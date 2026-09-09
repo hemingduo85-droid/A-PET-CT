@@ -1,0 +1,334 @@
+#!/usr/bin/env python3
+"""
+Run example:
+cd /data/cyf/codes/A-PET-CT/ESC_DRKD_successful
+python export_fixed_lesion_case_figure.py \
+  --data_root /data/cyf/shared_data/A-PETCT/2d_equal_mask50 \
+  --modalities ct,pet \
+  --device cuda:4 \
+  --checkpoint_dir checkpoints \
+  --output_dir fixed_lesion_case_figures
+"""
+
+import argparse
+import json
+from pathlib import Path
+
+import numpy as np
+import torch
+from PIL import Image, ImageDraw, ImageFont
+
+from new_model import ESC_DRKD_Multimodal
+from train import fuse_modalities, get_anomaly_map, parse_modalities
+
+
+METHOD = "ESC-DRKD"
+PROJECT_DIR = Path(__file__).resolve().parent
+GROUPS = ("small", "medium", "large")
+TRACERS = ("PSMA", "FDG")
+PANEL_NAMES = ("PET", "CT", "GT", "Pred", "ESC-DRKD")
+
+FIXED_CASES = {
+    "small": {
+        "PSMA": ("psma_1ca3af29b7df127d_2020-06-27", "0009"),
+        "FDG": ("fdg_791ec15924_04-16-2001-NA-PET-CT Ganzkoerper  primaer mit KM-50308", "0053"),
+    },
+    "medium": {
+        "PSMA": ("psma_ec45934c2fa23c76_2019-08-05", "0027"),
+        "FDG": ("fdg_19b68a666b_04-14-2005-NA-PET-CT Ganzkoerper  primaer mit KM-01313", "0036"),
+    },
+    "large": {
+        "PSMA": ("psma_18eba3b35ee1ddac_2020-09-05", "0036"),
+        "FDG": ("fdg_ea0fd89f0f_10-25-2003-NA-PET-CT Ganzkoerper  primaer mit KM-32502", "0038"),
+    },
+}
+
+
+def resolve_path(path):
+    path = Path(path).expanduser()
+    if path.is_absolute():
+        return path
+    for candidate in (PROJECT_DIR / path, PROJECT_DIR.parent / path, Path.cwd() / path):
+        if candidate.exists():
+            return candidate.resolve()
+    return (PROJECT_DIR / path).resolve()
+
+
+def tracer_root(data_root: Path, tracer: str) -> Path:
+    return data_root / tracer if (data_root / tracer / "test").exists() else data_root
+
+
+def case_paths(data_root: Path, tracer: str, patient: str, slice_id: str) -> dict[str, Path]:
+    base = tracer_root(data_root, tracer) / "test" / "abnormal" / patient
+    return {
+        "pet": base / "pet" / f"{slice_id}.png",
+        "ct": base / "ct" / f"{slice_id}.png",
+        "mask": base / "label" / f"{slice_id}.png",
+    }
+
+
+def check_paths(paths):
+    missing = [str(path) for path in paths.values() if not path.exists()]
+    if missing:
+        raise FileNotFoundError("Missing fixed case files:\n" + "\n".join(missing))
+
+
+def normalize01(arr):
+    arr = np.asarray(arr, dtype=np.float32)
+    finite = arr[np.isfinite(arr)]
+    if finite.size == 0:
+        return np.zeros_like(arr, dtype=np.float32)
+    lo, hi = np.percentile(finite, [1.0, 99.5])
+    if hi <= lo:
+        return np.zeros_like(arr, dtype=np.float32)
+    return np.clip((arr - lo) / (hi - lo + 1e-8), 0.0, 1.0)
+
+
+def read_gray(path: Path, image_size: int, is_mask=False):
+    image = Image.open(path).convert("L")
+    resample = Image.Resampling.NEAREST if is_mask else Image.Resampling.BILINEAR
+    image = image.resize((image_size, image_size), resample=resample)
+    arr = np.asarray(image, dtype=np.float32) / 255.0
+    return (arr > 0.5).astype(np.uint8) if is_mask else arr
+
+
+def colorize(arr, cmap_name="magma"):
+    import matplotlib.cm as cm
+
+    rgb = cm.get_cmap(cmap_name)(normalize01(arr))[..., :3]
+    return Image.fromarray((np.clip(rgb, 0, 1) * 255).astype(np.uint8)).convert("RGB")
+
+
+def gray_image(arr):
+    return Image.fromarray((normalize01(arr) * 255).astype(np.uint8)).convert("RGB")
+
+
+def mask_image(mask, color=(0, 255, 80)):
+    mask = (np.asarray(mask) > 0).astype(np.uint8)
+    rgb = np.zeros((*mask.shape, 3), dtype=np.uint8)
+    rgb[mask > 0] = np.array(color, dtype=np.uint8)
+    return Image.fromarray(rgb).convert("RGB")
+
+
+def mask_outline(mask, size, color=(0, 255, 80, 255), width=2):
+    gt = np.squeeze(np.asarray(mask)) > 0.5
+    m = Image.fromarray((gt.astype(np.uint8) * 255)).resize(size, resample=Image.Resampling.NEAREST)
+    arr = np.asarray(m) > 0
+    edge = arr.copy()
+    for _ in range(max(1, int(width))):
+        inner = edge.copy()
+        inner[1:-1, 1:-1] = arr[1:-1, 1:-1] & (
+            arr[:-2, 1:-1] & arr[2:, 1:-1] & arr[1:-1, :-2] & arr[1:-1, 2:]
+        )
+        edge = arr & ~inner
+        arr = inner
+    rgba = np.zeros((size[1], size[0], 4), dtype=np.uint8)
+    rgba[edge] = np.array(color, dtype=np.uint8)
+    return Image.fromarray(rgba, mode="RGBA")
+
+
+def overlay_gt(base_img, gt_mask):
+    base = base_img.convert("RGBA")
+    return Image.alpha_composite(base, mask_outline(gt_mask, base.size)).convert("RGB")
+
+
+def save_image(path: Path, image, size: int):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    image.resize((size, size), resample=Image.Resampling.LANCZOS).save(path)
+
+
+def best_f1_threshold(gt_mask, score_map):
+    from sklearn.metrics import precision_recall_curve
+
+    y_true = (np.asarray(gt_mask).reshape(-1) > 0).astype(np.uint8)
+    y_score = np.asarray(score_map, dtype=np.float32).reshape(-1)
+    if y_true.sum() == 0:
+        return 0.5, 0.0
+    precision, recall, thresholds = precision_recall_curve(y_true, y_score)
+    f1 = 2 * precision * recall / (precision + recall + 1e-7)
+    f1 = f1[:-1]
+    if len(f1) == 0:
+        return 0.5, 0.0
+    idx = int(np.argmax(f1))
+    return float(thresholds[idx]), float(f1[idx])
+
+
+def checkpoint_for_tracer(args, tracer: str, modalities) -> Path:
+    explicit = args.psma_checkpoint if tracer == "PSMA" else args.fdg_checkpoint
+    if explicit:
+        return resolve_path(explicit)
+    checkpoint_dir = resolve_path(args.checkpoint_dir) / tracer.upper() / "_".join(modalities)
+    for name in ("best_model.pt", "model.pth", "best_model.pth"):
+        checkpoint = checkpoint_dir / name
+        if checkpoint.exists():
+            return checkpoint
+    candidates = sorted(checkpoint_dir.glob("*.pt")) + sorted(checkpoint_dir.glob("*.pth"))
+    if candidates:
+        return candidates[-1]
+    raise FileNotFoundError(f"No checkpoint found in {checkpoint_dir}; provide --{tracer.lower()}_checkpoint")
+
+
+def load_model_for_tracer(args, tracer: str, modalities, device):
+    ckpt_path = checkpoint_for_tracer(args, tracer, modalities)
+    model = ESC_DRKD_Multimodal(modalities=modalities).to(device).eval()
+    ckpt = torch.load(str(ckpt_path), map_location=device)
+    state = ckpt.get("student", ckpt.get("model", ckpt.get("state_dict", ckpt))) if isinstance(ckpt, dict) else ckpt
+    model.student.load_state_dict(state, strict=True)
+    print(f"Loaded {tracer} checkpoint: {ckpt_path}")
+    return model, ckpt_path
+
+
+def build_input(paths, modalities, image_size, device):
+    arrays = {mod: read_gray(paths[mod], image_size) for mod in modalities}
+    x_dict = {
+        mod: torch.from_numpy(arrays[mod]).float().unsqueeze(0).unsqueeze(0).to(device)
+        for mod in modalities
+    }
+    return x_dict, arrays
+
+
+def render_case(args, model, ckpt_path, modalities, device, data_root, group, tracer, patient, slice_id):
+    paths = case_paths(data_root, tracer, patient, slice_id)
+    check_paths(paths)
+    x_dict, arrays = build_input(paths, modalities, args.image_size, device)
+    with torch.no_grad():
+        x = fuse_modalities(x_dict, modalities)
+        t_features = model.teacher.backbone(x)
+        reconstruction = model.student(t_features[-1], t_features[:-1])
+        raw_map = get_anomaly_map(model, t_features, reconstruction, args.image_size).squeeze().detach().cpu().numpy()
+    raw_map = np.asarray(raw_map, dtype=np.float32)
+    pet_arr = arrays["pet"]
+    ct_arr = arrays["ct"]
+    mask = read_gray(paths["mask"], raw_map.shape[0], is_mask=True)
+    threshold, best_f1 = best_f1_threshold(mask, raw_map)
+    pred = (raw_map >= threshold).astype(np.uint8)
+    score = float(np.max(raw_map))
+
+    case_name = f"{group}_{tracer}_{patient}__{slice_id}"
+    case_dir = args.output_dir / "cases" / group / case_name
+    pet_img = colorize(pet_arr, "magma")
+    ct_img = gray_image(ct_arr)
+    gt_img = mask_image(mask)
+    pred_img = mask_image(pred, color=(255, 128, 0))
+    heatmap_img = colorize(raw_map, "jet")
+
+    save_image(case_dir / "PET_enhanced.png", pet_img, args.image_size)
+    save_image(case_dir / "CT.png", ct_img, args.image_size)
+    save_image(case_dir / "GT.png", gt_img, args.image_size)
+    save_image(case_dir / "GT_on_PET.png", overlay_gt(pet_img, mask), args.image_size)
+    save_image(case_dir / "GT_on_CT.png", overlay_gt(ct_img, mask), args.image_size)
+    save_image(case_dir / "Pred.png", pred_img, args.image_size)
+    save_image(case_dir / "ESC-DRKD_heatmap.png", heatmap_img, args.image_size)
+
+    meta = {
+        "method": METHOD,
+        "group": group,
+        "tracer": tracer,
+        "patient": patient,
+        "slice": slice_id,
+        "score": score,
+        "score_mode": "max pixel score",
+        "threshold": threshold,
+        "best_f1": best_f1,
+        "checkpoint": str(ckpt_path),
+        "case_dir": str(case_dir),
+    }
+    case_dir.mkdir(parents=True, exist_ok=True)
+    with (case_dir / "case_meta.json").open("w", encoding="utf-8") as f:
+        json.dump(meta, f, indent=2, ensure_ascii=False)
+    return {"meta": meta, "panels": {"PET": pet_img, "CT": ct_img, "GT": gt_img, "Pred": pred_img, "ESC-DRKD": heatmap_img}}
+
+
+def load_font(size, bold=False):
+    for path in (
+        "/System/Library/Fonts/Supplemental/Arial Bold.ttf" if bold else "/System/Library/Fonts/Supplemental/Arial.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    ):
+        if path and Path(path).exists():
+            return ImageFont.truetype(path, size=size)
+    return ImageFont.load_default()
+
+
+def draw_text(draw, xy, text, font, fill=(0, 0, 0), anchor=None):
+    if anchor:
+        draw.text(xy, text, font=font, fill=fill, anchor=anchor)
+    else:
+        draw.text(xy, text, font=font, fill=fill)
+
+
+def make_plate(records, save_path: Path, title: str):
+    tile = 160
+    gap = 8
+    left = 18
+    top = 46
+    header_h = 30
+    meta_h = 26
+    row_h = meta_h + tile + gap
+    width = left * 2 + len(PANEL_NAMES) * tile + (len(PANEL_NAMES) - 1) * gap
+    height = top + header_h + len(records) * row_h + 10
+    canvas = Image.new("RGB", (width, height), "white")
+    draw = ImageDraw.Draw(canvas)
+    title_font = load_font(22, bold=True)
+    header_font = load_font(15, bold=True)
+    meta_font = load_font(13, bold=False)
+    draw_text(draw, (width // 2, 12), title, title_font, anchor="ma")
+    y = top
+    for col, name in enumerate(PANEL_NAMES):
+        x = left + col * (tile + gap)
+        draw_text(draw, (x + 4, y), name, header_font)
+    y += header_h
+    for row_idx, record in enumerate(records, 1):
+        meta = record["meta"]
+        meta_text = (
+            f"{meta['group'].capitalize()} #{row_idx} | score={meta['score']:.4f} | "
+            f"F1={meta['best_f1']:.3f} | {meta['tracer']} | {meta['patient']}__{meta['slice']}"
+        )
+        draw.rectangle([left - 4, y, width - left + 4, y + meta_h - 2], fill=(245, 245, 245))
+        draw_text(draw, (left, y + 4), meta_text, meta_font)
+        y += meta_h
+        for col, name in enumerate(PANEL_NAMES):
+            x = left + col * (tile + gap)
+            img = record["panels"][name].resize((tile, tile), resample=Image.Resampling.LANCZOS)
+            canvas.paste(img, (x, y))
+            draw.rectangle([x, y, x + tile - 1, y + tile - 1], outline=(255, 255, 255), width=2)
+        y += tile + gap
+    save_path.parent.mkdir(parents=True, exist_ok=True)
+    canvas.save(save_path)
+    print(f"Saved {save_path}")
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data_root", default="/data/cyf/shared_data/A-PETCT/2d_equal_mask50")
+    parser.add_argument("--modalities", default="ct,pet")
+    parser.add_argument("--device", default="cuda:0")
+    parser.add_argument("--checkpoint_dir", default="checkpoints")
+    parser.add_argument("--psma_checkpoint", default=None)
+    parser.add_argument("--fdg_checkpoint", default=None)
+    parser.add_argument("--image_size", type=int, default=256)
+    parser.add_argument("--output_dir", type=Path, default=PROJECT_DIR / "fixed_lesion_case_figures")
+    return parser.parse_args()
+
+
+def main():
+    args = parse_args()
+    args.output_dir = resolve_path(args.output_dir)
+    data_root = resolve_path(args.data_root)
+    modalities = parse_modalities(args.modalities)
+    if set(modalities) != {"ct", "pet"}:
+        raise ValueError("This fixed-case script expects --modalities ct,pet.")
+    device = torch.device(args.device if torch.cuda.is_available() or not args.device.startswith("cuda") else "cpu")
+    models = {tracer: load_model_for_tracer(args, tracer, modalities, device) for tracer in TRACERS}
+    records_by_group = {group: [] for group in GROUPS}
+    for group in GROUPS:
+        for tracer in TRACERS:
+            patient, slice_id = FIXED_CASES[group][tracer]
+            model, ckpt_path = models[tracer]
+            records_by_group[group].append(render_case(args, model, ckpt_path, modalities, device, data_root, group, tracer, patient, slice_id))
+        make_plate(records_by_group[group], args.output_dir / f"{group}.png", f"{METHOD} {group} fixed lesion cases")
+    all_records = [record for group in GROUPS for record in records_by_group[group]]
+    make_plate(all_records, args.output_dir / "all_fixed_lesion_cases.png", f"{METHOD} fixed lesion cases")
+
+
+if __name__ == "__main__":
+    main()

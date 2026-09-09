@@ -1,0 +1,6 @@
+Dataset: FDG
+Modality: petct
+Epoch: 30
+[Slice-Img]  AUROC=61.29% (95% CI 59.94-62.59%)  AUPR=62.42% (95% CI 60.90-63.85%)  F1=66.96% (95% CI 65.97-67.99%)
+[Slice-Px(abn)]  AUROC=93.76% (95% CI 93.67-93.84%)  AUPR=8.58% (95% CI 8.30-8.87%)
+[Patient(101/202abn)]  AUROC=66.27% (95% CI 57.81-73.27%)  AUPR=67.03% (95% CI 56.30-75.82%)  F1=68.94% (95% CI 63.16-76.24%)

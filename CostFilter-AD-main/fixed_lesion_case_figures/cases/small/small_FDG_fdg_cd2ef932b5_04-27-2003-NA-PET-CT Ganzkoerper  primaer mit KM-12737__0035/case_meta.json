@@ -1,0 +1,14 @@
+{
+  "method": "CostFilter-AD",
+  "group": "small",
+  "tracer": "FDG",
+  "patient": "fdg_cd2ef932b5_04-27-2003-NA-PET-CT Ganzkoerper  primaer mit KM-12737",
+  "slice": "0035",
+  "score": 0.5384762287139893,
+  "score_mode": "max pixel score",
+  "threshold": 0.2876758277416229,
+  "best_f1": 0.01666310443747556,
+  "dinomaly_checkpoint": "/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_fdg_petct/dinomaly_fdg_petct.pth",
+  "costfilter_checkpoint": "/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/CostFilter-AD-main/fixed_lesion_case_figures/cases/small/small_FDG_fdg_cd2ef932b5_04-27-2003-NA-PET-CT Ganzkoerper  primaer mit KM-12737__0035"
+}

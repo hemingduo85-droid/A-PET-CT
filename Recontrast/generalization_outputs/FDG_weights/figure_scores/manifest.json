@@ -1,0 +1,19 @@
+{
+  "method": "ReContrast",
+  "dataset": "DeepPSMA",
+  "source_dataset": "FDG",
+  "target_dataset": "DeepPSMA",
+  "original_data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1",
+  "data_dir": "/data/cyf/codes/A-PET-CT/Recontrast/generalization_outputs/FDG_weights/figure_scores/_deeppsma_view",
+  "modality": "petct",
+  "checkpoint": "./results/recontrast_fdg_petct/epoch30_fdg_petct.pth",
+  "slice_csv": "generalization_outputs/FDG_weights/figure_scores/slice_scores.csv",
+  "patient_csv": "generalization_outputs/FDG_weights/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "generalization_outputs/FDG_weights/figure_scores/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 2324,
+  "n_patients": 1747,
+  "n_pixel_slices": 1162,
+  "n_abnormal_slices": 1162,
+  "n_abnormal_patients": 1162
+}

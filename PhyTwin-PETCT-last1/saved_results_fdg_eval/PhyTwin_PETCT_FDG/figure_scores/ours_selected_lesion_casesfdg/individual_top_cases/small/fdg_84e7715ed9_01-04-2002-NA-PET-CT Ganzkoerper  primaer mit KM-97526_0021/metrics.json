@@ -1,0 +1,17 @@
+{
+  "group": "small",
+  "case_id": "fdg_84e7715ed9_01-04-2002-NA-PET-CT Ganzkoerper  primaer mit KM-97526",
+  "slice_id": "0021",
+  "rank_in_size_group": "9",
+  "lesion_pixels": "136",
+  "lesion_area_ratio": "0.0010461538461538462",
+  "image_score": 25.174223996142494,
+  "pixel_auroc": "0.9976155970365831",
+  "pixel_aupr": "0.1670162821478431",
+  "hotspot_recall": 0.0,
+  "hotspot_precision": 0.0,
+  "pred_dice_reference": 0.12774070543374644,
+  "pred_iou_reference": 0.06822810590631365,
+  "path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG/test/abnormal/fdg_84e7715ed9_01-04-2002-NA-PET-CT Ganzkoerper  primaer mit KM-97526/pet/0021.png",
+  "status": "saved"
+}

@@ -1,0 +1,14 @@
+{
+  "method": "CostFilter-AD",
+  "group": "large",
+  "tracer": "FDG",
+  "patient": "fdg_ea0fd89f0f_10-25-2003-NA-PET-CT Ganzkoerper  primaer mit KM-32502",
+  "slice": "0038",
+  "score": 0.5472145676612854,
+  "score_mode": "max pixel score",
+  "threshold": 0.4762846827507019,
+  "best_f1": 0.41640373730016333,
+  "dinomaly_checkpoint": "/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_fdg_petct/dinomaly_fdg_petct.pth",
+  "costfilter_checkpoint": "/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/CostFilter-AD-main/fixed_lesion_case_figures/cases/large/large_FDG_fdg_ea0fd89f0f_10-25-2003-NA-PET-CT Ganzkoerper  primaer mit KM-32502__0038"
+}

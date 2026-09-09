@@ -1,0 +1,10 @@
+{
+  "group": "medium",
+  "tracer": "PSMA",
+  "patient": "psma_ec45934c2fa23c76_2019-08-05",
+  "slice": "0027",
+  "score": 0.16152898967266083,
+  "threshold": 0.13348227739334106,
+  "best_f1": 0.18375712807134248,
+  "case_dir": "/data/cyf/codes/A-PET-CT/DAE_successful/fixed_lesion_case_figures/cases/medium/medium_PSMA_psma_ec45934c2fa23c76_2019-08-05__0027"
+}

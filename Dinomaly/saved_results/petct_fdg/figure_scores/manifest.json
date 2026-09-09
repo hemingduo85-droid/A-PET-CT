@@ -1,0 +1,15 @@
+{
+  "method": "Dinomaly",
+  "data_path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG",
+  "input_mode": "dual",
+  "checkpoint": "./saved_results/pet_fdg/epoch_30_model.pth",
+  "slice_csv": "./saved_results/pet_fdg/figure_scores/slice_scores.csv",
+  "patient_csv": "./saved_results/pet_fdg/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "./saved_results/pet_fdg/figure_scores/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 478,
+  "n_patients": 200,
+  "n_pixel_slices": 236,
+  "n_abnormal_slices": 236,
+  "n_abnormal_patients": 101
+}

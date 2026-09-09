@@ -1,0 +1,16 @@
+{
+  "method": "GatingAno",
+  "dataset": "PSMA",
+  "modality": "petct",
+  "checkpoint": "/data/cyf/codes/A-PET-CT/GatingAno/checkpoints/ctctpet/PSMA_petct_epoch30.pth",
+  "test_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA/test",
+  "slice_csv": "./results/PSMA_petct/figure_scores/slice_scores.csv",
+  "patient_csv": "./results/PSMA_petct/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "./results/PSMA_petct/figure_scores/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 1546,
+  "n_patients": 36,
+  "n_pixel_slices": 798,
+  "n_abnormal_slices": 798,
+  "n_abnormal_patients": 18
+}

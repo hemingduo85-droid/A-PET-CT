@@ -1,0 +1,10 @@
+[Slice-Img]  AUROC=75.48% (95%CI 73.13-77.68%)  AP=76.98% (95%CI 74.12-79.93%)  F1=72.74% (95%CI 70.81-74.86%)
+[Slice-Px(abn)]  AUROC=82.85% (95%CI 81.52-84.25%)  AUPR=13.35% (95%CI 11.50-15.11%)
+[Patient(18/36abn)]  AUROC=79.63% (95%CI 63.76-92.52%)  AP=81.85% (95%CI 65.46-94.20%)  F1=77.27% (95%CI 64.98-91.95%)
+
+CI protocol:
+- All CIs use bootstrap resampling with replacement.
+- Image-level CI: resample slices.
+- Pixel-level CI: resample abnormal slices with histogram-based weighted recomputation.
+- Patient-level CI: resample patients.
+- Binned full pixel check: AUROC=82.8509% AUPR=13.3485%

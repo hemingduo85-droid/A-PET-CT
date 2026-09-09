@@ -1,0 +1,4 @@
+checkpoint=./experiments/psma_petct/epoch_30.pth
+data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1
+[Slice-Img]  AUROC=19.35% (95% CI 17.79-21.20%)  AUPR=34.08% (95% CI 32.51-35.77%)  F1=66.67% (95% CI 65.00-68.51%)
+[Slice-Px(abn)]  AUROC=46.55% (95% CI 44.92-48.34%)  AUPR=0.33% (95% CI 0.30-0.35%)

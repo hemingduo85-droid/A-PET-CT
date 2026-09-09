@@ -1,0 +1,13 @@
+{
+  "method": "RD4AD",
+  "group": "large",
+  "tracer": "PSMA",
+  "patient": "psma_18eba3b35ee1ddac_2020-09-05",
+  "slice": "0036",
+  "score": 0.6492305397987366,
+  "score_mode": "max pixel score",
+  "threshold": 0.5111285448074341,
+  "best_f1": 0.15836069761397448,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/RD4AD/checkpoints/rd4ad_autopet_psma_ct_pet_pet.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/RD4AD/fixed_lesion_case_figures/cases/large/large_PSMA_psma_18eba3b35ee1ddac_2020-09-05__0036"
+}

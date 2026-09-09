@@ -1,0 +1,5 @@
+Pixel CI method: abnormal-slice bootstrap, 500 iterations, histogram bins=16384
+Exact full point estimates from previous run: AUROC=95.18% AUPR=24.36%
+Binned full point check: AUROC=95.1766% AUPR=24.3591%
+[Slice-Px(abn)] AUROC=95.18% (95%CI 95.11-95.25%)  AUPR=24.36% (95%CI 23.82-24.95%)
+Elapsed_sec=193.1

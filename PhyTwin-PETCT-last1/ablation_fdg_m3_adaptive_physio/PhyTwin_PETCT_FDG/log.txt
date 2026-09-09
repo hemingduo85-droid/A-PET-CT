@@ -1,0 +1,29 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG
+Experiment: PhyTwin_PETCT_FDG
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_FDG
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: enabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_FDG/BEST_PHYTWIN.pth
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Computing image-level metrics and 95CI...
+[Slice-Img]  AUROC=83.25% (95% CI 82.31-84.12%)  AUPR=83.92% (95% CI 82.94-84.88%)  F1=75.73% (95% CI 74.85-76.94%)
+Computing pixel-level Slice-Px(abn) metrics and 95CI...
+Computing exact full-pixel point estimates with sklearn...
+Pixel histogram slice bootstrap: 50/500
+Pixel histogram slice bootstrap: 100/500
+Pixel histogram slice bootstrap: 150/500
+Pixel histogram slice bootstrap: 200/500
+Pixel histogram slice bootstrap: 250/500
+Pixel histogram slice bootstrap: 300/500
+Pixel histogram slice bootstrap: 350/500
+Pixel histogram slice bootstrap: 400/500
+Pixel histogram slice bootstrap: 450/500
+Pixel histogram slice bootstrap: 500/500
+[Slice-Px(abn)]  AUROC=99.27% (95% CI 99.24-99.29%)  AUPR=59.85% (95% CI 58.64-60.92%)
+Computing patient-level metrics and 95CI...
+Saved visualizations to ./ablation_fdg_m3_adaptive_physio/PhyTwin_PETCT_FDG/visualizations
+Saved slice score table to ./ablation_fdg_m3_adaptive_physio/PhyTwin_PETCT_FDG/slice_scores.csv
+[Slice-Img]  AUROC=83.25% (95% CI 82.31-84.12%)  AUPR=83.92% (95% CI 82.94-84.88%)  F1=75.73% (95% CI 74.85-76.94%)
+[Slice-Px(abn)]  AUROC=99.27% (95% CI 99.24-99.29%)  AUPR=59.85% (95% CI 58.64-60.92%)
+[Patient(101/202abn)]  AUROC=86.34% (95% CI 81.42-90.82%)  AUPR=86.25% (95% CI 79.50-92.09%)  F1=78.72% (95% CI 75.39-85.59%)

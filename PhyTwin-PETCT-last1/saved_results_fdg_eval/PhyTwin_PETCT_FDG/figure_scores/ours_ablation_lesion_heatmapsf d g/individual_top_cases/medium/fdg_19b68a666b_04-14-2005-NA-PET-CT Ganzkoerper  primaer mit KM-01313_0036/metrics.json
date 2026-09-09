@@ -1,0 +1,20 @@
+{
+  "group": "medium",
+  "case_id": "fdg_19b68a666b_04-14-2005-NA-PET-CT Ganzkoerper  primaer mit KM-01313",
+  "slice_id": "0036",
+  "rank_in_size_group": "fixed",
+  "full_raw_lesion_evidence": 41.259015431722474,
+  "full_image_score_z": 29.08745107923578,
+  "without_a_physio_raw_lesion_evidence": 67.49313533613788,
+  "without_a_physio_image_score_z": 49.28341446610852,
+  "pixel_auroc": 0.9998235807141832,
+  "pixel_aupr": 0.9750334066927759,
+  "hotspot_recall": 0.9095607235142119,
+  "hotspot_precision": 0.9095607235142119,
+  "pred_dice_reference": 0.5653761869978087,
+  "pred_iou_reference": 0.3940936863543788,
+  "ms_lai_evidence_components": 10,
+  "ms_lai_components_by_quantile": "{\"0.985\": 6, \"0.992\": 2, \"0.997\": 2}",
+  "path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG/test/abnormal/fdg_19b68a666b_04-14-2005-NA-PET-CT Ganzkoerper  primaer mit KM-01313/pet/0036.png",
+  "status": "saved"
+}

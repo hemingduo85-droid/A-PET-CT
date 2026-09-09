@@ -1,0 +1,13 @@
+{
+  "method": "Skip-TS",
+  "group": "large",
+  "tracer": "PSMA",
+  "patient": "psma_18eba3b35ee1ddac_2020-09-05",
+  "slice": "0036",
+  "score": 0.8356580138206482,
+  "score_mode": "max pixel score",
+  "threshold": 0.7658876776695251,
+  "best_f1": 0.1703430951864321,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/skip-TS/checkpoints/psma/ct+pet_pseudo_rgb/wide_res50_psma_ct+pet_pseudo_rgb_epoch30_seed0.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/skip-TS/fixed_lesion_case_figures/cases/large/large_PSMA_psma_18eba3b35ee1ddac_2020-09-05__0036"
+}

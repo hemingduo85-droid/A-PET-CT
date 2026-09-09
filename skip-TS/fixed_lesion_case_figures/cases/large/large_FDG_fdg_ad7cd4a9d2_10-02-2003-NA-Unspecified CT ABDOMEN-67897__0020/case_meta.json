@@ -1,0 +1,13 @@
+{
+  "method": "Skip-TS",
+  "group": "large",
+  "tracer": "FDG",
+  "patient": "fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897",
+  "slice": "0020",
+  "score": 0.5654867887496948,
+  "score_mode": "max pixel score",
+  "threshold": 0.46561798453330994,
+  "best_f1": 0.5681709718335642,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/skip-TS/checkpoints/fdg/ct+pet_pseudo_rgb/wide_res50_fdg_ct+pet_pseudo_rgb_epoch30_seed0.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/skip-TS/fixed_lesion_case_figures/cases/large/large_FDG_fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897__0020"
+}

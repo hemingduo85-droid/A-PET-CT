@@ -1,0 +1,13 @@
+{
+  "method": "MMRAD",
+  "group": "large",
+  "tracer": "FDG",
+  "patient": "fdg_ea0fd89f0f_10-25-2003-NA-PET-CT Ganzkoerper  primaer mit KM-32502",
+  "slice": "0038",
+  "score": 0.4658973813056946,
+  "score_mode": "max pixel score",
+  "threshold": 0.24729421734809875,
+  "best_f1": 0.640243854187326,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/MMRAD_successful/checkpoints/FDG/ct_pet/model.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/MMRAD_successful/fixed_lesion_case_figures/cases/large/large_FDG_fdg_ea0fd89f0f_10-25-2003-NA-PET-CT Ganzkoerper  primaer mit KM-32502__0038"
+}

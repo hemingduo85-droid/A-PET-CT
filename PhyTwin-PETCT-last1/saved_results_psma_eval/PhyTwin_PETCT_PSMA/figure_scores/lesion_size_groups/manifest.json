@@ -1,0 +1,15 @@
+{
+  "slice_csv": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/slice_scores.csv",
+  "data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA",
+  "volume_csv": "/data/cyf/codes/A-PET-CT/PhyTwin-PETCT-last1/saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/lesion_volumes.csv",
+  "group_root": "/data/cyf/codes/A-PET-CT/PhyTwin-PETCT-last1/saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/lesion_size_groups",
+  "small_max_pixels": 232.0,
+  "large_min_pixels": 632.6666666666663,
+  "score_order": "desc",
+  "ranking_rule": "positive slices are sorted by PhyTwin anomaly_score; descending means better positive examples first",
+  "threshold_rule": "positive-slice tertiles unless fixed thresholds are provided",
+  "n_rows": 1546,
+  "n_positive_slices_with_mask": 798,
+  "n_missing_positive_masks": 0,
+  "missing_positive_masks": []
+}

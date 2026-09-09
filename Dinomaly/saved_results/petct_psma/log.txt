@@ -1,0 +1,13 @@
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='petct_psma', eval_only=True, ckpt_path='/data/cyf/codes/A-PET-CT/Dinomaly/saved_results/petct_psma/epoch_30_model.pth', max_ratio=0.01, vis_num=20, anomaly_dir=None, ci_bootstrap=500, ci_seed=42, ci_pixel_max_samples=200000, hist_pixel_points=False, exact_pixel_auroc=None, exact_pixel_aupr=None, cache_path='/data/cyf/codes/A-PET-CT/Dinomaly/saved_results/deeppsma1_generalization/PSMA_dual_eval_cache.npz', export_only=True, progress_interval=20)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 0
+Loading checkpoint from /data/cyf/codes/A-PET-CT/Dinomaly/saved_results/petct_psma/epoch_30_model.pth
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='petct_psma', eval_only=True, ckpt_path='/data/cyf/codes/A-PET-CT/Dinomaly/saved_results/petct_psma/epoch_30_model.pth', max_ratio=0.01, vis_num=20, anomaly_dir=None, ci_bootstrap=500, ci_seed=42, ci_pixel_max_samples=200000, hist_pixel_points=False, exact_pixel_auroc=None, exact_pixel_aupr=None, cache_path='/data/cyf/codes/A-PET-CT/Dinomaly/saved_results/deeppsma1_generalization/PSMA_dual_eval_cache.npz', export_only=True, progress_interval=20)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 0
+Loading checkpoint from /data/cyf/codes/A-PET-CT/Dinomaly/saved_results/petct_psma/epoch_30_model.pth
+--- Export eval cache ---

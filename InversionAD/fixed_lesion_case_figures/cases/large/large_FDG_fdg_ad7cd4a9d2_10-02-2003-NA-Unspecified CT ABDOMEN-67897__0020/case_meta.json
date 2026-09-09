@@ -1,0 +1,13 @@
+{
+  "method": "InvAD",
+  "group": "large",
+  "tracer": "FDG",
+  "patient": "fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897",
+  "slice": "0020",
+  "score": 10.278738975524902,
+  "score_mode": "max pixel score",
+  "threshold": 8.110960960388184,
+  "best_f1": 0.13528190258702355,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/InversionAD/results/exp_dit_petct/fdg/dual/model_latest.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/InversionAD/fixed_lesion_case_figures/cases/large/large_FDG_fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897__0020"
+}

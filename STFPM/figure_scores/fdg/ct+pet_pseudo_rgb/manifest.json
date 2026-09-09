@@ -1,0 +1,17 @@
+{
+  "method": "STFPM",
+  "dataset": "fdg",
+  "dataset_path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG",
+  "modality": "ct+pet",
+  "input_mode": "pseudo_rgb",
+  "checkpoint": "snapshots/fdg_ct+pet_pseudo_rgb_epoch30.pth.tar",
+  "slice_csv": "figure_scores/fdg/ct+pet_pseudo_rgb/slice_scores.csv",
+  "patient_csv": "figure_scores/fdg/ct+pet_pseudo_rgb/patient_scores.csv",
+  "pixel_slice_metrics_csv": "figure_scores/fdg/ct+pet_pseudo_rgb/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 7647,
+  "n_patients": 202,
+  "n_pixel_slices": 3778,
+  "n_abnormal_slices": 3778,
+  "n_abnormal_patients": 101
+}

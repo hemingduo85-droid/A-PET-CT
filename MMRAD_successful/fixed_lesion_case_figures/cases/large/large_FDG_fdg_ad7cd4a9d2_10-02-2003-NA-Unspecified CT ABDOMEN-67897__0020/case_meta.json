@@ -1,0 +1,13 @@
+{
+  "method": "MMRAD",
+  "group": "large",
+  "tracer": "FDG",
+  "patient": "fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897",
+  "slice": "0020",
+  "score": 0.557003915309906,
+  "score_mode": "max pixel score",
+  "threshold": 0.1625385582447052,
+  "best_f1": 0.42823075633674856,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/MMRAD_successful/checkpoints/FDG/ct_pet/model.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/MMRAD_successful/fixed_lesion_case_figures/cases/large/large_FDG_fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897__0020"
+}

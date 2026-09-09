@@ -1,0 +1,17 @@
+{
+  "method": "GatingAno",
+  "dataset": "FDG",
+  "modality": "petct",
+  "checkpoint": "checkpoints/FDG_petct_epoch30.pth",
+  "test_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG/test",
+  "slice_csv": "roc_csv_regenerated_20260821/FDG/figure_scores/slice_scores.csv",
+  "patient_csv": "roc_csv_regenerated_20260821/FDG/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "roc_csv_regenerated_20260821/FDG/figure_scores/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 7647,
+  "n_patients": 202,
+  "n_pixel_slices": 3778,
+  "n_abnormal_slices": 3778,
+  "n_abnormal_patients": 101,
+  "dual_input_mode": "ctctpet"
+}

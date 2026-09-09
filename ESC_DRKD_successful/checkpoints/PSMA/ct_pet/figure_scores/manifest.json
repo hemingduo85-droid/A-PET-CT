@@ -1,0 +1,15 @@
+{
+  "method": "ESC-DRKD",
+  "dataset": "PSMA",
+  "modality": "ct_pet",
+  "data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA",
+  "checkpoint": "/data/cyf/codes/A-PET-CT/ESC_DRKD_successful/checkpoints/PSMA/ct_pet/best_model.pt",
+  "score_rule": "top 1% mean from ESC-DRKD anomaly map",
+  "slice_csv": "/data/cyf/codes/A-PET-CT/ESC_DRKD_successful/checkpoints/PSMA/ct_pet/figure_scores/slice_scores.csv",
+  "patient_csv": "/data/cyf/codes/A-PET-CT/ESC_DRKD_successful/checkpoints/PSMA/ct_pet/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "/data/cyf/codes/A-PET-CT/ESC_DRKD_successful/checkpoints/PSMA/ct_pet/figure_scores/pixel_slice_metrics.csv",
+  "n_slices": 1546,
+  "n_patients": 36,
+  "n_pixel_slices": 798,
+  "patient_aggregation": "max slice anomaly_score"
+}

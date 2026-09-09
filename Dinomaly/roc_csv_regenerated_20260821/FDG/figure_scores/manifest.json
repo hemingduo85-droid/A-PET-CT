@@ -1,0 +1,15 @@
+{
+  "method": "Dinomaly",
+  "dataset": "FDG",
+  "modality": "petct",
+  "source_cache": "/data/cyf/codes/A-PET-CT/Dinomaly/saved_results/pet_fdg_export/FDG_petct_eval_cache.npz",
+  "slice_csv": "/data/cyf/codes/A-PET-CT/Dinomaly/roc_csv_regenerated_20260821/FDG/figure_scores/slice_scores.csv",
+  "patient_csv": "/data/cyf/codes/A-PET-CT/Dinomaly/roc_csv_regenerated_20260821/FDG/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "/data/cyf/codes/A-PET-CT/Dinomaly/roc_csv_regenerated_20260821/FDG/figure_scores/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 7647,
+  "n_patients": 202,
+  "n_pixel_slices": 3778,
+  "n_abnormal_slices": 3778,
+  "slice_auroc": 0.7747744727709676
+}

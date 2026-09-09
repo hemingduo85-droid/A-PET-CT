@@ -1,0 +1,198 @@
+[19:20:53] Args: {'dataset': 'psma', 'dataset_name': 'psma', 'data_path': '/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA', 'modality': 'petct', 'gpu': 2, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 30, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_psma_petct', 'heatmap_dir': './checkpoint_psma_petct/heatmaps/psma/petct', 'heatmap_limit': 128, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'dataset_tag': 'psma', 'dinomaly_ckpt': './checkpoint_psma_petct/dinomaly_psma_petct.pth', 'costfilter_ckpt': './checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth', 'device': 'cuda:2'}
+[19:20:53] Device: cuda:2
+[19:20:53] ============================================================
+[19:20:53] Phase 1: Training Dinomaly (unsupervised reconstruction)
+[19:20:53] ============================================================
+[19:20:54] Train slices: 1659, Test slices: 1546
+[19:22:24] [P1] Epoch 1/30  loss=0.203925  lr=0.001999
+[19:24:11] [P1] Epoch 2/30  loss=0.088332  lr=0.001988
+[19:25:56] [P1] Epoch 3/30  loss=0.076452  lr=0.001968
+[19:27:38] [P1] Epoch 4/30  loss=0.070093  lr=0.001938
+[19:29:27] [P1] Epoch 5/30  loss=0.065943  lr=0.001898
+[19:38:04] [P1 E5] === Slice Image-level ===  AUROC=0.8232  AP=0.8276  F1=0.7683
+[19:38:04] [P1 E5] === Slice Pixel-level (full) ===  AUROC=0.9066  AP=0.0465  F1=0.1108
+[19:38:04] [P1 E5] === Slice Pixel-level (abn-only) ===  AUROC=0.8800  AP=0.0548  F1=0.1195
+[19:38:05] [P1 E5] === Patient-level ===  AUROC=0.7623  AP=0.7350  F1=0.7619  Sens@90Spec=0.2778  Sens@95Spec=0.0556
+[19:38:06]   -> New best Dinomaly (Img-AP=0.8276), saved to ./checkpoint_psma_petct/dinomaly_psma_petct.pth
+[19:39:49] [P1] Epoch 6/30  loss=0.063333  lr=0.001849
+[19:41:36] [P1] Epoch 7/30  loss=0.061022  lr=0.001792
+[19:43:20] [P1] Epoch 8/30  loss=0.058992  lr=0.001727
+[19:45:16] [P1] Epoch 9/30  loss=0.057361  lr=0.001655
+[19:47:05] [P1] Epoch 10/30  loss=0.055954  lr=0.001576
+[19:55:50] [P1 E10] === Slice Image-level ===  AUROC=0.8556  AP=0.8667  F1=0.7914
+[19:55:50] [P1 E10] === Slice Pixel-level (full) ===  AUROC=0.9112  AP=0.0542  F1=0.1256
+[19:55:50] [P1 E10] === Slice Pixel-level (abn-only) ===  AUROC=0.8827  AP=0.0609  F1=0.1310
+[19:55:50] [P1 E10] === Patient-level ===  AUROC=0.8086  AP=0.8352  F1=0.8000  Sens@90Spec=0.3889  Sens@95Spec=0.3889
+[19:55:51]   -> New best Dinomaly (Img-AP=0.8667), saved to ./checkpoint_psma_petct/dinomaly_psma_petct.pth
+[19:57:50] [P1] Epoch 11/30  loss=0.054709  lr=0.001493
+[19:59:27] [P1] Epoch 12/30  loss=0.053491  lr=0.001404
+[20:01:06] [P1] Epoch 13/30  loss=0.052487  lr=0.001313
+[20:03:09] Args: {'dataset': 'psma', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA', 'modality': 'petct', 'gpu': 2, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 30, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_psma_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_psma_petct/heatmaps/psma/petct', 'heatmap_limit': 128, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': False, 'test_stage': 'costfilter', 'dataset_tag': 'psma', 'dinomaly_ckpt': './checkpoint_psma_petct/dinomaly_psma_petct.pth', 'costfilter_ckpt': './checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth', 'device': 'cuda:2'}
+[20:03:09] Device: cuda:2
+[20:03:09] ============================================================
+[20:03:09] Phase 1: Training Dinomaly (unsupervised reconstruction)
+[20:03:09] ============================================================
+[20:03:09] Train slices: 1659, Test slices: 1546
+[20:05:10] [P1] Epoch 1/30  loss=0.203925  lr=0.001999
+[20:06:53] [P1] Epoch 2/30  loss=0.088332  lr=0.001988
+[20:09:03] [P1] Epoch 3/30  loss=0.076452  lr=0.001968
+[20:10:50] [P1] Epoch 4/30  loss=0.070093  lr=0.001938
+[20:12:42] [P1] Epoch 5/30  loss=0.065943  lr=0.001898
+[20:14:53] [P1 E5] [Slice-Img]  AUROC=82.32%  AP=82.76%  F1=76.83%
+[20:14:53] [P1 E5] [Slice-Px(abn)]  AUROC=88.00%  AP=5.48%  F1=11.95%
+[20:14:53] [P1 E5] [Patient(18/36abn)]  AUROC=76.23%  AP=73.50%  F1=76.19%  Sens@90Spec=27.78%  Sens@95Spec=5.56%
+[20:14:54]   -> New best Dinomaly (Img-AP=0.8276), saved to ./checkpoint_psma_petct/dinomaly_psma_petct.pth
+[20:16:43] [P1] Epoch 6/30  loss=0.063333  lr=0.001849
+[20:18:29] [P1] Epoch 7/30  loss=0.061022  lr=0.001792
+[20:20:14] [P1] Epoch 8/30  loss=0.058992  lr=0.001727
+[20:22:14] [P1] Epoch 9/30  loss=0.057361  lr=0.001655
+[20:24:09] [P1] Epoch 10/30  loss=0.055954  lr=0.001576
+[20:26:20] [P1 E10] [Slice-Img]  AUROC=85.56%  AP=86.67%  F1=79.14%
+[20:26:20] [P1 E10] [Slice-Px(abn)]  AUROC=88.27%  AP=6.09%  F1=13.10%
+[20:26:20] [P1 E10] [Patient(18/36abn)]  AUROC=80.86%  AP=83.52%  F1=80.00%  Sens@90Spec=38.89%  Sens@95Spec=38.89%
+[20:26:21]   -> New best Dinomaly (Img-AP=0.8667), saved to ./checkpoint_psma_petct/dinomaly_psma_petct.pth
+[20:28:07] [P1] Epoch 11/30  loss=0.054709  lr=0.001493
+[20:29:45] [P1] Epoch 12/30  loss=0.053491  lr=0.001404
+[20:31:23] [P1] Epoch 13/30  loss=0.052487  lr=0.001313
+[20:33:06] [P1] Epoch 14/30  loss=0.051561  lr=0.001219
+[20:34:50] [P1] Epoch 15/30  loss=0.050620  lr=0.001123
+[20:36:37] [P1 E15] [Slice-Img]  AUROC=85.35%  AP=86.19%  F1=78.30%
+[20:36:37] [P1 E15] [Slice-Px(abn)]  AUROC=88.42%  AP=6.15%  F1=13.25%
+[20:36:37] [P1 E15] [Patient(18/36abn)]  AUROC=83.02%  AP=84.87%  F1=82.05%  Sens@90Spec=38.89%  Sens@95Spec=38.89%
+[20:38:11] [P1] Epoch 16/30  loss=0.049703  lr=0.001027
+[20:39:45] [P1] Epoch 17/30  loss=0.048915  lr=0.000933
+[20:41:23] [P1] Epoch 18/30  loss=0.048183  lr=0.000840
+[20:43:25] [P1] Epoch 19/30  loss=0.047504  lr=0.000750
+[20:45:08] [P1] Epoch 20/30  loss=0.046842  lr=0.000663
+[20:47:15] [P1 E20] [Slice-Img]  AUROC=86.02%  AP=87.18%  F1=78.68%
+[20:47:15] [P1 E20] [Slice-Px(abn)]  AUROC=88.82%  AP=6.51%  F1=13.91%
+[20:47:15] [P1 E20] [Patient(18/36abn)]  AUROC=83.64%  AP=86.76%  F1=83.33%  Sens@90Spec=44.44%  Sens@95Spec=44.44%
+[20:47:17]   -> New best Dinomaly (Img-AP=0.8718), saved to ./checkpoint_psma_petct/dinomaly_psma_petct.pth
+[20:49:06] [P1] Epoch 21/30  loss=0.046270  lr=0.000582
+[20:50:44] [P1] Epoch 22/30  loss=0.045727  lr=0.000507
+[20:52:30] [P1] Epoch 23/30  loss=0.045236  lr=0.000438
+[20:54:51] [P1] Epoch 24/30  loss=0.044795  lr=0.000377
+[20:56:53] [P1] Epoch 25/30  loss=0.044421  lr=0.000324
+[20:59:04] [P1 E25] [Slice-Img]  AUROC=85.86%  AP=86.81%  F1=78.96%
+[20:59:04] [P1 E25] [Slice-Px(abn)]  AUROC=88.74%  AP=6.33%  F1=13.59%
+[20:59:04] [P1 E25] [Patient(18/36abn)]  AUROC=80.56%  AP=84.00%  F1=81.08%  Sens@90Spec=50.00%  Sens@95Spec=33.33%
+[21:01:04] [P1] Epoch 26/30  loss=0.044072  lr=0.000280
+[21:03:15] [P1] Epoch 27/30  loss=0.043800  lr=0.000245
+[21:04:55] [P1] Epoch 28/30  loss=0.043548  lr=0.000220
+[21:06:38] [P1] Epoch 29/30  loss=0.043349  lr=0.000205
+[21:08:23] [P1] Epoch 30/30  loss=0.043198  lr=0.000200
+[21:10:29] [P1 E30] [Slice-Img]  AUROC=85.86%  AP=86.80%  F1=78.70%
+[21:10:29] [P1 E30] [Slice-Px(abn)]  AUROC=88.72%  AP=6.21%  F1=13.30%
+[21:10:29] [P1 E30] [Patient(18/36abn)]  AUROC=80.25%  AP=83.48%  F1=81.08%  Sens@90Spec=50.00%  Sens@95Spec=27.78%
+[21:10:29] Phase 1 done. Best Dinomaly Img-AP=0.8718
+[21:10:29] ============================================================
+[21:10:29] Phase 2: Training CostFilter (with synthetic anomalies)
+[21:10:29] ============================================================
+[21:10:29] Train slices (synth): 1659, Test slices: 1546
+[21:10:45] Loaded pretrained Dinomaly from ./checkpoint_psma_petct/dinomaly_psma_petct.pth
+[21:12:06] [P2] Epoch 1/30  loss=0.267022  lr=0.000100
+[21:13:17] [P2] Epoch 2/30  loss=0.214211  lr=0.000100
+[21:14:36] [P2] Epoch 3/30  loss=0.212495  lr=0.000100
+[21:15:53] [P2] Epoch 4/30  loss=0.194332  lr=0.000100
+[21:17:05] [P2] Epoch 5/30  loss=0.191889  lr=0.000100
+[21:18:19] [P2] Epoch 6/30  loss=0.183032  lr=0.000100
+[21:19:30] [P2] Epoch 7/30  loss=0.174265  lr=0.000100
+[21:20:48] [P2] Epoch 8/30  loss=0.174700  lr=0.000100
+[21:22:00] [P2] Epoch 9/30  loss=0.162258  lr=0.000100
+[21:23:11] [P2] Epoch 10/30  loss=0.154917  lr=0.000100
+[21:24:24] [P2] Epoch 11/30  loss=0.153020  lr=0.000100
+[21:25:38] [P2] Epoch 12/30  loss=0.153470  lr=0.000100
+[21:26:54] [P2] Epoch 13/30  loss=0.160033  lr=0.000100
+[21:28:06] [P2] Epoch 14/30  loss=0.155664  lr=0.000100
+[21:29:24] [P2] Epoch 15/30  loss=0.156248  lr=0.000100
+[21:30:42] [P2] Epoch 16/30  loss=0.150823  lr=0.000100
+[21:31:52] [P2] Epoch 17/30  loss=0.141844  lr=0.000100
+[21:33:10] [P2] Epoch 18/30  loss=0.146604  lr=0.000100
+[21:34:30] [P2] Epoch 19/30  loss=0.146583  lr=0.000100
+[21:35:43] [P2] Epoch 20/30  loss=0.146850  lr=0.000100
+[21:37:05] [P2] Epoch 21/30  loss=0.146533  lr=0.000100
+[21:38:22] [P2] Epoch 22/30  loss=0.152862  lr=0.000100
+[21:39:30] [P2] Epoch 23/30  loss=0.134493  lr=0.000100
+[21:40:36] [P2] Epoch 24/30  loss=0.144350  lr=0.000100
+[21:41:46] [P2] Epoch 25/30  loss=0.143074  lr=0.000100
+[21:42:51] [P2] Epoch 26/30  loss=0.133611  lr=0.000100
+[21:43:58] [P2] Epoch 27/30  loss=0.133462  lr=0.000100
+[21:45:06] [P2] Epoch 28/30  loss=0.135057  lr=0.000100
+[21:46:10] [P2] Epoch 29/30  loss=0.135854  lr=0.000100
+[21:47:19] [P2] Epoch 30/30  loss=0.132626  lr=0.000100
+[21:47:19] Saved final CostFilter epoch 30 to ./checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth
+[21:50:29] [P2 Final E30] [Slice-Img]  AUROC=54.44%  AP=53.38%  F1=69.49%
+[21:50:29] [P2 Final E30] [Slice-Px(abn)]  AUROC=85.78%  AP=3.64%  F1=7.90%
+[21:50:29] [P2 Final E30] [Patient(18/36abn)]  AUROC=51.54%  AP=50.99%  F1=68.09%  Sens@90Spec=0.00%  Sens@95Spec=0.00%
+[21:50:29] Heatmaps saved to ./checkpoint_psma_petct/heatmaps/psma/petct
+[21:50:29] Phase 2 done.
+[13:55:49] Args: {'dataset': 'psma', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA', 'modality': 'petct', 'gpu': 2, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 50, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_psma_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_psma_petct/heatmaps/psma/petct', 'heatmap_limit': 128, 'ci_iters': 500, 'ci_seed': 42, 'ci_pixel_max_samples': 0, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': True, 'test_stage': 'costfilter', 'dataset_tag': 'psma', 'dinomaly_ckpt': './checkpoint_psma_petct/dinomaly_psma_petct.pth', 'costfilter_ckpt': './checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth', 'device': 'cuda:2'}
+[13:55:49] Device: cuda:2
+[13:55:49] ============================================================
+[13:55:49] Test only: costfilter
+[13:55:49] ============================================================
+[13:55:49] Test slices: 1546
+[13:56:03] Loaded Dinomaly from ./checkpoint_psma_petct/dinomaly_psma_petct.pth
+[13:56:07] Loaded CostFilter from ./checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth
+[13:57:34] [Test CostFilter] [Image first]  AUROC=54.44% (95% CI 51.56-57.32%)  AUPR=53.37% (95% CI 50.96-56.30%)  F1=69.49% (95% CI 69.09-69.94%)
+[17:28:31] [Test CostFilter] [Slice-Img]  AUROC=54.44% (95% CI 51.56-57.32%)  AUPR=53.37% (95% CI 50.96-56.30%)  F1=69.49% (95% CI 69.09-69.94%)
+[17:28:31] [Test CostFilter] [Slice-Px(abn)]  AUROC=85.78% (95% CI 85.74-85.83%)  AUPR=3.64% (95% CI 3.63-3.66%)
+[17:28:31] [Test CostFilter] [Patient(18/36abn)]  AUROC=51.23% (95% CI 31.63-70.84%)  AUPR=50.86% (95% CI 42.53-72.52%)  F1=68.09% (95% CI 66.67-78.16%)
+[17:28:31] Heatmaps saved to ./checkpoint_psma_petct/heatmaps/psma/petct
+[22:34:30] Args: {'dataset': 'psma', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA', 'modality': 'petct', 'gpu': 4, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 50, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_psma_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_psma_petct/heatmaps/psma/petct', 'heatmap_limit': 128, 'eval_cache_path': './checkpoint_fdg_petct/eval_cache/PSMA_petct_eval_cache.npz', 'ci_iters': 0, 'ci_seed': 20260707, 'ci_pixel_max_samples': 200000, 'ci_hist_bins': 16384, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': True, 'test_stage': 'costfilter', 'dataset_tag': 'psma', 'dinomaly_ckpt': './checkpoint_psma_petct/dinomaly_psma_petct.pth', 'costfilter_ckpt': './checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth', 'device': 'cuda:4'}
+[22:34:30] Device: cuda:4
+[22:34:30] ============================================================
+[22:34:30] Test only: costfilter
+[22:34:30] ============================================================
+[22:34:30] Test slices: 0
+[22:34:39] Loaded Dinomaly from ./checkpoint_psma_petct/dinomaly_psma_petct.pth
+[22:34:40] Loaded CostFilter from ./checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth
+[22:35:22] Args: {'dataset': 'psma', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG', 'modality': 'petct', 'gpu': 4, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 50, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_psma_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_psma_petct/heatmaps/psma/petct', 'heatmap_limit': 128, 'eval_cache_path': './checkpoint_fdg_petct/eval_cache/PSMA_petct_eval_cache.npz', 'ci_iters': 0, 'ci_seed': 20260707, 'ci_pixel_max_samples': 200000, 'ci_hist_bins': 16384, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': True, 'test_stage': 'costfilter', 'dataset_tag': 'psma', 'dinomaly_ckpt': './checkpoint_psma_petct/dinomaly_psma_petct.pth', 'costfilter_ckpt': './checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth', 'device': 'cuda:4'}
+[22:35:22] Device: cuda:4
+[22:35:22] ============================================================
+[22:35:22] Test only: costfilter
+[22:35:22] ============================================================
+[22:35:22] Test slices: 7647
+[22:35:31] Loaded Dinomaly from ./checkpoint_psma_petct/dinomaly_psma_petct.pth
+[22:35:34] Loaded CostFilter from ./checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth
+[22:52:33] Args: {'dataset': 'psma', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA', 'modality': 'petct', 'gpu': 4, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 50, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_psma_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_psma_petct/heatmaps/psma/petct', 'heatmap_limit': 128, 'eval_cache_path': './checkpoint_fdg_petct/eval_cache/PSMA_petct_eval_cache.npz', 'ci_iters': 0, 'ci_seed': 20260707, 'ci_pixel_max_samples': 200000, 'ci_hist_bins': 16384, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': True, 'test_stage': 'costfilter', 'dataset_tag': 'psma', 'dinomaly_ckpt': './checkpoint_psma_petct/dinomaly_psma_petct.pth', 'costfilter_ckpt': './checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth', 'device': 'cuda:4'}
+[22:52:33] Device: cuda:4
+[22:52:33] ============================================================
+[22:52:33] Test only: costfilter
+[22:52:33] ============================================================
+[22:52:33] Test slices: 1546
+[22:52:40] Loaded Dinomaly from ./checkpoint_psma_petct/dinomaly_psma_petct.pth
+[22:52:41] Loaded CostFilter from ./checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth
+[22:53:34] Computing image-level metrics and 95CI...
+[22:53:34] [Slice-Img]  AUROC=54.44% (95% CI 54.44-54.44%)  AP=53.37% (95% CI 53.37-53.37%)  F1=69.49% (95% CI 69.49-69.49%)
+[22:53:34] Computing pixel-level Slice-Px(abn) metrics and 95CI...
+[22:53:34] Computing exact full-pixel point estimates with sklearn...
+[22:54:12] Computing patient-level metrics and 95CI...
+[22:54:30] Saved eval cache: ./checkpoint_fdg_petct/eval_cache/PSMA_petct_eval_cache.npz
+[22:54:30] [Slice-Img]  AUROC=54.44% (95% CI 54.44-54.44%)  AP=53.37% (95% CI 53.37-53.37%)  F1=69.49% (95% CI 69.49-69.49%)
+[22:54:30] [Slice-Px(abn)]  AUROC=85.78% (95% CI 85.78-85.78%)  AUPR=3.64% (95% CI 3.64-3.64%)
+[22:54:30] [Patient(18/36abn)]  AUROC=51.23% (95% CI 51.23-51.23%)  AP=50.86% (95% CI 50.86-50.86%)  F1=68.09% (95% CI 68.09-68.09%)
+[22:54:30] Heatmaps saved to ./checkpoint_psma_petct/heatmaps/psma/petct
+[16:39:42] Computing image-level metrics and 95CI...
+[16:39:43] [Slice-Img]  AUROC=54.44% (95% CI 51.69-57.68%)  AP=53.37% (95% CI 49.83-57.60%)  F1=69.49% (95% CI 67.40-71.58%)
+[16:39:43] Computing pixel-level Slice-Px(abn) metrics and 95CI...
+[16:39:43] Computing exact full-pixel point estimates with sklearn...
+[16:41:34] Pixel histogram slice bootstrap: 50/500
+[16:41:39] Pixel histogram slice bootstrap: 100/500
+[16:41:44] Pixel histogram slice bootstrap: 150/500
+[16:41:49] Pixel histogram slice bootstrap: 200/500
+[16:41:53] Pixel histogram slice bootstrap: 250/500
+[16:41:58] Pixel histogram slice bootstrap: 300/500
+[16:42:03] Pixel histogram slice bootstrap: 350/500
+[16:42:08] Pixel histogram slice bootstrap: 400/500
+[16:42:12] Pixel histogram slice bootstrap: 450/500
+[16:42:17] Pixel histogram slice bootstrap: 500/500
+[16:42:17] Computing patient-level metrics and 95CI...
+[22:32:01] Args: {'dataset': 'custom', 'dataset_name': 'psma', 'data_path': '/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1', 'modality': 'petct', 'gpu': 0, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 50, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': '/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_psma_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': '/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_psma_petct/heatmaps/psma/petct', 'heatmap_limit': 128, 'eval_cache_path': '/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_psma_petct/eval_cache/psma_petct_costfilter_eval_cache.npz', 'ci_iters': 500, 'ci_seed': 20260707, 'ci_pixel_max_samples': 200000, 'ci_hist_bins': 16384, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': True, 'test_stage': 'costfilter', 'dataset_tag': 'psma', 'dinomaly_ckpt': '/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_psma_petct/dinomaly_psma_petct.pth', 'costfilter_ckpt': '/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth', 'device': 'cuda:0'}
+[22:32:01] Device: cuda:0
+[22:32:01] ============================================================
+[22:32:01] Test only: costfilter
+[22:32:01] ============================================================
+[22:32:01] Test slices: 0
+[22:32:06] Loaded Dinomaly from /data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_psma_petct/dinomaly_psma_petct.pth
+[22:32:06] Loaded CostFilter from /data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth

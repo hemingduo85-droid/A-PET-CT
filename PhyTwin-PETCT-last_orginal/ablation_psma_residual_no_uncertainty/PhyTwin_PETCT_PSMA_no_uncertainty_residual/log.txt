@@ -1,0 +1,72 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA_no_uncertainty_residual
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA_no_uncertainty_residual
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: disabled
+Train Normal Twin | epochs=30 | image_size=256 | base_channels=32 | uncertainty=False | nll_weight=0.0
+Epoch [01/30] loss=0.8366 l1=0.8119 grad=0.0989 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.8366)
+Epoch [02/30] loss=0.1713 l1=0.1510 grad=0.0810 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.1713)
+Epoch [03/30] loss=0.1609 l1=0.1411 grad=0.0794 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.1609)
+Epoch [04/30] loss=0.1518 l1=0.1322 grad=0.0786 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.1518)
+Epoch [05/30] loss=0.1446 l1=0.1252 grad=0.0778 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.1446)
+Epoch [06/30] loss=0.1366 l1=0.1173 grad=0.0771 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.1366)
+Epoch [07/30] loss=0.1306 l1=0.1115 grad=0.0766 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.1306)
+Epoch [08/30] loss=0.1270 l1=0.1080 grad=0.0762 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.1270)
+Epoch [09/30] loss=0.1245 l1=0.1054 grad=0.0760 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.1245)
+Epoch [10/30] loss=0.1197 l1=0.1008 grad=0.0755 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.1197)
+Epoch [11/30] loss=0.1121 l1=0.0935 grad=0.0747 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.1121)
+Epoch [12/30] loss=0.1076 l1=0.0891 grad=0.0742 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.1076)
+Epoch [13/30] loss=0.1052 l1=0.0869 grad=0.0735 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.1052)
+Epoch [14/30] loss=0.0991 l1=0.0809 grad=0.0728 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0991)
+Epoch [15/30] loss=0.0985 l1=0.0804 grad=0.0723 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0985)
+Epoch [16/30] loss=0.0956 l1=0.0777 grad=0.0718 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0956)
+Epoch [17/30] loss=0.0927 l1=0.0749 grad=0.0712 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0927)
+Epoch [18/30] loss=0.0916 l1=0.0739 grad=0.0706 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0916)
+Epoch [19/30] loss=0.0899 l1=0.0723 grad=0.0702 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0899)
+Epoch [20/30] loss=0.0870 l1=0.0696 grad=0.0696 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0870)
+Epoch [21/30] loss=0.0850 l1=0.0677 grad=0.0692 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0850)
+Epoch [22/30] loss=0.0831 l1=0.0660 grad=0.0687 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0831)
+Epoch [23/30] loss=0.0834 l1=0.0663 grad=0.0683 nll=0.0000
+Epoch [24/30] loss=0.0834 l1=0.0664 grad=0.0683 nll=0.0000
+Epoch [25/30] loss=0.0802 l1=0.0633 grad=0.0677 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0802)
+Epoch [26/30] loss=0.0810 l1=0.0641 grad=0.0674 nll=0.0000
+Epoch [27/30] loss=0.0794 l1=0.0627 grad=0.0671 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0794)
+Epoch [28/30] loss=0.0772 l1=0.0606 grad=0.0667 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0772)
+Epoch [29/30] loss=0.0756 l1=0.0590 grad=0.0664 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.0756)
+Epoch [30/30] loss=0.0756 l1=0.0591 grad=0.0661 nll=0.0000
+Calibrated multi-scale lesion_z | normal_lesion_ms_mean=8.2053 normal_lesion_ms_std=4.3126 | normal_hotspots=disabled
+Built normal models | normal_residuals=1659 | memory_patches=30000 | residual_mean=0.0635 residual_std=0.1184 | memory_mean=6.1174 memory_std=9.1835 | normal_image_mean=3.9308 normal_image_std=1.6384 | normal_lesion_mean=8.2053 normal_lesion_std=4.3126 | pred_mask_thr=2.2865 | physio=disabled
+Saved full PhyTwin checkpoint to ./ckpts/PhyTwin_PETCT_PSMA_no_uncertainty_residual/BEST_PHYTWIN.pth
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Saved visualizations to ./ablation_psma_residual_no_uncertainty/PhyTwin_PETCT_PSMA_no_uncertainty_residual/visualizations
+Saved slice score table to ./ablation_psma_residual_no_uncertainty/PhyTwin_PETCT_PSMA_no_uncertainty_residual/slice_scores.csv
+[Slice-Img]  AUROC=74.88%  AP=72.51%  F1=74.63%
+[Slice-Px(abn)]  AUROC=96.69%  AP=23.84%  F1=33.56%
+[Patient(18/36abn)]  AUROC=76.85%  AP=74.13%  F1=82.93%  Sens@90Spec=16.67%  Sens@95Spec=11.11%

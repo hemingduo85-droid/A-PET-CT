@@ -1,0 +1,10 @@
+{
+  "dataset": "fdg",
+  "data_root": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG",
+  "modalities": [
+    "pet",
+    "ct"
+  ],
+  "input_mode": "ct_pet_pet",
+  "checkpoint": "./checkpoints/rd4ad_autopet_fdg_ct_pet_pet.pth"
+}

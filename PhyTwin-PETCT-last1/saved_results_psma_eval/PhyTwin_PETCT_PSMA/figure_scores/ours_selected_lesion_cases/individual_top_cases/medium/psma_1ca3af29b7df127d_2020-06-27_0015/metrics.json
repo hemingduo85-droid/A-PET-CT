@@ -1,0 +1,20 @@
+{
+  "group": "medium",
+  "case_id": "psma_1ca3af29b7df127d_2020-06-27",
+  "slice_id": "0015",
+  "rank_in_size_group": 5,
+  "original_rank_in_size_group": "43",
+  "sort_by": "pixel_aupr",
+  "sort_value": 0.9544455828364025,
+  "lesion_pixels": "549",
+  "lesion_area_ratio": "0.008154111216730039",
+  "image_score": 11.86281436813704,
+  "pixel_auroc": "0.999455771601471",
+  "pixel_aupr": "0.9544455828364025",
+  "hotspot_recall": 0.8845437616387337,
+  "hotspot_precision": 0.8845437616387337,
+  "pred_dice_reference": 0.6982248520710059,
+  "pred_iou_reference": 0.5363636363636364,
+  "path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA/test/abnormal/psma_1ca3af29b7df127d_2020-06-27/pet/0015.png",
+  "status": "saved"
+}

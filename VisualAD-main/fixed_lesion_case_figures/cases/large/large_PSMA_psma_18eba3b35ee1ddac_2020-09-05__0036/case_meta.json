@@ -1,0 +1,13 @@
+{
+  "method": "VisualAD",
+  "group": "large",
+  "tracer": "PSMA",
+  "patient": "psma_18eba3b35ee1ddac_2020-09-05",
+  "slice": "0036",
+  "score": -7.964119911193848,
+  "score_mode": "max pixel score",
+  "threshold": -7.964709758758545,
+  "best_f1": 0.14026955068221933,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/VisualAD-main/experiments/psma_petct/epoch_30.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/VisualAD-main/fixed_lesion_case_figures/cases/large/large_PSMA_psma_18eba3b35ee1ddac_2020-09-05__0036"
+}

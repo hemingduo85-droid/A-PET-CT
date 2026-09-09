@@ -1,0 +1,15 @@
+{
+  "method": "RD4AD",
+  "dataset": "fdg",
+  "data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG",
+  "modality": "pet+ct",
+  "input_mode": "ct_pet_pet",
+  "checkpoint": "./checkpoints/rd4ad_autopet_fdg_ct_pet_pet.pth",
+  "slice_csv": "figure_scores/fdg/pet+ct_ct_pet_pet/slice_scores.csv",
+  "patient_csv": "figure_scores/fdg/pet+ct_ct_pet_pet/patient_scores.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 7647,
+  "n_patients": 202,
+  "n_abnormal_slices": 3778,
+  "n_abnormal_patients": 101
+}

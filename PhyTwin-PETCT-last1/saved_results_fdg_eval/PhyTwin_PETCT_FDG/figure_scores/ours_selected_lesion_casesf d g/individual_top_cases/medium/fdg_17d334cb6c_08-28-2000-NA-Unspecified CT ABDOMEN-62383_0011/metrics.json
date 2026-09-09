@@ -1,0 +1,20 @@
+{
+  "group": "medium",
+  "case_id": "fdg_17d334cb6c_08-28-2000-NA-Unspecified CT ABDOMEN-62383",
+  "slice_id": "0011",
+  "rank_in_size_group": 10,
+  "original_rank_in_size_group": "127",
+  "sort_by": "pixel_aupr",
+  "sort_value": 0.9831132909362266,
+  "lesion_pixels": "422",
+  "lesion_area_ratio": "0.003236196319018405",
+  "image_score": 18.90334014872015,
+  "pixel_auroc": "0.9999424494219236",
+  "pixel_aupr": "0.9831132909362266",
+  "hotspot_recall": 0.9245283018867925,
+  "hotspot_precision": 0.9245283018867925,
+  "pred_dice_reference": 0.35451505016722407,
+  "pred_iou_reference": 0.21544715447154472,
+  "path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG/test/abnormal/fdg_17d334cb6c_08-28-2000-NA-Unspecified CT ABDOMEN-62383/pet/0011.png",
+  "status": "saved"
+}

@@ -1,0 +1,38 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA_no_uncertainty_residual
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA_no_uncertainty_residual
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: disabled
+Train Normal Twin | epochs=30 | image_size=256 | base_channels=32 | uncertainty=False | nll_weight=0.0
+Epoch [01/30] loss=0.8448 l1=0.8201 grad=0.0990 nll=0.0000
+  -> Saved best Normal Twin (train loss=0.8448)
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA_no_uncertainty_residual
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA_no_uncertainty_residual
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: disabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA_no_uncertainty_residual/BEST_PHYTWIN.pth
+Static PHYSIO prior disabled by --no_physio after checkpoint loading.
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Computing image-level metrics and 95CI...
+[Slice-Img]  AUROC=74.88% (95% CI 72.38-77.37%)  AUPR=72.50% (95% CI 69.10-75.91%)  F1=74.63% (95% CI 72.65-77.03%)
+Computing pixel-level Slice-Px(abn) metrics and 95CI...
+Computing exact full-pixel point estimates with sklearn...
+Pixel histogram slice bootstrap: 50/500
+Pixel histogram slice bootstrap: 100/500
+Pixel histogram slice bootstrap: 150/500
+Pixel histogram slice bootstrap: 200/500
+Pixel histogram slice bootstrap: 250/500
+Pixel histogram slice bootstrap: 300/500
+Pixel histogram slice bootstrap: 350/500
+Pixel histogram slice bootstrap: 400/500
+Pixel histogram slice bootstrap: 450/500
+Pixel histogram slice bootstrap: 500/500
+[Slice-Px(abn)]  AUROC=96.69% (95% CI 96.42-96.96%)  AUPR=23.84% (95% CI 21.32-26.69%)
+Computing patient-level metrics and 95CI...
+Saved visualizations to ./ablation_psma_m1_no_uncertainty_residual_only/PhyTwin_PETCT_PSMA_no_uncertainty_residual/visualizations
+Saved slice score table to ./ablation_psma_m1_no_uncertainty_residual_only/PhyTwin_PETCT_PSMA_no_uncertainty_residual/slice_scores.csv
+[Slice-Img]  AUROC=74.88% (95% CI 72.38-77.37%)  AUPR=72.50% (95% CI 69.10-75.91%)  F1=74.63% (95% CI 72.65-77.03%)
+[Slice-Px(abn)]  AUROC=96.69% (95% CI 96.42-96.96%)  AUPR=23.84% (95% CI 21.32-26.69%)
+[Patient(18/36abn)]  AUROC=76.85% (95% CI 58.73-92.09%)  AUPR=74.13% (95% CI 55.46-93.73%)  F1=82.93% (95% CI 68.66-93.55%)

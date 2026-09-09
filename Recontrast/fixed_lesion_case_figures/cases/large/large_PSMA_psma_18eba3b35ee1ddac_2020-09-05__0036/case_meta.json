@@ -1,0 +1,13 @@
+{
+  "method": "ReContrast",
+  "group": "large",
+  "tracer": "PSMA",
+  "patient": "psma_18eba3b35ee1ddac_2020-09-05",
+  "slice": "0036",
+  "score": 0.21639052033424377,
+  "score_mode": "top 0.0100 pixel ratio mean",
+  "threshold": 0.14842745661735535,
+  "best_f1": 0.13392983249787632,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/Recontrast/results/recontrast_psma_petct/epoch30_psma_petct.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/Recontrast/fixed_lesion_case_figures/cases/large/large_PSMA_psma_18eba3b35ee1ddac_2020-09-05__0036"
+}

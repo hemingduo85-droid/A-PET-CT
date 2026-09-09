@@ -1,0 +1,13 @@
+{
+  "method": "AE-FLOW",
+  "group": "medium",
+  "tracer": "PSMA",
+  "patient": "psma_ec45934c2fa23c76_2019-08-05",
+  "slice": "0027",
+  "score": 1.7098783254623413,
+  "score_mode": "max pixel score",
+  "threshold": 0.7044245600700378,
+  "best_f1": 0.03545249718695367,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/AE_Flow_successful/checkpoints/PSMA/ct_pet/best_PSMA_ct_pet_model.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/AE_Flow_successful/fixed_lesion_case_figures】/cases/medium/medium_PSMA_psma_ec45934c2fa23c76_2019-08-05__0027"
+}

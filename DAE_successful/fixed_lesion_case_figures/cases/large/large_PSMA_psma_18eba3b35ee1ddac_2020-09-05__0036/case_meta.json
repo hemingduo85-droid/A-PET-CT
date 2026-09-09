@@ -1,0 +1,10 @@
+{
+  "group": "large",
+  "tracer": "PSMA",
+  "patient": "psma_18eba3b35ee1ddac_2020-09-05",
+  "slice": "0036",
+  "score": 0.18101538717746735,
+  "threshold": 0.12379983067512512,
+  "best_f1": 0.21855514018366376,
+  "case_dir": "/data/cyf/codes/A-PET-CT/DAE_successful/fixed_lesion_case_figures/cases/large/large_PSMA_psma_18eba3b35ee1ddac_2020-09-05__0036"
+}

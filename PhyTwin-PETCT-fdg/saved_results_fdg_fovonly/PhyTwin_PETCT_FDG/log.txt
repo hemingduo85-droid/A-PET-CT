@@ -1,0 +1,14 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG
+Experiment: PhyTwin_PETCT_FDG
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_FDG
+Labels and masks are used only for evaluation and visualization.
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_FDG/BEST_PHYTWIN.pth
+Checkpoint image-level refinement calibration is missing or outdated; recalibrating on train/normal without retraining.
+Calibrated multi-scale lesion_z | normal_lesion_ms_mean=4.1864 normal_lesion_ms_std=1.7535 | normal_hotspots=disabled
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Saved visualizations to ./saved_results_fdg_fovonly/PhyTwin_PETCT_FDG/visualizations
+Saved slice score table to ./saved_results_fdg_fovonly/PhyTwin_PETCT_FDG/slice_scores.csv
+[Slice-Img]  AUROC=80.73%  AP=82.15%  F1=73.08%
+[Slice-Px(abn)]  AUROC=99.09%  AP=55.97%  F1=54.39%
+[Patient(101/202abn)]  AUROC=84.80%  AP=85.52%  F1=81.19%  Sens@90Spec=56.44%  Sens@95Spec=45.54%

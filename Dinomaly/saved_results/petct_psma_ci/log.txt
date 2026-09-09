@@ -1,0 +1,11 @@
+Device: cuda:1
+Args: Namespace(data_path='/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='1', seed=42, save_dir='./saved_results', save_name='petct_psma_ci', eval_only=True, ckpt_path='/data/cyf/codes/A-PET-CT/Dinomaly/saved_results/pet_psma/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None, ci_bootstrap=500, ci_seed=42, ci_pixel_max_samples=0)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 1546
+Loading checkpoint from /data/cyf/codes/A-PET-CT/Dinomaly/saved_results/pet_psma/epoch_30_model.pth
+--- Final evaluation ---
+[Slice-Img]  AUROC=87.09% (95% CI 85.37-88.81%)  AUPR=88.19% (95% CI 86.29-90.08%)  F1=79.42% (95% CI 78.22-81.57%)
+[Slice-Img]  AUROC=87.09% (95% CI 85.37-88.81%)  AUPR=88.19% (95% CI 86.29-90.08%)  F1=79.42% (95% CI 78.22-81.57%)
+[Slice-Px(abn)]  AUROC=87.87% (95% CI 87.84-87.91%)  AUPR=7.66% (95% CI 7.63-7.70%)
+[Patient(18/36abn)]  AUROC=80.25% (95% CI 65.51-94.99%)  AUPR=79.78% (95% CI 62.64-94.23%)  F1=76.92% (95% CI 71.11-91.43%)

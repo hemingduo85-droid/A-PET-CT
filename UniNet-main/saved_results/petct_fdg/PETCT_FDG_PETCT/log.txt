@@ -1,0 +1,318 @@
+开始训练 | modality=petct | epochs=30 | batch_size=8 | image_size=256 | image_agg=top1pct
+训练集样本数: 13182 | 测试集样本数: 6876
+评估协议: Img/Px AUROC+AP 用原始分数; Img-F1 用原始 image score; Px-F1 用测试集全局 min-max; 训练完成后统一测试一次
+开始训练 | modality=petct | epochs=30 | batch_size=8 | image_size=256 | image_agg=top1pct
+训练集样本数: 13182 | 测试集样本数: 6876
+评估协议: Img/Px AUROC+AP 用原始分数; Img-F1 用原始 image score; Px-F1 用测试集全局 min-max; 训练完成后统一测试一次
+Epoch [01/30] loss=18.4098
+Epoch [02/30] loss=18.2812
+Epoch [03/30] loss=18.2600
+Epoch [04/30] loss=18.2374
+Epoch [05/30] loss=18.2213
+Epoch [06/30] loss=18.2115
+Epoch [07/30] loss=18.2022
+Epoch [08/30] loss=18.1990
+Epoch [09/30] loss=18.1927
+Epoch [10/30] loss=18.1883
+Epoch [11/30] loss=18.1867
+Epoch [12/30] loss=18.1843
+Epoch [13/30] loss=18.1821
+Epoch [14/30] loss=18.1838
+Epoch [15/30] loss=18.1811
+Epoch [16/30] loss=18.1792
+Epoch [17/30] loss=18.1770
+Epoch [18/30] loss=18.1756
+Epoch [19/30] loss=18.1751
+Epoch [20/30] loss=18.1732
+Epoch [21/30] loss=18.1725
+Epoch [22/30] loss=18.1711
+Epoch [23/30] loss=18.1697
+Epoch [24/30] loss=18.1678
+Epoch [25/30] loss=18.1670
+Epoch [26/30] loss=18.1665
+Epoch [27/30] loss=18.1663
+Epoch [28/30] loss=18.1657
+Epoch [29/30] loss=18.1657
+Epoch [30/30] loss=18.1664
+训练结束 | 已保存最后一轮权重: EPOCH_030.pth
+
+--- 最后一轮权重最终评估 ---
+[Slice-Img]  AUROC=62.71%  AP=63.93%  F1=67.82%
+[Slice-Px(all)]  AUROC=93.64%  AP=4.90%  F1=11.37%
+[Slice-Px(abn)]  AUROC=93.14%  AP=7.58%  F1=15.31%
+[Patient(92/184abn)]  AUROC=59.72%  AP=61.90%  F1=68.02%  Sens@90Spec=22.83%  Sens@95Spec=10.87%
+热力图已保存到: ./saved_results/petct_fdg/PETCT_FDG_PETCT/heatmaps/EPOCH_030
+权重加载完成: EPOCH_030.pth
+开始评估 | ci_bootstraps=500 | ci_pixel_max_samples=0 | pixel_metric_max_samples=0
+评估 forward 进度: 1/7647
+评估 forward 进度: 100/7647
+评估 forward 进度: 200/7647
+评估 forward 进度: 300/7647
+评估 forward 进度: 400/7647
+评估 forward 进度: 500/7647
+评估 forward 进度: 600/7647
+评估 forward 进度: 700/7647
+评估 forward 进度: 800/7647
+评估 forward 进度: 900/7647
+评估 forward 进度: 1000/7647
+评估 forward 进度: 1100/7647
+评估 forward 进度: 1200/7647
+评估 forward 进度: 1300/7647
+评估 forward 进度: 1400/7647
+评估 forward 进度: 1500/7647
+评估 forward 进度: 1600/7647
+评估 forward 进度: 1700/7647
+评估 forward 进度: 1800/7647
+评估 forward 进度: 1900/7647
+评估 forward 进度: 2000/7647
+评估 forward 进度: 2100/7647
+评估 forward 进度: 2200/7647
+评估 forward 进度: 2300/7647
+评估 forward 进度: 2400/7647
+评估 forward 进度: 2500/7647
+评估 forward 进度: 2600/7647
+评估 forward 进度: 2700/7647
+评估 forward 进度: 2800/7647
+评估 forward 进度: 2900/7647
+评估 forward 进度: 3000/7647
+评估 forward 进度: 3100/7647
+评估 forward 进度: 3200/7647
+评估 forward 进度: 3300/7647
+评估 forward 进度: 3400/7647
+评估 forward 进度: 3500/7647
+评估 forward 进度: 3600/7647
+评估 forward 进度: 3700/7647
+评估 forward 进度: 3800/7647
+评估 forward 进度: 3900/7647
+评估 forward 进度: 4000/7647
+评估 forward 进度: 4100/7647
+评估 forward 进度: 4200/7647
+评估 forward 进度: 4300/7647
+评估 forward 进度: 4400/7647
+评估 forward 进度: 4500/7647
+评估 forward 进度: 4600/7647
+评估 forward 进度: 4700/7647
+评估 forward 进度: 4800/7647
+评估 forward 进度: 4900/7647
+评估 forward 进度: 5000/7647
+评估 forward 进度: 5100/7647
+评估 forward 进度: 5200/7647
+评估 forward 进度: 5300/7647
+评估 forward 进度: 5400/7647
+评估 forward 进度: 5500/7647
+评估 forward 进度: 5600/7647
+评估 forward 进度: 5700/7647
+评估 forward 进度: 5800/7647
+评估 forward 进度: 5900/7647
+评估 forward 进度: 6000/7647
+评估 forward 进度: 6100/7647
+评估 forward 进度: 6200/7647
+评估 forward 进度: 6300/7647
+评估 forward 进度: 6400/7647
+评估 forward 进度: 6500/7647
+评估 forward 进度: 6600/7647
+评估 forward 进度: 6700/7647
+评估 forward 进度: 6800/7647
+评估 forward 进度: 6900/7647
+评估 forward 进度: 7000/7647
+评估 forward 进度: 7100/7647
+评估 forward 进度: 7200/7647
+评估 forward 进度: 7300/7647
+评估 forward 进度: 7400/7647
+评估 forward 进度: 7500/7647
+评估 forward 进度: 7600/7647
+开始合成 anomaly map
+权重加载完成: EPOCH_030.pth
+开始评估 | ci_bootstraps=500 | ci_pixel_max_samples=0 | pixel_metric_max_samples=0
+评估 forward 进度: 1/7647
+评估 forward 进度: 100/7647
+评估 forward 进度: 200/7647
+评估 forward 进度: 300/7647
+评估 forward 进度: 400/7647
+评估 forward 进度: 500/7647
+评估 forward 进度: 600/7647
+评估 forward 进度: 700/7647
+评估 forward 进度: 800/7647
+评估 forward 进度: 900/7647
+评估 forward 进度: 1000/7647
+评估 forward 进度: 1100/7647
+评估 forward 进度: 1200/7647
+评估 forward 进度: 1300/7647
+评估 forward 进度: 1400/7647
+评估 forward 进度: 1500/7647
+评估 forward 进度: 1600/7647
+评估 forward 进度: 1700/7647
+评估 forward 进度: 1800/7647
+评估 forward 进度: 1900/7647
+评估 forward 进度: 2000/7647
+评估 forward 进度: 2100/7647
+评估 forward 进度: 2200/7647
+评估 forward 进度: 2300/7647
+评估 forward 进度: 2400/7647
+评估 forward 进度: 2500/7647
+评估 forward 进度: 2600/7647
+评估 forward 进度: 2700/7647
+评估 forward 进度: 2800/7647
+评估 forward 进度: 2900/7647
+评估 forward 进度: 3000/7647
+评估 forward 进度: 3100/7647
+评估 forward 进度: 3200/7647
+评估 forward 进度: 3300/7647
+评估 forward 进度: 3400/7647
+评估 forward 进度: 3500/7647
+评估 forward 进度: 3600/7647
+评估 forward 进度: 3700/7647
+评估 forward 进度: 3800/7647
+评估 forward 进度: 3900/7647
+评估 forward 进度: 4000/7647
+评估 forward 进度: 4100/7647
+评估 forward 进度: 4200/7647
+评估 forward 进度: 4300/7647
+评估 forward 进度: 4400/7647
+评估 forward 进度: 4500/7647
+评估 forward 进度: 4600/7647
+评估 forward 进度: 4700/7647
+评估 forward 进度: 4800/7647
+评估 forward 进度: 4900/7647
+评估 forward 进度: 5000/7647
+评估 forward 进度: 5100/7647
+评估 forward 进度: 5200/7647
+评估 forward 进度: 5300/7647
+评估 forward 进度: 5400/7647
+评估 forward 进度: 5500/7647
+评估 forward 进度: 5600/7647
+评估 forward 进度: 5700/7647
+评估 forward 进度: 5800/7647
+评估 forward 进度: 5900/7647
+评估 forward 进度: 6000/7647
+评估 forward 进度: 6100/7647
+评估 forward 进度: 6200/7647
+评估 forward 进度: 6300/7647
+评估 forward 进度: 6400/7647
+评估 forward 进度: 6500/7647
+评估 forward 进度: 6600/7647
+评估 forward 进度: 6700/7647
+评估 forward 进度: 6800/7647
+评估 forward 进度: 6900/7647
+评估 forward 进度: 7000/7647
+评估 forward 进度: 7100/7647
+评估 forward 进度: 7200/7647
+评估 forward 进度: 7300/7647
+评估 forward 进度: 7400/7647
+评估 forward 进度: 7500/7647
+评估 forward 进度: 7600/7647
+anomaly map 已逐 batch 合成完成
+开始计算 image-level 指标
+[Image-level first pass]
+[Slice-Img]  AUROC=60.72% [59.47-61.98]  AUPR=60.42% [58.85-62.03]  F1=66.63% [65.69-67.73]
+开始计算 pixel-level 指标
+开始计算 patient-level 指标
+开始保存热力图: ./saved_results/petct_fdg/PETCT_FDG_PETCT/heatmaps/EPOCH_030
+[推理模式]
+[Slice-Img]  AUROC=60.72% [59.47-61.98]  AUPR=60.42% [58.85-62.03]  F1=66.63% [65.69-67.73]
+[Slice-Px(abn)] AUROC=93.37% [93.35-93.38]  AUPR=8.40% [7.84-8.94]
+[Patient(101/202abn)]  AUROC=58.78% [50.92-66.63]  AUPR=59.89% [50.91-69.75]  F1=68.13% [62.29-75.17]
+热力图已保存到: ./saved_results/petct_fdg/PETCT_FDG_PETCT/heatmaps/EPOCH_030
+权重加载完成: EPOCH_030.pth
+开始评估 | ci_bootstraps=500 | hist_bins=16384
+评估 forward 进度: 1/7647
+评估 forward 进度: 100/7647
+评估 forward 进度: 200/7647
+评估 forward 进度: 300/7647
+评估 forward 进度: 400/7647
+评估 forward 进度: 500/7647
+评估 forward 进度: 600/7647
+评估 forward 进度: 700/7647
+评估 forward 进度: 800/7647
+评估 forward 进度: 900/7647
+评估 forward 进度: 1000/7647
+评估 forward 进度: 1100/7647
+评估 forward 进度: 1200/7647
+评估 forward 进度: 1300/7647
+评估 forward 进度: 1400/7647
+评估 forward 进度: 1500/7647
+评估 forward 进度: 1600/7647
+评估 forward 进度: 1700/7647
+评估 forward 进度: 1800/7647
+评估 forward 进度: 1900/7647
+评估 forward 进度: 2000/7647
+评估 forward 进度: 2100/7647
+评估 forward 进度: 2200/7647
+评估 forward 进度: 2300/7647
+评估 forward 进度: 2400/7647
+评估 forward 进度: 2500/7647
+评估 forward 进度: 2600/7647
+评估 forward 进度: 2700/7647
+评估 forward 进度: 2800/7647
+评估 forward 进度: 2900/7647
+评估 forward 进度: 3000/7647
+评估 forward 进度: 3100/7647
+评估 forward 进度: 3200/7647
+评估 forward 进度: 3300/7647
+评估 forward 进度: 3400/7647
+评估 forward 进度: 3500/7647
+评估 forward 进度: 3600/7647
+评估 forward 进度: 3700/7647
+评估 forward 进度: 3800/7647
+评估 forward 进度: 3900/7647
+评估 forward 进度: 4000/7647
+评估 forward 进度: 4100/7647
+评估 forward 进度: 4200/7647
+评估 forward 进度: 4300/7647
+评估 forward 进度: 4400/7647
+评估 forward 进度: 4500/7647
+评估 forward 进度: 4600/7647
+评估 forward 进度: 4700/7647
+评估 forward 进度: 4800/7647
+评估 forward 进度: 4900/7647
+评估 forward 进度: 5000/7647
+评估 forward 进度: 5100/7647
+评估 forward 进度: 5200/7647
+评估 forward 进度: 5300/7647
+评估 forward 进度: 5400/7647
+评估 forward 进度: 5500/7647
+评估 forward 进度: 5600/7647
+评估 forward 进度: 5700/7647
+评估 forward 进度: 5800/7647
+评估 forward 进度: 5900/7647
+评估 forward 进度: 6000/7647
+评估 forward 进度: 6100/7647
+评估 forward 进度: 6200/7647
+评估 forward 进度: 6300/7647
+评估 forward 进度: 6400/7647
+评估 forward 进度: 6500/7647
+评估 forward 进度: 6600/7647
+评估 forward 进度: 6700/7647
+评估 forward 进度: 6800/7647
+评估 forward 进度: 6900/7647
+评估 forward 进度: 7000/7647
+评估 forward 进度: 7100/7647
+评估 forward 进度: 7200/7647
+评估 forward 进度: 7300/7647
+评估 forward 进度: 7400/7647
+评估 forward 进度: 7500/7647
+评估 forward 进度: 7600/7647
+anomaly map 已逐 batch 合成完成
+Eval arrays ready: labels=(7647,), masks=(7647, 256, 256), maps=(7647, 256, 256), bootstrap_iters=500
+Computing image-level metrics and 95CI...
+[Slice-Img]  AUROC=60.72% (95% CI 59.51-62.02%)  AUPR=60.42% (95% CI 58.85-62.03%)  F1=66.63% (95% CI 65.69-67.73%)
+Computing pixel-level Slice-Px(abn) metrics and 95CI...
+Computing exact full-pixel point estimates with sklearn...
+Pixel histogram slice bootstrap: 50/500
+Pixel histogram slice bootstrap: 100/500
+Pixel histogram slice bootstrap: 150/500
+Pixel histogram slice bootstrap: 200/500
+Pixel histogram slice bootstrap: 250/500
+Pixel histogram slice bootstrap: 300/500
+Pixel histogram slice bootstrap: 350/500
+Pixel histogram slice bootstrap: 400/500
+Pixel histogram slice bootstrap: 450/500
+Pixel histogram slice bootstrap: 500/500
+[Slice-Px(abn)]  AUROC=93.37% (95% CI 93.17-93.57%)  AUPR=8.40% (95% CI 7.89-8.94%)
+Computing patient-level metrics and 95CI...
+开始保存热力图: ./saved_results/petct_fdg/PETCT_FDG_PETCT/heatmaps/EPOCH_030
+[推理模式]
+[Slice-Img]  AUROC=60.72% (95% CI 59.51-62.02%)  AUPR=60.42% (95% CI 58.85-62.03%)  F1=66.63% (95% CI 65.69-67.73%)
+[Slice-Px(abn)]  AUROC=93.37% (95% CI 93.17-93.57%)  AUPR=8.40% (95% CI 7.89-8.94%)
+[Patient(101/202abn)]  AUROC=58.78% (95% CI 50.64-66.12%)  AUPR=59.89% (95% CI 50.91-69.75%)  F1=68.13% (95% CI 62.29-75.17%)
+热力图已保存到: ./saved_results/petct_fdg/PETCT_FDG_PETCT/heatmaps/EPOCH_030

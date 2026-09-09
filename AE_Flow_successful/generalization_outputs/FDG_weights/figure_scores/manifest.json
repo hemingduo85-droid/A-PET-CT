@@ -1,0 +1,19 @@
+{
+  "method": "AE-Flow",
+  "dataset": "DeepPSMA",
+  "source_dataset": "FDG",
+  "target_dataset": "DeepPSMA",
+  "modality": "ct_pet",
+  "data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1",
+  "data_view": "/data/cyf/codes/A-PET-CT/AE_Flow_successful/generalization_outputs/FDG_weights/figure_scores/_deeppsma_view",
+  "patient_level_valid": false,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/AE_Flow_successful/checkpoints/FDG/ct_pet/best_FDG_ct_pet_model.pth",
+  "score_rule": "top 1% mean from AE-Flow residual map",
+  "slice_csv": "generalization_outputs/FDG_weights/figure_scores/slice_scores.csv",
+  "patient_csv": "generalization_outputs/FDG_weights/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "generalization_outputs/FDG_weights/figure_scores/pixel_slice_metrics.csv",
+  "n_slices": 2324,
+  "n_patients": 1747,
+  "n_pixel_slices": 1162,
+  "patient_aggregation": "max slice anomaly_score"
+}

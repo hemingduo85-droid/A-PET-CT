@@ -1,0 +1,19 @@
+{
+  "method": "VisualAD",
+  "dataset": "DeepPSMA",
+  "source_dataset": "PSMA",
+  "target_dataset": "DeepPSMA",
+  "original_data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1",
+  "test_data_path": "/data/cyf/codes/A-PET-CT/VisualAD-main/generalization_outputs/PSMA_weights/figure_scores/_deeppsma_view",
+  "modality": "petct",
+  "checkpoint": "./experiments/psma_petct/epoch_30.pth",
+  "slice_csv": "generalization_outputs/PSMA_weights/figure_scores/slice_scores.csv",
+  "patient_csv": "generalization_outputs/PSMA_weights/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "generalization_outputs/PSMA_weights/figure_scores/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 0,
+  "n_patients": 0,
+  "n_pixel_slices": 0,
+  "n_abnormal_slices": 0,
+  "n_abnormal_patients": 0
+}

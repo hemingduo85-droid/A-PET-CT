@@ -1,0 +1,16 @@
+Device: cuda:3
+Args: Namespace(data_path='/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='3', seed=42, save_dir='./saved_results', save_name='petct_fdg_ci', eval_only=True, ckpt_path='/data/cyf/codes/A-PET-CT/Dinomaly/saved_results/pet_fdg_old/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None, ci_bootstrap=500, ci_seed=42, ci_pixel_max_samples=0)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 7647
+Loading checkpoint from /data/cyf/codes/A-PET-CT/Dinomaly/saved_results/pet_fdg_old/epoch_30_model.pth
+--- Final evaluation ---
+[Slice-Img]  AUROC=77.48% (95% CI 76.44-78.51%)  AUPR=75.37% (95% CI 73.97-76.82%)  F1=71.85% (95% CI 71.27-72.72%)
+Device: cuda:3
+Args: Namespace(data_path='/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='3', seed=42, save_dir='./saved_results', save_name='petct_fdg_ci', eval_only=True, ckpt_path='/data/cyf/codes/A-PET-CT/Dinomaly/saved_results/pet_fdg_old/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None, ci_bootstrap=500, ci_seed=42, ci_pixel_max_samples=0)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 7647
+Loading checkpoint from /data/cyf/codes/A-PET-CT/Dinomaly/saved_results/pet_fdg_old/epoch_30_model.pth
+--- Final evaluation ---
+[Slice-Img]  AUROC=77.48% (95% CI 76.44-78.51%)  AUPR=75.37% (95% CI 73.97-76.82%)  F1=71.85% (95% CI 71.27-72.72%)

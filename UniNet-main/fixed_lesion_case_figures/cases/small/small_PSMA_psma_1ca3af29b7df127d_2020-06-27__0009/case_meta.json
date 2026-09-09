@@ -1,0 +1,13 @@
+{
+  "method": "UniNet",
+  "group": "small",
+  "tracer": "PSMA",
+  "patient": "psma_1ca3af29b7df127d_2020-06-27",
+  "slice": "0009",
+  "score": 1.4592536687850952,
+  "score_mode": "max pixel score",
+  "threshold": 1.193814754486084,
+  "best_f1": 0.34642493922919004,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/UniNet-main/ckpts/PETCT_PSMA_PETCT/EPOCH_030.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/UniNet-main/fixed_lesion_case_figures/cases/small/small_PSMA_psma_1ca3af29b7df127d_2020-06-27__0009"
+}

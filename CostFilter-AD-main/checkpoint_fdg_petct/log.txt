@@ -1,0 +1,11 @@
+[13:50:33] Args: {'dataset': 'fdg', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG', 'modality': 'petct', 'gpu': 4, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 30, 'dinomaly_eval_freq': 30, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_fdg_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_fdg_petct/heatmaps/fdg/petct', 'heatmap_limit': 128, 'ci_iters': 500, 'ci_seed': 42, 'ci_pixel_max_samples': 0, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': False, 'test_stage': 'costfilter', 'dataset_tag': 'fdg', 'dinomaly_ckpt': './checkpoint_fdg_petct/dinomaly_fdg_petct.pth', 'costfilter_ckpt': './checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth', 'device': 'cuda:4'}
+[13:50:33] Device: cuda:4
+[13:50:33] ============================================================
+[13:50:33] Phase 1: Training Dinomaly (unsupervised reconstruction)
+[13:50:33] ============================================================
+[13:52:10] Args: {'dataset': 'fdg', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG', 'modality': 'petct', 'gpu': 4, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 30, 'dinomaly_eval_freq': 30, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_fdg_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_fdg_petct/heatmaps/fdg/petct', 'heatmap_limit': 128, 'ci_iters': 500, 'ci_seed': 42, 'ci_pixel_max_samples': 0, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': False, 'test_stage': 'costfilter', 'dataset_tag': 'fdg', 'dinomaly_ckpt': './checkpoint_fdg_petct/dinomaly_fdg_petct.pth', 'costfilter_ckpt': './checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth', 'device': 'cuda:4'}
+[13:52:10] Device: cuda:4
+[13:52:10] ============================================================
+[13:52:10] Phase 1: Training Dinomaly (unsupervised reconstruction)
+[13:52:10] ============================================================
+[13:52:10] Train slices: 15625, Test slices: 7647

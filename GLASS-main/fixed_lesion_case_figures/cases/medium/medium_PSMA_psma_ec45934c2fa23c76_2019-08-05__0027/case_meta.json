@@ -1,0 +1,13 @@
+{
+  "method": "GLASS",
+  "group": "medium",
+  "tracer": "PSMA",
+  "patient": "psma_ec45934c2fa23c76_2019-08-05",
+  "slice": "0027",
+  "score": 0.2372252522490737,
+  "score_mode": "GLASS top-1% mean score",
+  "threshold": 0.2328522652387619,
+  "best_f1": 0.24835160268833112,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/GLASS-main/results/psma_petct/models/backbone_0/petct_petct/ckpt_epoch_30.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/GLASS-main/fixed_lesion_case_figures/cases/medium/medium_PSMA_psma_ec45934c2fa23c76_2019-08-05__0027"
+}

@@ -1,0 +1,17 @@
+{
+  "method": "PhyTwin_PETCT_FDG",
+  "dataset": "DeepPSMA",
+  "source_dataset": "FDG",
+  "target_dataset": "DeepPSMA",
+  "data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1",
+  "checkpoint": "./ckpts/PhyTwin_PETCT_FDG/BEST_PHYTWIN.pth",
+  "slice_csv": "generalization_outputs/FDG_weights/figure_scores/slice_scores.csv",
+  "patient_csv": "generalization_outputs/FDG_weights/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "generalization_outputs/FDG_weights/figure_scores/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 2324,
+  "n_patients": 2,
+  "n_pixel_slices": 1162,
+  "n_abnormal_slices": 1162,
+  "n_abnormal_patients": 1
+}

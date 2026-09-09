@@ -1,0 +1,30 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG
+Experiment: PhyTwin_PETCT_FDG_no_uncertainty_residual
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_FDG_no_uncertainty_residual
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: disabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_FDG_no_uncertainty_residual/BEST_PHYTWIN.pth
+Static PHYSIO prior disabled by --no_physio after checkpoint loading.
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Computing image-level metrics and 95CI...
+[Slice-Img]  AUROC=77.37% (95% CI 76.18-78.50%)  AUPR=74.64% (95% CI 73.06-76.18%)  F1=72.23% (95% CI 71.32-73.38%)
+Computing pixel-level Slice-Px(abn) metrics and 95CI...
+Computing exact full-pixel point estimates with sklearn...
+Pixel histogram slice bootstrap: 50/500
+Pixel histogram slice bootstrap: 100/500
+Pixel histogram slice bootstrap: 150/500
+Pixel histogram slice bootstrap: 200/500
+Pixel histogram slice bootstrap: 250/500
+Pixel histogram slice bootstrap: 300/500
+Pixel histogram slice bootstrap: 350/500
+Pixel histogram slice bootstrap: 400/500
+Pixel histogram slice bootstrap: 450/500
+Pixel histogram slice bootstrap: 500/500
+[Slice-Px(abn)]  AUROC=98.79% (95% CI 98.74-98.83%)  AUPR=42.33% (95% CI 40.83-43.68%)
+Computing patient-level metrics and 95CI...
+Saved visualizations to ./ablation_fdg_m1_no_uncertainty_residual_only/PhyTwin_PETCT_FDG_no_uncertainty_residual/visualizations
+Saved slice score table to ./ablation_fdg_m1_no_uncertainty_residual_only/PhyTwin_PETCT_FDG_no_uncertainty_residual/slice_scores.csv
+[Slice-Img]  AUROC=77.37% (95% CI 76.18-78.50%)  AUPR=74.64% (95% CI 73.06-76.18%)  F1=72.23% (95% CI 71.32-73.38%)
+[Slice-Px(abn)]  AUROC=98.79% (95% CI 98.74-98.83%)  AUPR=42.33% (95% CI 40.83-43.68%)
+[Patient(101/202abn)]  AUROC=78.95% (95% CI 72.97-84.87%)  AUPR=75.57% (95% CI 65.46-84.44%)  F1=77.92% (95% CI 72.12-83.02%)

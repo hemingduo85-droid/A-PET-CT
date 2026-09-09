@@ -1,0 +1,58 @@
+{
+  "data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA",
+  "pixel_metrics_csv": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/pixel_slice_metrics.csv",
+  "checkpoint": "./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth",
+  "output_dir": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/twin_segmentation_figure",
+  "figure_outputs": {
+    "png": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/twin_segmentation_figure/psma_twin_segmentation_figure.png",
+    "tiff": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/twin_segmentation_figure/psma_twin_segmentation_figure.tiff",
+    "pdf": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/twin_segmentation_figure/psma_twin_segmentation_figure.pdf",
+    "svg": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/twin_segmentation_figure/psma_twin_segmentation_figure.svg"
+  },
+  "ground_truth_figure_outputs": {
+    "png": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/twin_segmentation_figure/psma_twin_segmentation_ground_truth.png",
+    "tiff": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/twin_segmentation_figure/psma_twin_segmentation_ground_truth.tiff",
+    "pdf": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/twin_segmentation_figure/psma_twin_segmentation_ground_truth.pdf",
+    "svg": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/twin_segmentation_figure/psma_twin_segmentation_ground_truth.svg"
+  },
+  "candidate_contact_sheet": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/twin_segmentation_figure/candidate_contact_sheet.png",
+  "n_scanned_nonempty_masks": 798,
+  "n_inference_candidates": 59,
+  "n_inferred": 59,
+  "selection_gates": {
+    "min_lesion_pixels": 120,
+    "min_visual_precision": 0.3,
+    "min_visual_dice": 0.25
+  },
+  "missing_inference_candidates": [],
+  "scenes": [
+    "upper_compact",
+    "whole_body_disseminated",
+    "lower_compact",
+    "upper_multifocal"
+  ],
+  "manual_overrides": {},
+  "labels": {
+    "ct": "Normalized CT intensity",
+    "pet": "Normalized PET uptake",
+    "anomaly": "PhyTwin anomaly score (a.u.)",
+    "overlay": {
+      "TP": [
+        0,
+        190,
+        0
+      ],
+      "FN": [
+        230,
+        35,
+        35
+      ],
+      "FP": [
+        30,
+        145,
+        235
+      ]
+    }
+  },
+  "selection_note": "Representative evaluation cases were selected using ground-truth morphology and localization metrics; this is not an unbiased performance estimate."
+}

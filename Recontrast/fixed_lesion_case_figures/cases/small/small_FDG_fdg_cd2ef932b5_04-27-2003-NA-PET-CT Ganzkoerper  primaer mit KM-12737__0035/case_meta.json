@@ -1,0 +1,13 @@
+{
+  "method": "ReContrast",
+  "group": "small",
+  "tracer": "FDG",
+  "patient": "fdg_cd2ef932b5_04-27-2003-NA-PET-CT Ganzkoerper  primaer mit KM-12737",
+  "slice": "0035",
+  "score": 0.14574790000915527,
+  "score_mode": "top 0.0100 pixel ratio mean",
+  "threshold": 0.06354954838752747,
+  "best_f1": 0.010606952392190004,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/Recontrast/results/recontrast_fdg_petct/epoch30_fdg_petct.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/Recontrast/fixed_lesion_case_figures/cases/small/small_FDG_fdg_cd2ef932b5_04-27-2003-NA-PET-CT Ganzkoerper  primaer mit KM-12737__0035"
+}

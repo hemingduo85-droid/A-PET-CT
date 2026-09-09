@@ -1,0 +1,9 @@
+[Slice-Img]  AUROC=65.86% (95%CI 64.58-67.02%)  AP=66.34% (95%CI 64.77-67.89%)  F1=67.88% (95%CI 66.95-68.92%)
+[Slice-Px(abn)]  AUROC=95.18% (95%CI 95.11-95.25%)  AUPR=24.36% (95%CI 23.82-24.95%)
+[Patient(101/202abn)]  AUROC=73.41% (95%CI 66.27-79.75%)  AP=73.87% (95%CI 65.22-82.40%)  F1=71.06% (95%CI 66.67-77.85%)
+
+CI protocol:
+- All point estimates use the full available evaluation data.
+- Image-level CI: slice-level bootstrap with 500 iterations.
+- Pixel-level CI: abnormal-slice-level bootstrap with 500 iterations; each bootstrap sample resamples abnormal slices with replacement, then computes pixel-level AUROC/AUPR on all pixels from the sampled slices.
+- Patient-level CI: patient-level bootstrap with 500 iterations.

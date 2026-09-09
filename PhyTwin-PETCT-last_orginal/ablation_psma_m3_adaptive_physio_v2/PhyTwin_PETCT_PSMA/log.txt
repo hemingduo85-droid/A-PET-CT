@@ -1,0 +1,13 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: enabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Saved visualizations to ./ablation_psma_m3_adaptive_physio_v2/PhyTwin_PETCT_PSMA/visualizations
+Saved slice score table to ./ablation_psma_m3_adaptive_physio_v2/PhyTwin_PETCT_PSMA/slice_scores.csv
+[Slice-Img]  AUROC=88.25%  AP=90.69%  F1=80.38%
+[Slice-Px(abn)]  AUROC=97.74%  AP=44.17%  F1=48.74%
+[Patient(18/36abn)]  AUROC=94.44%  AP=95.27%  F1=88.89%  Sens@90Spec=72.22%  Sens@95Spec=72.22%

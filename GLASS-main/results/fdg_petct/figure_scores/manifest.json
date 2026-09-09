@@ -1,0 +1,16 @@
+{
+  "repo": "GLASS-main",
+  "dataset": "fdg",
+  "modality": "petct",
+  "data_path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG",
+  "save_dir": "results/fdg_petct",
+  "checkpoint": "results/fdg_petct/models/backbone_0/petct_petct/ckpt_epoch_30.pth",
+  "score_rule": "GLASS anomaly map top-1% mean, matching glass.GLASS._predict",
+  "patient_rule": "max slice score per patient",
+  "slice_scores_csv": "results/fdg_petct/figure_scores/slice_scores.csv",
+  "patient_scores_csv": "results/fdg_petct/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "results/fdg_petct/figure_scores/pixel_slice_metrics.csv",
+  "n_slices": 7647,
+  "n_patients": 202,
+  "n_pixel_slices": 3750
+}

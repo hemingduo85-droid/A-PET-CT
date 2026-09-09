@@ -1,0 +1,89 @@
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='pet_fdg_old', eval_only=False, ckpt_path=None, max_ratio=0.01, vis_num=20, anomaly_dir=None)
+Input mode: dual
+Image size: 256, Crop size: 252
+Train samples: 15625, Test samples: 7647
+Trainable parameters: 61425408
+Total iterations: 29280, Warmup: 100
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='pet_fdg_old', eval_only=False, ckpt_path=None, max_ratio=0.01, vis_num=20, anomaly_dir=None)
+Input mode: dual
+Image size: 256, Crop size: 252
+Train samples: 15625, Test samples: 7647
+Trainable parameters: 61425408
+Total iterations: 29280, Warmup: 100
+Epoch [1/30], Loss: 0.0697
+Epoch [2/30], Loss: 0.0438
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='pet_fdg_old', eval_only=False, ckpt_path=None, max_ratio=0.01, vis_num=20, anomaly_dir=None)
+Input mode: dual
+Image size: 256, Crop size: 252
+Train samples: 15625, Test samples: 7647
+Trainable parameters: 61425408
+Total iterations: 29280, Warmup: 100
+Epoch [1/30], Loss: 0.0697
+Epoch [2/30], Loss: 0.0438
+Epoch [3/30], Loss: 0.0415
+Epoch [4/30], Loss: 0.0398
+Epoch [5/30], Loss: 0.0384
+Epoch [6/30], Loss: 0.0373
+Epoch [7/30], Loss: 0.0365
+Epoch [8/30], Loss: 0.0358
+Epoch [9/30], Loss: 0.0351
+Epoch [10/30], Loss: 0.0346
+Epoch [11/30], Loss: 0.0341
+Epoch [12/30], Loss: 0.0337
+Epoch [13/30], Loss: 0.0333
+Epoch [14/30], Loss: 0.0329
+Epoch [15/30], Loss: 0.0326
+Epoch [16/30], Loss: 0.0323
+Epoch [17/30], Loss: 0.0319
+Epoch [18/30], Loss: 0.0317
+Epoch [19/30], Loss: 0.0314
+Epoch [20/30], Loss: 0.0312
+Epoch [21/30], Loss: 0.0309
+Epoch [22/30], Loss: 0.0307
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='pet_fdg_old', eval_only=False, ckpt_path=None, max_ratio=0.01, vis_num=20, anomaly_dir=None)
+Input mode: dual
+Image size: 256, Crop size: 252
+Train samples: 15625, Test samples: 7647
+Trainable parameters: 61425408
+Total iterations: 29280, Warmup: 100
+Epoch [1/30], Loss: 0.0697
+Epoch [2/30], Loss: 0.0438
+Epoch [3/30], Loss: 0.0415
+Epoch [4/30], Loss: 0.0398
+Epoch [5/30], Loss: 0.0384
+Epoch [6/30], Loss: 0.0373
+Epoch [7/30], Loss: 0.0365
+Epoch [8/30], Loss: 0.0358
+Epoch [9/30], Loss: 0.0351
+Epoch [10/30], Loss: 0.0346
+Epoch [11/30], Loss: 0.0341
+Epoch [12/30], Loss: 0.0337
+Epoch [13/30], Loss: 0.0333
+Epoch [14/30], Loss: 0.0329
+Epoch [15/30], Loss: 0.0326
+Epoch [16/30], Loss: 0.0323
+Epoch [17/30], Loss: 0.0319
+Epoch [18/30], Loss: 0.0317
+Epoch [19/30], Loss: 0.0314
+Epoch [20/30], Loss: 0.0312
+Epoch [21/30], Loss: 0.0309
+Epoch [22/30], Loss: 0.0307
+Epoch [23/30], Loss: 0.0305
+Epoch [24/30], Loss: 0.0303
+Epoch [25/30], Loss: 0.0302
+Epoch [26/30], Loss: 0.0301
+Epoch [27/30], Loss: 0.0299
+Epoch [28/30], Loss: 0.0298
+Epoch [29/30], Loss: 0.0298
+Epoch [30/30], Loss: 0.0297
+================================================================================
+Saved final epoch model to ./saved_results/pet_fdg_old/epoch_30_model.pth
+--- Final evaluation ---
+[Slice-Img]  AUROC=77.48%  AP=75.39%  F1=71.85%
+[Slice-Px(abn)]  AUROC=96.04%  AP=20.24%  F1=30.85%
+[Patient(101/202abn)]  AUROC=82.31%  AP=78.49%  F1=77.50%  Sens@90Spec=54.46%  Sens@95Spec=39.60%
+Saved anomaly images to ./saved_results/pet_fdg_old/anomaly_maps (20 cases)

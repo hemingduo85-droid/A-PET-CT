@@ -1,0 +1,15 @@
+{
+  "method": "ReContrast",
+  "data_dir": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG",
+  "modality": "petct",
+  "checkpoint": "./results/recontrast_fdg_petct/epoch30_fdg_petct.pth",
+  "slice_csv": "./results/recontrast_fdg_petct/figure_scores/slice_scores.csv",
+  "patient_csv": "./results/recontrast_fdg_petct/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "./results/recontrast_fdg_petct/figure_scores/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 7647,
+  "n_patients": 202,
+  "n_pixel_slices": 3778,
+  "n_abnormal_slices": 3778,
+  "n_abnormal_patients": 101
+}

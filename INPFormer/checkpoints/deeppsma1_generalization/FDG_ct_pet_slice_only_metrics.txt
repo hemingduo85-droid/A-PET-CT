@@ -1,0 +1,4 @@
+checkpoint=/data/cyf/codes/A-PET-CT/INPFormer/checkpoints/FDG/ct_pet/model.pth
+data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1
+[Slice-Img]  AUROC=24.13% (95% CI 22.29-25.94%)  AUPR=35.46% (95% CI 33.72-37.61%)  F1=66.67% (95% CI 64.90-68.50%)
+[Slice-Px(abn)]  AUROC=70.98% (95% CI 69.94-72.04%)  AUPR=0.76% (95% CI 0.70-0.83%)

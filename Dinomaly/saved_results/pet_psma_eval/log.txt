@@ -1,0 +1,20 @@
+Device: cuda:5
+Args: Namespace(data_path='/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='5', seed=42, save_dir='./saved_results', save_name='pet_psma_eval', eval_only=True, ckpt_path='./saved_results/pet_psma/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None, ci_bootstrap=500, ci_seed=42, ci_pixel_max_samples=200000, cache_path=None, export_only=False)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 1546
+Loading checkpoint from ./saved_results/pet_psma/epoch_30_model.pth
+--- Final evaluation ---
+[Slice-Img]  AUROC=87.09% (95% CI 85.45-88.71%)  AUPR=88.20% (95% CI 86.03-90.10%)  F1=79.42% (95% CI 77.92-81.86%)
+Device: cuda:5
+Args: Namespace(data_path='/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='5', seed=42, save_dir='./saved_results', save_name='pet_psma_eval', eval_only=True, ckpt_path='./saved_results/pet_psma/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None, ci_bootstrap=500, ci_seed=42, ci_pixel_max_samples=200000, cache_path=None, export_only=False, progress_interval=20)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 1546
+Loading checkpoint from ./saved_results/pet_psma/epoch_30_model.pth
+--- Final evaluation ---
+Eval/export progress: batch 20/97, samples 320/1546
+Eval/export progress: batch 40/97, samples 640/1546
+Eval/export progress: batch 60/97, samples 960/1546
+Eval/export progress: batch 80/97, samples 1280/1546
+[Slice-Img]  AUROC=87.09% (95% CI 85.45-88.71%)  AUPR=88.20% (95% CI 86.03-90.10%)  F1=79.42% (95% CI 77.92-81.86%)

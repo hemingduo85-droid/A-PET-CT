@@ -1,0 +1,66 @@
+[14:30:35] Args: {'mode': 'test', 'dataset': 'psma', 'data_path': '/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA', 'modality': 'petct', 'gpu': 1, 'batch_size': 16, 'num_workers': 4, 'image_size': 256, 'epochs': 30, 'lr': 0.005, 'weight_decay': 0.0001, 'loss_lam': 5.0, 'depths_decoder': [3, 4, 6, 3], 'scan_type': 'hilbert', 'num_direction': 8, 'pretrained_encoder': '/data/cyf/codes/A-PET-CT/MambaAD-main/model/pretrain/resnet34-b627a593.pth', 'save_dir': '/data/cyf/codes/A-PET-CT/MambaAD-main/checkpoints/psma_petct', 'weight_path': '/data/cyf/codes/A-PET-CT/MambaAD-main/checkpoints/psma_petct/mambaad_psma_petct_epoch30.pth', 'sigma': 4, 'save_heatmaps': 0, 'save_all_heatmaps': False, 'heatmap_dir': '/data/cyf/codes/A-PET-CT/MambaAD-main/checkpoints/psma_petct/heatmaps', 'seed': 42, 'should_save_heatmaps': False, 'device': 'cuda:1'}
+[14:30:35] Device: cuda:1
+[14:30:35] Test slices: 1546
+[14:31:38] Args: {'mode': 'train', 'dataset': 'psma', 'data_path': '/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA', 'modality': 'petct', 'gpu': 1, 'batch_size': 16, 'num_workers': 4, 'image_size': 256, 'epochs': 30, 'lr': 0.005, 'weight_decay': 0.0001, 'loss_lam': 5.0, 'depths_decoder': [3, 4, 6, 3], 'scan_type': 'hilbert', 'num_direction': 8, 'pretrained_encoder': '/data/cyf/codes/A-PET-CT/MambaAD-main/model/pretrain/resnet34-b627a593.pth', 'save_dir': '/data/cyf/codes/A-PET-CT/MambaAD-main/checkpoints/psma_petct', 'weight_path': '/data/cyf/codes/A-PET-CT/MambaAD-main/checkpoints/psma_petct/mambaad_psma_petct_epoch30.pth', 'sigma': 4, 'save_heatmaps': 0, 'save_all_heatmaps': False, 'heatmap_dir': '/data/cyf/codes/A-PET-CT/MambaAD-main/checkpoints/psma_petct/heatmaps', 'seed': 42, 'should_save_heatmaps': False, 'device': 'cuda:1'}
+[14:31:38] Device: cuda:1
+[14:31:38] Train slices: 1659,  Test slices: 1546
+[14:31:40] Trainable params: 17.44M  Total params: 25.65M
+[14:32:19] Epoch 1/30  loss=14.357785  lr=0.005000
+[14:33:09] Epoch 2/30  loss=1.663744  lr=0.004986
+[14:33:50] Epoch 3/30  loss=1.356186  lr=0.004946
+[14:34:32] Epoch 4/30  loss=1.281513  lr=0.004879
+[14:35:08] Epoch 5/30  loss=1.208244  lr=0.004786
+[14:35:46] Epoch 6/30  loss=1.163290  lr=0.004668
+[14:36:22] Epoch 7/30  loss=1.117192  lr=0.004527
+[14:36:57] Epoch 8/30  loss=1.162655  lr=0.004364
+[14:37:35] Epoch 9/30  loss=1.103308  lr=0.004181
+[14:38:15] Epoch 10/30  loss=1.103114  lr=0.003980
+[14:38:57] Epoch 11/30  loss=1.087568  lr=0.003763
+[14:39:38] Epoch 12/30  loss=1.044510  lr=0.003532
+[14:40:20] Epoch 13/30  loss=1.014802  lr=0.003290
+[14:40:55] Epoch 14/30  loss=0.996797  lr=0.003040
+[14:41:36] Epoch 15/30  loss=0.969568  lr=0.002784
+[14:42:16] Epoch 16/30  loss=0.951227  lr=0.002525
+[14:42:58] Epoch 17/30  loss=0.933483  lr=0.002266
+[14:43:39] Epoch 18/30  loss=0.918723  lr=0.002010
+[14:44:21] Epoch 19/30  loss=0.902803  lr=0.001760
+[14:44:59] Epoch 20/30  loss=0.892452  lr=0.001518
+[14:45:41] Epoch 21/30  loss=0.877306  lr=0.001288
+[14:46:23] Epoch 22/30  loss=0.870857  lr=0.001070
+[14:47:04] Epoch 23/30  loss=0.859743  lr=0.000869
+[14:47:46] Epoch 24/30  loss=0.847338  lr=0.000686
+[14:48:27] Epoch 25/30  loss=0.843917  lr=0.000523
+[14:49:01] Epoch 26/30  loss=0.839030  lr=0.000382
+[14:49:35] Epoch 27/30  loss=0.829960  lr=0.000264
+[14:50:11] Epoch 28/30  loss=0.826089  lr=0.000171
+[14:50:50] Epoch 29/30  loss=0.820976  lr=0.000104
+[14:51:32] Epoch 30/30  loss=0.823587  lr=0.000064
+[14:54:13] [E30] [Slice-Img] AUROC=81.62%  AP=81.08%  F1=76.84%
+[14:54:13] [E30] [Slice-Px(abn)] AUROC=89.99%  AP=10.77%  F1=19.80%
+[14:54:13] [E30] [Patient(18/36abn)] AUROC=74.69%  AP=68.20%  F1=79.07%  Sens@90Spec=27.78%  Sens@95Spec=0.00%
+[14:54:14] Saved final epoch 30 checkpoint to /data/cyf/codes/A-PET-CT/MambaAD-main/checkpoints/psma_petct/mambaad_psma_petct_epoch30.pth
+[14:54:14] Heatmap saving disabled (--save_heatmaps 0).
+Args: {'mode': 'test', 'dataset': 'psma', 'data_path': '/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA', 'modality': 'petct', 'gpu': 0, 'batch_size': 16, 'num_workers': 4, 'image_size': 256, 'epochs': 30, 'lr': 0.005, 'weight_decay': 0.0001, 'loss_lam': 5.0, 'depths_decoder': [3, 4, 6, 3], 'scan_type': 'hilbert', 'num_direction': 8, 'pretrained_encoder': '/data/cyf/codes/A-PET-CT/MambaAD-main/model/pretrain/resnet34-b627a593.pth', 'save_dir': '/data/cyf/codes/A-PET-CT/MambaAD-main/checkpoints/psma_petct', 'weight_path': '/data/cyf/codes/A-PET-CT/MambaAD-main/checkpoints/psma_petct/mambaad_psma_petct_epoch30.pth', 'sigma': 4, 'save_heatmaps': 0, 'save_all_heatmaps': False, 'heatmap_dir': '/data/cyf/codes/A-PET-CT/MambaAD-main/checkpoints/psma_petct/heatmaps', 'ci_bootstrap': 500, 'ci_seed': 20260717, 'ci_max_samples': 200000, 'hist_bins': 16384, 'progress_every': 50, 'seed': 42, 'should_save_heatmaps': False, 'device': 'cuda:0'}
+Device: cuda:0
+Test slices: 1546
+Test mode: skipped encoder pretrain loading; loading full trained checkpoint next.
+Loaded checkpoint from /data/cyf/codes/A-PET-CT/MambaAD-main/checkpoints/psma_petct/mambaad_psma_petct_epoch30.pth (epoch=30)
+Computing image-level metrics and 95CI...
+[Slice-Img]  AUROC=81.61% (95% CI 79.48-83.73%)  AUPR=81.06% (95% CI 78.04-84.06%)  F1=76.84% (95% CI 75.20-79.11%)
+Computing pixel-level Slice-Px(abn) metrics and 95CI...
+Computing exact full-pixel point estimates with sklearn...
+Pixel histogram slice bootstrap: 50/500
+Pixel histogram slice bootstrap: 100/500
+Pixel histogram slice bootstrap: 150/500
+Pixel histogram slice bootstrap: 200/500
+Pixel histogram slice bootstrap: 250/500
+Pixel histogram slice bootstrap: 300/500
+Pixel histogram slice bootstrap: 350/500
+Pixel histogram slice bootstrap: 400/500
+Pixel histogram slice bootstrap: 450/500
+Pixel histogram slice bootstrap: 500/500
+[Slice-Px(abn)]  AUROC=89.99% (95% CI 89.19-90.70%)  AUPR=10.76% (95% CI 9.65-12.00%)
+Computing patient-level metrics and 95CI...
+[Slice-Img]  AUROC=81.61% (95% CI 79.48-83.73%)  AUPR=81.06% (95% CI 78.04-84.06%)  F1=76.84% (95% CI 75.20-79.11%)
+[Slice-Px(abn)]  AUROC=89.99% (95% CI 89.19-90.70%)  AUPR=10.76% (95% CI 9.65-12.00%)
+[Patient(18/36abn)] AUROC=74.69% (95% CI 56.45-90.50%)  AUPR=68.20% (95% CI 51.64-91.48%)  F1=79.07% (95% CI 64.61-92.00%)

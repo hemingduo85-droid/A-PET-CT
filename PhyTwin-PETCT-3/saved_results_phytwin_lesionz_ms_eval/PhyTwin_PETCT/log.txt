@@ -1,0 +1,15 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA
+Labels and masks are used only for evaluation and visualization.
+Loading checkpoint from ./ckpts/PhyTwin_PETCT/BEST_PHYTWIN.pth
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA
+Labels and masks are used only for evaluation and visualization.
+Loading checkpoint from ./ckpts/PhyTwin_PETCT/BEST_PHYTWIN.pth
+Checkpoint lacks multi-scale lesion_z calibration; recalibrating on train/normal without retraining.
+Calibrated multi-scale lesion_z | normal_lesion_ms_mean=5.1338 normal_lesion_ms_std=3.5782
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Saved visualizations to ./saved_results_phytwin_lesionz_ms_eval/PhyTwin_PETCT/visualizations
+Saved slice score table to ./saved_results_phytwin_lesionz_ms_eval/PhyTwin_PETCT/slice_scores.csv
+[Slice-Img]  AUROC=87.18%  AP=89.64%  F1=79.71%
+[Slice-Px(abn)]  AUROC=96.23%  AP=35.37%  F1=40.75%
+[Patient(18/36abn)]  AUROC=90.12%  AP=91.94%  F1=82.05%  Sens@90Spec=66.67%  Sens@95Spec=66.67%

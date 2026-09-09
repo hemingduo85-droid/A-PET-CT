@@ -1,0 +1,15 @@
+{
+  "method": "DAE",
+  "dataset": "FDG",
+  "modality": "ct_pet",
+  "data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG",
+  "score_rule": "top 1% mean from DAE residual map",
+  "inference_rule": "denoising wrapper forward with configured Gaussian noise, matching train.py evaluate()",
+  "slice_csv": "roc_csv_regenerated_20260821/FDG/figure_scores/slice_scores.csv",
+  "patient_csv": "roc_csv_regenerated_20260821/FDG/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "roc_csv_regenerated_20260821/FDG/figure_scores/pixel_slice_metrics.csv",
+  "n_slices": 7647,
+  "n_patients": 202,
+  "n_pixel_slices": 3778,
+  "patient_aggregation": "max slice anomaly_score"
+}

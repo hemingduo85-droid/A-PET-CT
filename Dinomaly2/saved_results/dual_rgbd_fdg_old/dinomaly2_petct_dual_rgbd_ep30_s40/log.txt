@@ -1,0 +1,44 @@
+Device: cuda:7
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG', input_mode='dual_rgbd', mulsen_fusion='mean', num_epochs=30, batch_size=16, num_workers=4, gpu='7', seed=40, save_dir='./saved_results/dual_rgbd_fdg_old', save_name='dinomaly2_petct_dual_rgbd_ep30_s40', eval_only=False, checkpoint=None, max_ratio=0.01)
+输入模式: dual_rgbd — 6通道 [CT³,PET³] DinomalyRGBD（特征级融合）
+图像尺寸: 256, 裁剪尺寸: 252
+训练样本: 15625, 测试样本: 7647
+模型类型: DinomalyRGBD
+可训练参数: 60049408
+总迭代数: 29280, 预热: 100
+Epoch [1/30], Loss: 0.0821
+Epoch [2/30], Loss: 0.0477
+Epoch [3/30], Loss: 0.0447
+Epoch [4/30], Loss: 0.0424
+Epoch [5/30], Loss: 0.0409
+Epoch [6/30], Loss: 0.0402
+Epoch [7/30], Loss: 0.0384
+Epoch [8/30], Loss: 0.0381
+Epoch [9/30], Loss: 0.0368
+Epoch [10/30], Loss: 0.0362
+Epoch [11/30], Loss: 0.0357
+Epoch [12/30], Loss: 0.0351
+Epoch [13/30], Loss: 0.0344
+Epoch [14/30], Loss: 0.0341
+Epoch [15/30], Loss: 0.0337
+Epoch [16/30], Loss: 0.0332
+Epoch [17/30], Loss: 0.0330
+Epoch [18/30], Loss: 0.0329
+Epoch [19/30], Loss: 0.0322
+Epoch [20/30], Loss: 0.0322
+Epoch [21/30], Loss: 0.0319
+Epoch [22/30], Loss: 0.0316
+Epoch [23/30], Loss: 0.0315
+Epoch [24/30], Loss: 0.0312
+Epoch [25/30], Loss: 0.0310
+Epoch [26/30], Loss: 0.0309
+Epoch [27/30], Loss: 0.0308
+Epoch [28/30], Loss: 0.0307
+Epoch [29/30], Loss: 0.0303
+Epoch [30/30], Loss: 0.0304
+================================================================================
+第 30 轮模型已保存: ./saved_results/dual_rgbd_fdg_old/dinomaly2_petct_dual_rgbd_ep30_s40/model.pth
+最终测试结果:
+[Slice-Img]  AUROC=80.22%  AP=77.93%  F1=73.59%
+[Slice-Px(abn)]  AUROC=96.20%  AP=24.43%  F1=33.84%
+[Patient(101/202abn)]  AUROC=86.22%  AP=81.03%  F1=80.53%  Sens@90Spec=55.45%  Sens@95Spec=27.72%

@@ -1,0 +1,24 @@
+{
+  "group_root": "None",
+  "pixel_metrics_csv": null,
+  "output_dir": "saved_results_psma_eval/PhyTwin_PETCT_PSMA/figure_scores/ours_ablation_lesion_heatmaps",
+  "top_k_per_group": 20,
+  "individual_top_k_per_group": 5,
+  "case_selection": "fixed_paper_cases",
+  "checkpoint": "./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth",
+  "panels": [
+    "PET",
+    "CT",
+    "GT",
+    "Pred",
+    "w/o A-PHYSIO",
+    "w/o MS-LAI",
+    "MS-LAI evidence"
+  ],
+  "ms_lai_evidence_note": "The w/o MS-LAI panel shows the post-UCR and post-A-PHYSIO A* heatmap before lesion-aware evidence aggregation. MS-LAI evidence overlays the selected multi-scale candidate components on that same A* map. It is an interpretability visualization, not a new anomaly heatmap and not a top-1% replacement score.",
+  "evidence_outline_colors": {
+    "low_quantile": "green",
+    "middle_quantile": "yellow",
+    "high_quantile": "red"
+  }
+}

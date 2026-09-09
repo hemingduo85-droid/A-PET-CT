@@ -1,0 +1,4 @@
+Best Epoch: 30
+[Slice-Img]  AUROC=64.89%  AP=61.27%  F1=67.27%
+[Slice-Px(abn)]  AUROC=93.98%  AP=14.59%  F1=23.97%
+[Patient(101/202abn)]  AUROC=51.03%  AP=49.47%  F1=67.11%  Sens@90Spec=7.92%  Sens@95Spec=4.95%

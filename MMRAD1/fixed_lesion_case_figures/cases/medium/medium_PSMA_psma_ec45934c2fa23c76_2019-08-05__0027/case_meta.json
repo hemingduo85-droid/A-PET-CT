@@ -1,0 +1,13 @@
+{
+  "method": "MMRAD",
+  "group": "medium",
+  "tracer": "PSMA",
+  "patient": "psma_ec45934c2fa23c76_2019-08-05",
+  "slice": "0027",
+  "score": 0.6829078197479248,
+  "score_mode": "max pixel score",
+  "threshold": 0.3926926255226135,
+  "best_f1": 0.7472726775241356,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/MMRAD_successful/checkpoints/PSMA/ct_pet/model.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/MMRAD_successful/fixed_lesion_case_figures/cases/medium/medium_PSMA_psma_ec45934c2fa23c76_2019-08-05__0027"
+}

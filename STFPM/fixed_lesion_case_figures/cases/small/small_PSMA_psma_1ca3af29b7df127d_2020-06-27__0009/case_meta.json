@@ -1,0 +1,13 @@
+{
+  "method": "STFPM",
+  "group": "small",
+  "tracer": "PSMA",
+  "patient": "psma_1ca3af29b7df127d_2020-06-27",
+  "slice": "0009",
+  "score": 0.189425528049469,
+  "score_mode": "max pixel score",
+  "threshold": 0.10356434434652328,
+  "best_f1": 0.07692304746878181,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/STFPM/snapshots/psma_ct+pet_pseudo_rgb_epoch30.pth.tar",
+  "case_dir": "/data/cyf/codes/A-PET-CT/STFPM/fixed_lesion_case_figures/cases/small/small_PSMA_psma_1ca3af29b7df127d_2020-06-27__0009"
+}

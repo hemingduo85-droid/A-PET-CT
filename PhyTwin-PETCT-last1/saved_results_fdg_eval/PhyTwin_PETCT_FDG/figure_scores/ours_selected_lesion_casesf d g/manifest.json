@@ -1,0 +1,17 @@
+{
+  "group_root": "saved_results_fdg_eval/PhyTwin_PETCT_FDG/figure_scores/lesion_size_groups",
+  "pixel_metrics_csv": "saved_results_fdg_eval/PhyTwin_PETCT_FDG/figure_scores/pixel_slice_metrics.csv",
+  "output_dir": "saved_results_fdg_eval/PhyTwin_PETCT_FDG/figure_scores/ours_selected_lesion_cases",
+  "top_k_per_group": 20,
+  "individual_top_k_per_group": 10,
+  "individual_output": "saved_results_fdg_eval/PhyTwin_PETCT_FDG/figure_scores/ours_selected_lesion_cases/individual_top_cases",
+  "n_individual_saved": 30,
+  "checkpoint": "./ckpts/PhyTwin_PETCT_FDG/BEST_PHYTWIN.pth",
+  "data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG",
+  "quality_metrics": [
+    "pixel_auroc",
+    "pixel_aupr",
+    "hotspot_recall",
+    "hotspot_precision"
+  ]
+}

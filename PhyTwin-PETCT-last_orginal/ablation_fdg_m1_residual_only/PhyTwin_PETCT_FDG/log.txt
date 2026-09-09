@@ -1,0 +1,14 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG
+Experiment: PhyTwin_PETCT_FDG
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_FDG
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: disabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_FDG/BEST_PHYTWIN.pth
+Static PHYSIO prior disabled by --no_physio after checkpoint loading.
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Saved visualizations to ./ablation_fdg_m1_residual_only/PhyTwin_PETCT_FDG/visualizations
+Saved slice score table to ./ablation_fdg_m1_residual_only/PhyTwin_PETCT_FDG/slice_scores.csv
+[Slice-Img]  AUROC=80.93%  AP=80.27%  F1=74.49%
+[Slice-Px(abn)]  AUROC=99.19%  AP=59.27%  F1=58.04%
+[Patient(101/202abn)]  AUROC=81.57%  AP=79.95%  F1=77.98%  Sens@90Spec=44.55%  Sens@95Spec=31.68%

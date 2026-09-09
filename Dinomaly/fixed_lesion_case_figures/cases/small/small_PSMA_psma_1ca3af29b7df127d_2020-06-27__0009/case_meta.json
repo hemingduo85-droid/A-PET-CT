@@ -1,0 +1,13 @@
+{
+  "method": "Dinomaly",
+  "group": "small",
+  "tracer": "PSMA",
+  "patient": "psma_1ca3af29b7df127d_2020-06-27",
+  "slice": "0009",
+  "score": 0.10138249397277832,
+  "score_mode": "top 0.0100 pixel ratio mean",
+  "threshold": 0.10052593797445297,
+  "best_f1": 0.11355306479359122,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/Dinomaly/saved_results/petct_psma/epoch_30_model.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/Dinomaly/fixed_lesion_case_figures/cases/small/small_PSMA_psma_1ca3af29b7df127d_2020-06-27__0009"
+}

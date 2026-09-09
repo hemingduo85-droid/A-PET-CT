@@ -1,0 +1,20 @@
+{
+  "repo": "InversionAD1",
+  "config": "configs/exp_dit_petct/petct_dual.yml",
+  "dataset": "DeepPSMA",
+  "source_dataset": "FDG",
+  "target_dataset": "DeepPSMA",
+  "original_data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1",
+  "input_mode": "dual",
+  "data_path": "/data/cyf/codes/A-PET-CT/InversionAD/generalization_outputs/FDG_weights/figure_scores/_deeppsma_view",
+  "save_dir": "results/exp_dit_petct/fdg/dual",
+  "checkpoint": "results/exp_dit_petct/fdg/dual/model_latest.pth",
+  "score_rule": "mean of top-1% pixels from the inversion anomaly map, matching src.evaluate",
+  "patient_rule": "max slice score per patient",
+  "slice_scores_csv": "generalization_outputs/FDG_weights/figure_scores/slice_scores.csv",
+  "patient_scores_csv": "generalization_outputs/FDG_weights/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "generalization_outputs/FDG_weights/figure_scores/pixel_slice_metrics.csv",
+  "n_slices": 2324,
+  "n_patients": 1747,
+  "n_pixel_slices": 1162
+}

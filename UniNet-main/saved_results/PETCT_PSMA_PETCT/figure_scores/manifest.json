@@ -1,0 +1,16 @@
+{
+  "method": "UniNet",
+  "dataset": "PSMA",
+  "data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA",
+  "modality": "petct",
+  "checkpoint": "./ckpts/PETCT_PSMA_PETCT/EPOCH_030.pth",
+  "slice_csv": "./saved_results/PETCT_PSMA_PETCT/figure_scores/slice_scores.csv",
+  "patient_csv": "./saved_results/PETCT_PSMA_PETCT/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "./saved_results/PETCT_PSMA_PETCT/figure_scores/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 1546,
+  "n_patients": 36,
+  "n_pixel_slices": 798,
+  "n_abnormal_slices": 798,
+  "n_abnormal_patients": 18
+}

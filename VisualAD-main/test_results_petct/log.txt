@@ -1,0 +1,77 @@
+26-06-20 22:33:36.394 - INFO: Test samples: 1546 | Modality: petct
+26-06-20 22:42:09.211 - INFO: 
+[Slice-Img]  AUROC=52.96%  AP=52.21%  F1=68.48%
+[Slice-Px(abn)]  AUROC=53.59%  AP=0.82%  F1=1.75%
+[Patient(18/36abn)]  AUROC=41.98%  AP=44.74%  F1=66.67%  Sens@90Spec=0.00%  Sens@95Spec=0.00%
+26-06-21 18:49:27.031 - INFO: Test samples: 7647 | Modality: petct
+26-06-21 19:06:46.259 - INFO: 
+[Slice-Img]  AUROC=58.07%  AP=55.23%  F1=66.81%
+[Slice-Px(abn)]  AUROC=51.52%  AP=0.58%  F1=1.18%
+[Patient(101/202abn)]  AUROC=56.53%  AP=52.99%  F1=68.03%  Sens@90Spec=10.89%  Sens@95Spec=3.96%
+26-07-12 20:10:31.966 - INFO: Test samples: 1546 | Modality: petct
+26-07-12 20:11:54.579 - INFO: Test samples: 0 | Modality: petct
+26-07-12 20:11:54.710 - INFO: 
+[Image-level finished]
+[Slice-Img]  AUROC=0.00% (95% CI 0.00-0.00%)  AP=0.00% (95% CI 0.00-0.00%)  F1=0.00% (95% CI 0.00-0.00%)
+26-07-12 20:11:54.710 - INFO: 
+[Overall]
+[Slice-Img]  AUROC=0.00% (95% CI 0.00-0.00%)  AP=0.00% (95% CI 0.00-0.00%)  F1=0.00% (95% CI 0.00-0.00%)
+[Slice-Px(abn)]  AUROC=0.00% (95% CI 0.00-0.00%)  AUPR=0.00% (95% CI 0.00-0.00%)
+[Patient(0/0abn)]  AUROC=0.00% (95% CI 0.00-0.00%)  AP=0.00% (95% CI 0.00-0.00%)  F1=0.00% (95% CI 0.00-0.00%)
+26-07-12 20:15:18.777 - INFO: Test samples: 7647 | Modality: petct
+26-07-12 20:17:37.384 - INFO: 
+[Image-level finished]
+[Slice-Img]  AUROC=52.96% (95% CI 50.07-55.85%)  AP=52.21% (95% CI 50.00-54.80%)  F1=68.48% (95% CI 68.17-69.20%)
+26-07-12 20:17:37.384 - INFO: 
+[Overall]
+[Slice-Img]  AUROC=52.96% (95% CI 50.07-55.85%)  AP=52.21% (95% CI 50.00-54.80%)  F1=68.48% (95% CI 68.17-69.20%)
+[Slice-Px(abn)]  AUROC=53.59% (95% CI 53.51-53.68%)  AUPR=0.78% (95% CI 0.75-0.83%)
+[Patient(18/36abn)]  AUROC=41.98% (95% CI 22.66-61.29%)  AP=44.74% (95% CI 38.69-61.51%)  F1=66.67% (95% CI 66.67-74.18%)
+26-07-12 20:24:59.428 - INFO: 
+[Image-level finished]
+[Slice-Img]  AUROC=58.06% (95% CI 56.79-59.34%)  AP=55.23% (95% CI 54.10-56.51%)  F1=66.81% (95% CI 66.49-67.23%)
+26-07-12 20:24:59.429 - INFO: 
+[Overall]
+[Slice-Img]  AUROC=58.06% (95% CI 56.79-59.34%)  AP=55.23% (95% CI 54.10-56.51%)  F1=66.81% (95% CI 66.49-67.23%)
+[Slice-Px(abn)]  AUROC=51.52% (95% CI 51.48-51.57%)  AUPR=0.61% (95% CI 0.58-0.69%)
+[Patient(101/202abn)]  AUROC=56.52% (95% CI 48.56-64.49%)  AP=52.98% (95% CI 47.52-61.17%)  F1=68.03% (95% CI 67.11-71.26%)
+26-07-18 23:52:41.113 - INFO: Test samples: 1546 | Modality: petct
+26-07-18 23:53:51.167 - INFO: Computing image-level metrics and 95CI...
+26-07-18 23:53:52.371 - INFO: [Slice-Img]  AUROC=52.96% (95% CI 49.95-55.69%)  AUPR=52.21% (95% CI 48.67-55.76%)  F1=68.48% (95% CI 66.68-70.63%)
+26-07-18 23:53:52.371 - INFO: Computing pixel-level Slice-Px(abn) metrics and 95CI...
+26-07-18 23:53:52.371 - INFO: Computing exact full-pixel point estimates with sklearn...
+26-07-18 23:54:45.414 - INFO: Pixel histogram slice bootstrap: 50/500
+26-07-18 23:54:56.830 - INFO: Pixel histogram slice bootstrap: 100/500
+26-07-18 23:55:08.236 - INFO: Pixel histogram slice bootstrap: 150/500
+26-07-18 23:55:19.679 - INFO: Pixel histogram slice bootstrap: 200/500
+26-07-18 23:55:31.077 - INFO: Pixel histogram slice bootstrap: 250/500
+26-07-18 23:55:42.611 - INFO: Pixel histogram slice bootstrap: 300/500
+26-07-18 23:55:54.058 - INFO: Pixel histogram slice bootstrap: 350/500
+26-07-18 23:56:06.016 - INFO: Pixel histogram slice bootstrap: 400/500
+26-07-18 23:56:18.269 - INFO: Pixel histogram slice bootstrap: 450/500
+26-07-18 23:56:30.039 - INFO: Pixel histogram slice bootstrap: 500/500
+26-07-18 23:56:30.040 - INFO: [Slice-Px(abn)]  AUROC=53.59% (95% CI 51.89-55.11%)  AUPR=0.82% (95% CI 0.75-0.89%)
+26-07-18 23:56:30.040 - INFO: Computing patient-level metrics and 95CI...
+26-07-18 23:56:30.953 - INFO: [Slice-Img]  AUROC=52.96% (95% CI 49.95-55.69%)  AUPR=52.21% (95% CI 48.67-55.76%)  F1=68.48% (95% CI 66.68-70.63%)
+[Slice-Px(abn)]  AUROC=53.59% (95% CI 51.89-55.11%)  AUPR=0.82% (95% CI 0.75-0.89%)
+[Patient(18/36abn)]  AUROC=41.98% (95% CI 23.97-62.91%)  AUPR=44.74% (95% CI 30.38-67.07%)  F1=66.67% (95% CI 51.43-80.00%)
+26-07-18 23:58:53.846 - INFO: Test samples: 7647 | Modality: petct
+26-07-19 00:05:06.499 - INFO: Computing image-level metrics and 95CI...
+26-07-19 00:05:08.939 - INFO: [Slice-Img]  AUROC=58.06% (95% CI 56.84-59.27%)  AUPR=55.23% (95% CI 53.58-56.92%)  F1=66.81% (95% CI 65.90-67.74%)
+26-07-19 00:05:08.939 - INFO: Computing pixel-level Slice-Px(abn) metrics and 95CI...
+26-07-19 00:05:08.939 - INFO: Computing exact full-pixel point estimates with sklearn...
+26-07-19 00:08:04.587 - INFO: Pixel histogram slice bootstrap: 50/500
+26-07-19 00:09:36.892 - INFO: Pixel histogram slice bootstrap: 100/500
+26-07-19 00:11:09.409 - INFO: Pixel histogram slice bootstrap: 150/500
+26-07-19 00:12:42.717 - INFO: Pixel histogram slice bootstrap: 200/500
+26-07-19 00:14:20.317 - INFO: Pixel histogram slice bootstrap: 250/500
+26-07-19 00:16:09.039 - INFO: Pixel histogram slice bootstrap: 300/500
+26-07-19 00:17:58.428 - INFO: Pixel histogram slice bootstrap: 350/500
+26-07-19 00:20:14.324 - INFO: Pixel histogram slice bootstrap: 400/500
+26-07-19 00:21:58.485 - INFO: Pixel histogram slice bootstrap: 450/500
+26-07-19 00:23:42.886 - INFO: Pixel histogram slice bootstrap: 500/500
+26-07-19 00:23:42.890 - INFO: [Slice-Px(abn)]  AUROC=51.52% (95% CI 50.75-52.38%)  AUPR=0.58% (95% CI 0.55-0.61%)
+26-07-19 00:23:42.890 - INFO: Computing patient-level metrics and 95CI...
+26-07-19 00:23:44.124 - INFO: [Slice-Img]  AUROC=58.06% (95% CI 56.84-59.27%)  AUPR=55.23% (95% CI 53.58-56.92%)  F1=66.81% (95% CI 65.90-67.74%)
+[Slice-Px(abn)]  AUROC=51.52% (95% CI 50.75-52.38%)  AUPR=0.58% (95% CI 0.55-0.61%)
+[Patient(101/202abn)]  AUROC=56.52% (95% CI 48.08-64.43%)  AUPR=52.99% (95% CI 44.44-63.96%)  F1=68.03% (95% CI 62.34-74.96%)

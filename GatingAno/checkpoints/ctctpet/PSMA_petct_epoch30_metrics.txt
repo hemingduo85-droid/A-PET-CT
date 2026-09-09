@@ -1,0 +1,6 @@
+Dataset: PSMA
+Modality: petct
+Epoch: 30
+[Slice-Img]  AUROC=69.13% (95% CI 66.27-71.57%)  AUPR=76.24% (95% CI 73.45-78.81%)  F1=68.49% (95% CI 66.44-70.94%)
+[Slice-Px(abn)]  AUROC=93.55% (95% CI 93.26-93.88%)  AUPR=11.41% (95% CI 10.87-12.11%)
+[Patient(18/36abn)]  AUROC=90.74% (95% CI 79.09-98.14%)  AUPR=91.50% (95% CI 80.85-98.55%)  F1=85.71% (95% CI 75.00-96.61%)

@@ -1,0 +1,20 @@
+{
+  "group": "medium",
+  "case_id": "fdg_cd2ef932b5_04-27-2003-NA-PET-CT Ganzkoerper  primaer mit KM-12737",
+  "slice_id": "0019",
+  "rank_in_size_group": 8,
+  "original_rank_in_size_group": "431",
+  "sort_by": "pixel_aupr",
+  "sort_value": 0.9839393539671863,
+  "lesion_pixels": "288",
+  "lesion_area_ratio": "0.0022085889570552146",
+  "image_score": 13.535116241346705,
+  "pixel_auroc": "0.9999645566836795",
+  "pixel_aupr": "0.9839393539671863",
+  "hotspot_recall": 0.9256756756756757,
+  "hotspot_precision": 0.9256756756756757,
+  "pred_dice_reference": 0.2624113475177305,
+  "pred_iou_reference": 0.1510204081632653,
+  "path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG/test/abnormal/fdg_cd2ef932b5_04-27-2003-NA-PET-CT Ganzkoerper  primaer mit KM-12737/pet/0019.png",
+  "status": "saved"
+}

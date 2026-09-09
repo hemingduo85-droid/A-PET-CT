@@ -1,0 +1,17 @@
+{
+  "group": "medium",
+  "case_id": "fdg_ddca6cfba6_02-27-2004-NA-PET-CT Ganzkoerper  primaer mit KM-47148",
+  "slice_id": "0025",
+  "rank_in_size_group": "10",
+  "lesion_pixels": "631",
+  "lesion_area_ratio": "0.0055545774647887325",
+  "image_score": 25.436862943323842,
+  "pixel_auroc": "0.996965159938564",
+  "pixel_aupr": "0.7064857773407653",
+  "hotspot_recall": 0.6301369863013698,
+  "hotspot_precision": 0.6301369863013698,
+  "pred_dice_reference": 0.5011119347664937,
+  "pred_iou_reference": 0.334322453016815,
+  "path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG/test/abnormal/fdg_ddca6cfba6_02-27-2004-NA-PET-CT Ganzkoerper  primaer mit KM-47148/pet/0025.png",
+  "status": "saved"
+}

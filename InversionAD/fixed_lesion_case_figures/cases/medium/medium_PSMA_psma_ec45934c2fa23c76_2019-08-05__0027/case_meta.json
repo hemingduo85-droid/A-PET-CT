@@ -1,0 +1,13 @@
+{
+  "method": "InvAD",
+  "group": "medium",
+  "tracer": "PSMA",
+  "patient": "psma_ec45934c2fa23c76_2019-08-05",
+  "slice": "0027",
+  "score": 12.217533111572266,
+  "score_mode": "max pixel score",
+  "threshold": 11.312947273254395,
+  "best_f1": 0.3083003466022433,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/InversionAD/results/exp_dit_petct/psma/dual/model_latest.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/InversionAD/fixed_lesion_case_figures/cases/medium/medium_PSMA_psma_ec45934c2fa23c76_2019-08-05__0027"
+}

@@ -1,0 +1,13 @@
+{
+  "method": "UniNet",
+  "group": "large",
+  "tracer": "FDG",
+  "patient": "fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897",
+  "slice": "0020",
+  "score": 1.2617080211639404,
+  "score_mode": "max pixel score",
+  "threshold": 1.218711256980896,
+  "best_f1": 0.18816384455779486,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/UniNet-main/ckpts/PETCT_FDG_PETCT/EPOCH_030.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/UniNet-main/fixed_lesion_case_figures/cases/large/large_FDG_fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897__0020"
+}

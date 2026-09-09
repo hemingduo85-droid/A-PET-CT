@@ -1,0 +1,13 @@
+{
+  "method": "AE-FLOW",
+  "group": "small",
+  "tracer": "FDG",
+  "patient": "fdg_cd2ef932b5_04-27-2003-NA-PET-CT Ganzkoerper  primaer mit KM-12737",
+  "slice": "0035",
+  "score": 1.095456600189209,
+  "score_mode": "max pixel score",
+  "threshold": 0.6448830366134644,
+  "best_f1": 0.11359022564011001,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/AE_Flow_successful/checkpoints/FDG/ct_pet/best_FDG_ct_pet_model.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/AE_Flow_successful/fixed_lesion_case_figures/cases/small/small_FDG_fdg_cd2ef932b5_04-27-2003-NA-PET-CT Ganzkoerper  primaer mit KM-12737__0035"
+}

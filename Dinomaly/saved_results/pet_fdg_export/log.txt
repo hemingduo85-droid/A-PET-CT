@@ -1,0 +1,9 @@
+Device: cuda:4
+Args: Namespace(data_path='/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='4', seed=42, save_dir='./saved_results', save_name='pet_fdg_export', eval_only=True, ckpt_path='./saved_results/pet_fdg/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None, ci_bootstrap=500, ci_seed=42, ci_pixel_max_samples=200000, cache_path='./saved_results/pet_fdg_export/FDG_petct_eval_cache.npz', export_only=True)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 7647
+Loading checkpoint from ./saved_results/pet_fdg/epoch_30_model.pth
+--- Final evaluation ---
+Saved eval cache to ./saved_results/pet_fdg_export/FDG_petct_eval_cache.npz
+Export only: skipped metric computation.

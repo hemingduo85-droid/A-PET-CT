@@ -1,0 +1,26 @@
+DeepPSMA slice-level evaluation | data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1
+Device: cuda
+Loaded slices=2324 normal=1162 abnormal=1162
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+Checkpoint lesion_z refinement config differs from current args; DeepPSMA slice-level evaluation cannot recalibrate without train/normal, so it will reuse the checkpoint's available normal calibration statistics.
+Computing image-level metrics and 95CI...
+[Slice-Img]  AUROC=85.04% (95% CI 83.61-86.42%)  AUPR=80.22% (95% CI 77.27-82.62%)  F1=81.31% (95% CI 79.85-83.16%)
+Computing pixel-level Slice-Px(abn) metrics and 95CI...
+Computing exact full-pixel point estimates with sklearn...
+Pixel histogram slice bootstrap: 50/500
+Pixel histogram slice bootstrap: 100/500
+Pixel histogram slice bootstrap: 150/500
+Pixel histogram slice bootstrap: 200/500
+Pixel histogram slice bootstrap: 250/500
+Pixel histogram slice bootstrap: 300/500
+Pixel histogram slice bootstrap: 350/500
+Pixel histogram slice bootstrap: 400/500
+Pixel histogram slice bootstrap: 450/500
+Pixel histogram slice bootstrap: 500/500
+[Slice-Px(abn)]  AUROC=98.16% (95% CI 98.06-98.26%)  AUPR=14.88% (95% CI 13.41-16.52%)
+Computing patient-level metrics and 95CI...
+[Final metrics]
+[DeepPSMA] slices=2324 normal=1162 abnormal=1162 score_mode=lesion_z
+[Slice-Img]  AUROC=85.04% (95% CI 83.61-86.42%)  AUPR=80.22% (95% CI 77.27-82.62%)  F1=81.31% (95% CI 79.85-83.16%)
+[Slice-Px(abn)]  AUROC=98.16% (95% CI 98.06-98.26%)  AUPR=14.88% (95% CI 13.41-16.52%)
+Saved: ./saved_results_deeppsma_npz_psma/PhyTwin_PETCT_PSMA_DeepPSMA_slice_level/deeppsma_slice_level_metrics.json | ./saved_results_deeppsma_npz_psma/PhyTwin_PETCT_PSMA_DeepPSMA_slice_level/deeppsma_slice_level_metrics.txt | ./saved_results_deeppsma_npz_psma/PhyTwin_PETCT_PSMA_DeepPSMA_slice_level/deeppsma_slice_level_scores.csv

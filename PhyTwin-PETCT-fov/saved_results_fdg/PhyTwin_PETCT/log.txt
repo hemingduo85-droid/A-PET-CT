@@ -1,0 +1,3 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG
+Labels and masks are used only for evaluation and visualization.
+Train Normal Twin | epochs=30 | image_size=256 | base_channels=32 | uncertainty=True | nll_weight=0.05

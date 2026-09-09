@@ -1,0 +1,16 @@
+{
+  "method": "VisualAD",
+  "dataset": "psma",
+  "test_data_path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA/test",
+  "modality": "petct",
+  "checkpoint": "./experiments/psma_petct/epoch_30.pth",
+  "slice_csv": "figure_scores/psma/petct/slice_scores.csv",
+  "patient_csv": "figure_scores/psma/petct/patient_scores.csv",
+  "pixel_slice_metrics_csv": "figure_scores/psma/petct/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 1546,
+  "n_patients": 36,
+  "n_pixel_slices": 798,
+  "n_abnormal_slices": 798,
+  "n_abnormal_patients": 18
+}

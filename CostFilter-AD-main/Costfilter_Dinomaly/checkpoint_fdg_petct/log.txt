@@ -1,0 +1,144 @@
+[19:22:35] Args: {'dataset': 'fdg', 'dataset_name': 'fdg', 'data_path': '/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG', 'modality': 'petct', 'gpu': 2, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 30, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_fdg_petct', 'heatmap_dir': './checkpoint_fdg_petct/heatmaps/fdg/petct', 'heatmap_limit': 128, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'dataset_tag': 'fdg', 'dinomaly_ckpt': './checkpoint_fdg_petct/dinomaly_fdg_petct.pth', 'costfilter_ckpt': './checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth', 'device': 'cuda:2'}
+[19:22:35] Device: cuda:2
+[19:22:35] ============================================================
+[19:22:35] Phase 1: Training Dinomaly (unsupervised reconstruction)
+[19:22:35] ============================================================
+[19:22:35] Train slices: 15625, Test slices: 7647
+[19:38:10] [P1] Epoch 1/30  loss=0.067975  lr=0.001996
+[19:53:30] [P1] Epoch 2/30  loss=0.045159  lr=0.001981
+[20:03:33] Args: {'dataset': 'fdg', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG', 'modality': 'petct', 'gpu': 2, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 30, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_fdg_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_fdg_petct/heatmaps/fdg/petct', 'heatmap_limit': 128, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': False, 'test_stage': 'costfilter', 'dataset_tag': 'fdg', 'dinomaly_ckpt': './checkpoint_fdg_petct/dinomaly_fdg_petct.pth', 'costfilter_ckpt': './checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth', 'device': 'cuda:2'}
+[20:03:33] Device: cuda:2
+[20:03:33] ============================================================
+[20:03:33] Phase 1: Training Dinomaly (unsupervised reconstruction)
+[20:03:33] ============================================================
+[20:03:33] Train slices: 15625, Test slices: 7647
+[20:20:31] [P1] Epoch 1/30  loss=0.067975  lr=0.001996
+[20:38:50] [P1] Epoch 2/30  loss=0.045159  lr=0.001981
+[20:57:47] [P1] Epoch 3/30  loss=0.041352  lr=0.001957
+[21:16:49] [P1] Epoch 4/30  loss=0.039286  lr=0.001924
+[21:36:22] [P1] Epoch 5/30  loss=0.037871  lr=0.001881
+[22:03:47] Args: {'dataset': 'fdg', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/FDG', 'modality': 'petct', 'gpu': 2, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 30, 'dinomaly_eval_freq': 30, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_fdg_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_fdg_petct/heatmaps/fdg/petct', 'heatmap_limit': 128, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': False, 'test_stage': 'costfilter', 'dataset_tag': 'fdg', 'dinomaly_ckpt': './checkpoint_fdg_petct/dinomaly_fdg_petct.pth', 'costfilter_ckpt': './checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth', 'device': 'cuda:2'}
+[22:03:47] Device: cuda:2
+[22:03:47] ============================================================
+[22:03:47] Phase 1: Training Dinomaly (unsupervised reconstruction)
+[22:03:47] ============================================================
+[22:03:47] Train slices: 15625, Test slices: 7647
+[22:18:42] [P1] Epoch 1/30  loss=0.067975  lr=0.001996
+[22:32:18] [P1] Epoch 2/30  loss=0.045159  lr=0.001981
+[22:44:44] [P1] Epoch 3/30  loss=0.041352  lr=0.001957
+[22:52:11] [P1] Epoch 4/30  loss=0.039286  lr=0.001924
+[23:05:17] [P1] Epoch 5/30  loss=0.037871  lr=0.001881
+[23:19:48] [P1] Epoch 6/30  loss=0.036838  lr=0.001830
+[23:32:27] [P1] Epoch 7/30  loss=0.036005  lr=0.001771
+[23:43:44] [P1] Epoch 8/30  loss=0.035357  lr=0.001705
+[23:54:38] [P1] Epoch 9/30  loss=0.034764  lr=0.001632
+[00:08:20] [P1] Epoch 10/30  loss=0.034271  lr=0.001553
+[00:22:20] [P1] Epoch 11/30  loss=0.033798  lr=0.001469
+[00:44:45] [P1] Epoch 12/30  loss=0.033382  lr=0.001381
+[01:09:45] [P1] Epoch 13/30  loss=0.033012  lr=0.001290
+[01:32:07] [P1] Epoch 14/30  loss=0.032649  lr=0.001197
+[01:50:58] [P1] Epoch 15/30  loss=0.032325  lr=0.001102
+[02:12:20] [P1] Epoch 16/30  loss=0.032078  lr=0.001008
+[02:34:25] [P1] Epoch 17/30  loss=0.031713  lr=0.000915
+[02:56:45] [P1] Epoch 18/30  loss=0.031437  lr=0.000824
+[03:10:49] [P1] Epoch 19/30  loss=0.031151  lr=0.000736
+[03:29:16] [P1] Epoch 20/30  loss=0.030911  lr=0.000651
+[03:49:38] [P1] Epoch 21/30  loss=0.030681  lr=0.000572
+[04:08:17] [P1] Epoch 22/30  loss=0.030473  lr=0.000499
+[04:26:36] [P1] Epoch 23/30  loss=0.030275  lr=0.000432
+[04:44:01] [P1] Epoch 24/30  loss=0.030106  lr=0.000372
+[05:03:08] [P1] Epoch 25/30  loss=0.029940  lr=0.000321
+[05:19:33] [P1] Epoch 26/30  loss=0.029803  lr=0.000278
+[05:36:00] [P1] Epoch 27/30  loss=0.029678  lr=0.000244
+[05:54:53] [P1] Epoch 28/30  loss=0.029588  lr=0.000220
+[06:13:51] [P1] Epoch 29/30  loss=0.029513  lr=0.000205
+[06:33:15] [P1] Epoch 30/30  loss=0.029456  lr=0.000200
+[06:42:44] [P1 E30] [Slice-Img]  AUROC=77.07%  AP=74.92%  F1=71.57%
+[06:42:44] [P1 E30] [Slice-Px(abn)]  AUROC=96.59%  AP=16.40%  F1=27.06%
+[06:42:44] [P1 E30] [Patient(101/202abn)]  AUROC=81.27%  AP=76.90%  F1=75.62%  Sens@90Spec=49.50%  Sens@95Spec=36.63%
+[06:42:45]   -> New best Dinomaly (Img-AP=0.7492), saved to ./checkpoint_fdg_petct/dinomaly_fdg_petct.pth
+[06:42:45] Phase 1 done. Best Dinomaly Img-AP=0.7492
+[06:42:45] ============================================================
+[06:42:45] Phase 2: Training CostFilter (with synthetic anomalies)
+[06:42:45] ============================================================
+[06:42:45] Train slices (synth): 15625, Test slices: 7647
+[06:42:56] Loaded pretrained Dinomaly from ./checkpoint_fdg_petct/dinomaly_fdg_petct.pth
+[06:55:28] [P2] Epoch 1/30  loss=0.190213  lr=0.000100
+[07:07:43] [P2] Epoch 2/30  loss=0.154076  lr=0.000100
+[07:19:17] [P2] Epoch 3/30  loss=0.142235  lr=0.000100
+[07:30:57] [P2] Epoch 4/30  loss=0.135538  lr=0.000100
+[07:42:17] [P2] Epoch 5/30  loss=0.131149  lr=0.000100
+[07:53:37] [P2] Epoch 6/30  loss=0.124600  lr=0.000100
+[08:05:58] [P2] Epoch 7/30  loss=0.122337  lr=0.000100
+[08:18:23] [P2] Epoch 8/30  loss=0.119579  lr=0.000100
+[08:30:37] [P2] Epoch 9/30  loss=0.117652  lr=0.000100
+[08:41:57] [P2] Epoch 10/30  loss=0.117781  lr=0.000100
+[08:53:57] [P2] Epoch 11/30  loss=0.116865  lr=0.000100
+[09:04:32] [P2] Epoch 12/30  loss=0.114678  lr=0.000100
+[09:15:43] [P2] Epoch 13/30  loss=0.113915  lr=0.000100
+[09:25:59] [P2] Epoch 14/30  loss=0.111469  lr=0.000100
+[09:36:29] [P2] Epoch 15/30  loss=0.109540  lr=0.000100
+[09:47:37] [P2] Epoch 16/30  loss=0.110068  lr=0.000100
+[09:59:23] [P2] Epoch 17/30  loss=0.109947  lr=0.000100
+[10:09:51] [P2] Epoch 18/30  loss=0.108574  lr=0.000100
+[10:21:25] [P2] Epoch 19/30  loss=0.107347  lr=0.000100
+[10:32:20] [P2] Epoch 20/30  loss=0.107290  lr=0.000100
+[10:44:01] [P2] Epoch 21/30  loss=0.107499  lr=0.000100
+[10:54:09] [P2] Epoch 22/30  loss=0.106080  lr=0.000100
+[11:05:11] [P2] Epoch 23/30  loss=0.105236  lr=0.000100
+[11:17:42] [P2] Epoch 24/30  loss=0.105633  lr=0.000100
+[11:29:43] [P2] Epoch 25/30  loss=0.105567  lr=0.000100
+[11:41:43] [P2] Epoch 26/30  loss=0.105508  lr=0.000100
+[11:53:56] [P2] Epoch 27/30  loss=0.103247  lr=0.000100
+[12:05:35] [P2] Epoch 28/30  loss=0.105478  lr=0.000100
+[12:17:42] [P2] Epoch 29/30  loss=0.101849  lr=0.000100
+[12:29:34] [P2] Epoch 30/30  loss=0.103806  lr=0.000100
+[12:29:34] Saved final CostFilter epoch 30 to ./checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth
+[12:42:38] [P2 Final E30] [Slice-Img]  AUROC=78.36%  AP=77.60%  F1=72.98%
+[12:42:38] [P2 Final E30] [Slice-Px(abn)]  AUROC=92.95%  AP=9.60%  F1=16.77%
+[12:42:38] [P2 Final E30] [Patient(101/202abn)]  AUROC=83.74%  AP=84.07%  F1=78.67%  Sens@90Spec=60.40%  Sens@95Spec=52.48%
+[12:42:38] Heatmaps saved to ./checkpoint_fdg_petct/heatmaps/fdg/petct
+[12:42:38] Phase 2 done.
+[13:55:52] Args: {'dataset': 'fdg', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG', 'modality': 'petct', 'gpu': 4, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 30, 'dinomaly_eval_freq': 30, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_fdg_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_fdg_petct/heatmaps/fdg/petct', 'heatmap_limit': 128, 'ci_iters': 500, 'ci_seed': 42, 'ci_pixel_max_samples': 0, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': False, 'test_stage': 'costfilter', 'dataset_tag': 'fdg', 'dinomaly_ckpt': './checkpoint_fdg_petct/dinomaly_fdg_petct.pth', 'costfilter_ckpt': './checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth', 'device': 'cuda:4'}
+[13:55:52] Device: cuda:4
+[13:55:52] ============================================================
+[13:55:52] Phase 1: Training Dinomaly (unsupervised reconstruction)
+[13:55:52] ============================================================
+[13:55:52] Train slices: 15625, Test slices: 7647
+[13:58:25] Args: {'dataset': 'fdg', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG', 'modality': 'petct', 'gpu': 4, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 30, 'dinomaly_eval_freq': 30, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_fdg_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_fdg_petct/heatmaps/fdg/petct', 'heatmap_limit': 128, 'ci_iters': 500, 'ci_seed': 42, 'ci_pixel_max_samples': 0, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': False, 'test_stage': 'costfilter', 'dataset_tag': 'fdg', 'dinomaly_ckpt': './checkpoint_fdg_petct/dinomaly_fdg_petct.pth', 'costfilter_ckpt': './checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth', 'device': 'cuda:4'}
+[13:58:25] Device: cuda:4
+[13:58:25] ============================================================
+[13:58:25] Phase 1: Training Dinomaly (unsupervised reconstruction)
+[13:58:25] ============================================================
+[13:58:25] Train slices: 15625, Test slices: 7647
+[14:00:28] Args: {'dataset': 'fdg', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG', 'modality': 'petct', 'gpu': 4, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 50, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_fdg_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_fdg_petct/heatmaps/fdg/petct', 'heatmap_limit': 128, 'ci_iters': 500, 'ci_seed': 42, 'ci_pixel_max_samples': 0, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': True, 'test_stage': 'costfilter', 'dataset_tag': 'fdg', 'dinomaly_ckpt': './checkpoint_fdg_petct/dinomaly_fdg_petct.pth', 'costfilter_ckpt': './checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth', 'device': 'cuda:4'}
+[14:00:28] Device: cuda:4
+[14:00:28] ============================================================
+[14:00:28] Test only: costfilter
+[14:00:28] ============================================================
+[14:00:28] Test slices: 7647
+[14:00:38] Loaded Dinomaly from ./checkpoint_fdg_petct/dinomaly_fdg_petct.pth
+[14:00:38] Loaded CostFilter from ./checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth
+[14:03:21] [Test CostFilter] [Image first]  AUROC=78.36% (95% CI 77.35-79.38%)  AUPR=77.60% (95% CI 76.41-78.86%)  F1=72.97% (95% CI 72.17-73.95%)
+[08:33:18] [Test CostFilter] [Slice-Img]  AUROC=78.36% (95% CI 77.35-79.38%)  AUPR=77.60% (95% CI 76.41-78.86%)  F1=72.97% (95% CI 72.17-73.95%)
+[08:33:18] [Test CostFilter] [Slice-Px(abn)]  AUROC=92.95% (95% CI 92.94-92.96%)  AUPR=9.60% (95% CI 9.56-9.65%)
+[08:33:18] [Test CostFilter] [Patient(101/202abn)]  AUROC=83.75% (95% CI 78.25-89.24%)  AUPR=84.08% (95% CI 77.97-90.42%)  F1=78.67% (95% CI 73.91-84.16%)
+[08:33:18] Heatmaps saved to ./checkpoint_fdg_petct/heatmaps/fdg/petct
+[22:56:52] Args: {'dataset': 'fdg', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG', 'modality': 'petct', 'gpu': 4, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 50, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_fdg_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_fdg_petct/heatmaps/fdg/petct', 'heatmap_limit': 128, 'eval_cache_path': './checkpoint_fdg_petct/eval_cache/FDG_petct_eval_cache.npz', 'ci_iters': 0, 'ci_seed': 20260707, 'ci_pixel_max_samples': 200000, 'ci_hist_bins': 16384, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': True, 'test_stage': 'costfilter', 'dataset_tag': 'fdg', 'dinomaly_ckpt': './checkpoint_fdg_petct/dinomaly_fdg_petct.pth', 'costfilter_ckpt': './checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth', 'device': 'cuda:4'}
+[22:56:52] Device: cuda:4
+[22:56:52] ============================================================
+[22:56:52] Test only: costfilter
+[22:56:52] ============================================================
+[22:56:52] Test slices: 7647
+[22:56:58] Loaded Dinomaly from ./checkpoint_fdg_petct/dinomaly_fdg_petct.pth
+[22:56:59] Loaded CostFilter from ./checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth
+[23:01:26] Computing image-level metrics and 95CI...
+[23:01:26] [Slice-Img]  AUROC=78.36% (95% CI 78.36-78.36%)  AP=77.60% (95% CI 77.60-77.60%)  F1=72.99% (95% CI 72.99-72.99%)
+[23:01:26] Computing pixel-level Slice-Px(abn) metrics and 95CI...
+[23:01:26] Computing exact full-pixel point estimates with sklearn...
+[23:05:09] Computing patient-level metrics and 95CI...
+[23:06:43] Saved eval cache: ./checkpoint_fdg_petct/eval_cache/FDG_petct_eval_cache.npz
+[23:06:44] [Slice-Img]  AUROC=78.36% (95% CI 78.36-78.36%)  AP=77.60% (95% CI 77.60-77.60%)  F1=72.99% (95% CI 72.99-72.99%)
+[23:06:44] [Slice-Px(abn)]  AUROC=92.95% (95% CI 92.95-92.95%)  AUPR=9.60% (95% CI 9.60-9.60%)
+[23:06:44] [Patient(101/202abn)]  AUROC=83.73% (95% CI 83.73-83.73%)  AP=84.07% (95% CI 84.07-84.07%)  F1=78.67% (95% CI 78.67-78.67%)
+[23:06:44] Heatmaps saved to ./checkpoint_fdg_petct/heatmaps/fdg/petct

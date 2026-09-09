@@ -1,0 +1,16 @@
+{
+  "method": "VisualAD",
+  "dataset": "fdg",
+  "test_data_path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG/test",
+  "modality": "petct",
+  "checkpoint": "./experiments/fdg_petct/epoch_30.pth",
+  "slice_csv": "figure_scores/fdg/petct/slice_scores.csv",
+  "patient_csv": "figure_scores/fdg/petct/patient_scores.csv",
+  "pixel_slice_metrics_csv": "figure_scores/fdg/petct/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 7647,
+  "n_patients": 202,
+  "n_pixel_slices": 3778,
+  "n_abnormal_slices": 3778,
+  "n_abnormal_patients": 101
+}

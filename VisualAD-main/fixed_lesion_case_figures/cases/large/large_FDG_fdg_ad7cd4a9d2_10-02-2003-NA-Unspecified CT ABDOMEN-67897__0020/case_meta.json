@@ -1,0 +1,13 @@
+{
+  "method": "VisualAD",
+  "group": "large",
+  "tracer": "FDG",
+  "patient": "fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897",
+  "slice": "0020",
+  "score": -7.997196197509766,
+  "score_mode": "max pixel score",
+  "threshold": -7.997219085693359,
+  "best_f1": 0.03402603412052439,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/VisualAD-main/experiments/fdg_petct/epoch_30.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/VisualAD-main/fixed_lesion_case_figures/cases/large/large_FDG_fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897__0020"
+}

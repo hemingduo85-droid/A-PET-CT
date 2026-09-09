@@ -1,0 +1,13 @@
+{
+  "method": "ESC-DRKD",
+  "group": "large",
+  "tracer": "FDG",
+  "patient": "fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897",
+  "slice": "0020",
+  "score": 0.21014389395713806,
+  "score_mode": "max pixel score",
+  "threshold": 0.1364261358976364,
+  "best_f1": 0.3506320259147317,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/ESC_DRKD_successful/checkpoints/FDG/ct_pet/best_model.pt",
+  "case_dir": "/data/cyf/codes/A-PET-CT/ESC_DRKD_successful/fixed_lesion_case_figures/cases/large/large_FDG_fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897__0020"
+}

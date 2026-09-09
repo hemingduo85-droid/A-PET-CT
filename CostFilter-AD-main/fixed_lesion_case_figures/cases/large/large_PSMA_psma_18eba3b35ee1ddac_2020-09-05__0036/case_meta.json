@@ -1,0 +1,14 @@
+{
+  "method": "CostFilter-AD",
+  "group": "large",
+  "tracer": "PSMA",
+  "patient": "psma_18eba3b35ee1ddac_2020-09-05",
+  "slice": "0036",
+  "score": 0.510881245136261,
+  "score_mode": "max pixel score",
+  "threshold": 0.4046156108379364,
+  "best_f1": 0.1707717073089963,
+  "dinomaly_checkpoint": "/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_psma_petct/dinomaly_psma_petct.pth",
+  "costfilter_checkpoint": "/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/CostFilter-AD-main/fixed_lesion_case_figures/cases/large/large_PSMA_psma_18eba3b35ee1ddac_2020-09-05__0036"
+}

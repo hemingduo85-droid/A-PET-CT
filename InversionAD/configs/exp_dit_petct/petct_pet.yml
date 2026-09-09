@@ -1,0 +1,66 @@
+diffusion:
+  model_type: 'dit'
+  num_classes: 1
+  target_channels: 3
+  z_channels: 768
+  depth: 16
+  width: 2048
+  num_sampling_steps: '100'
+  ema_decay: 0.999
+  learn_sigma: false
+  grad_checkpoint: false
+  patch_size: 1
+  channel_mult: [1,1,2,2]
+backbone:
+    model_type: efficientnet-b4
+    outblocks:
+      - 1
+      - 5
+      - 9
+      - 21
+    outstrides: 
+      - 2
+      - 4
+      - 8
+      - 16
+    pretrained: true
+    pretrained_model: pretrained/efficientnet-b4-6ed6700e.pth
+    stride: 16
+data:
+  batch_size: 8
+  petct_dataset: psma
+  category: psma
+  data_root: /data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA
+  data_roots:
+    fdg: /data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG
+    psma: /data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA
+  dataset_name: petct
+  img_size: 256
+  input_mode: pet
+  num_workers: 4
+  pin_memory: true
+  train: true
+  transform_type: imagenet
+optimizer:
+  grad_clip: 1.0
+  init_lr: 0.000001
+  peak_lr: 0.00005
+  final_lr: 0.000005
+  num_epochs: 30
+  optimizer_name: adamw
+  scheduler_type: warmup_cosine
+  warmup_epochs: 3
+  weight_decay: 0
+logging:
+  log_interval: 10
+  save_interval: 30
+  save_images: false
+  save_root: 'results/exp_dit_petct'
+  save_dir: 'results/exp_dit_petct/psma/pet'
+evaluation:
+  eval_interval: 30
+  eval_step: 3
+  save_heatmaps: 0
+meta:
+  seed: 42
+  device: 'cuda'

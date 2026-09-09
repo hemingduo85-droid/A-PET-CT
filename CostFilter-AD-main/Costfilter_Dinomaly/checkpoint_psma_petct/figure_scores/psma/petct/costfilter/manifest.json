@@ -1,0 +1,18 @@
+{
+  "repo": "CostFilter-AD-main/Costfilter_Dinomaly",
+  "dataset": "psma",
+  "modality": "petct",
+  "test_stage": "costfilter",
+  "data_path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA",
+  "save_dir": "./checkpoint_psma_petct",
+  "checkpoint": "./checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth",
+  "score_rule": "mean of top-1% pixels from the same anomaly map used by run_petct._compute_three_level",
+  "patient_rule": "max slice score per patient",
+  "slice_scores_csv": "./checkpoint_psma_petct/figure_scores/psma/petct/costfilter/slice_scores.csv",
+  "patient_scores_csv": "./checkpoint_psma_petct/figure_scores/psma/petct/costfilter/patient_scores.csv",
+  "pixel_slice_metrics_csv": "./checkpoint_psma_petct/figure_scores/psma/petct/costfilter/pixel_slice_metrics.csv",
+  "n_slices": 1546,
+  "n_patients": 36,
+  "n_pixel_slices": 1546,
+  "n_valid_pixel_metric_slices": 798
+}

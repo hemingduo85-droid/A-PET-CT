@@ -1,0 +1,13 @@
+{
+  "method": "INPFormer",
+  "group": "large",
+  "tracer": "PSMA",
+  "patient": "psma_18eba3b35ee1ddac_2020-09-05",
+  "slice": "0036",
+  "score": 0.28957876563072205,
+  "score_mode": "max pixel score",
+  "threshold": 0.12189537286758423,
+  "best_f1": 0.052372792949015375,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/INPFormer/checkpoints/PSMA/ct_pet/model.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/INPFormer/fixed_lesion_case_figures/cases/large/large_PSMA_psma_18eba3b35ee1ddac_2020-09-05__0036"
+}

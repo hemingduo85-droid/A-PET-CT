@@ -1,0 +1,13 @@
+{
+  "method": "AE-FLOW",
+  "group": "large",
+  "tracer": "FDG",
+  "patient": "fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897",
+  "slice": "0020",
+  "score": 1.1327943801879883,
+  "score_mode": "max pixel score",
+  "threshold": 0.5437545776367188,
+  "best_f1": 0.2124624165318571,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/AE_Flow_successful/checkpoints/FDG/ct_pet/best_FDG_ct_pet_model.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/AE_Flow_successful/fixed_lesion_case_figures/cases/large/large_FDG_fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897__0020"
+}

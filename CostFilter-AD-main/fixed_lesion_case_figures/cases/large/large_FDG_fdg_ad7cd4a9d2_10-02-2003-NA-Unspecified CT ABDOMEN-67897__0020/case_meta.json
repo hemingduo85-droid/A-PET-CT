@@ -1,0 +1,14 @@
+{
+  "method": "CostFilter-AD",
+  "group": "large",
+  "tracer": "FDG",
+  "patient": "fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897",
+  "slice": "0020",
+  "score": 0.5218648910522461,
+  "score_mode": "max pixel score",
+  "threshold": 0.2900223731994629,
+  "best_f1": 0.5133739539642882,
+  "dinomaly_checkpoint": "/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_fdg_petct/dinomaly_fdg_petct.pth",
+  "costfilter_checkpoint": "/data/cyf/codes/A-PET-CT/CostFilter-AD-main/Costfilter_Dinomaly/checkpoint_fdg_petct/costfilter_fdg_petct_epoch30.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/CostFilter-AD-main/fixed_lesion_case_figures/cases/large/large_FDG_fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897__0020"
+}

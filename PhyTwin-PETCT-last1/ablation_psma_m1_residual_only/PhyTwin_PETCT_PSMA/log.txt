@@ -1,0 +1,74 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: disabled
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: disabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+Static PHYSIO prior disabled by --no_physio after checkpoint loading.
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Computing image-level metrics and 95CI...
+[Slice-Img]  AUROC=86.97% (95% CI 85.17-88.75%)  AUPR=88.98% (95% CI 87.09-90.51%)  F1=79.93% (95% CI 78.19-82.22%)
+Computing pixel-level Slice-Px(abn) metrics and 95CI...
+Computing exact full-pixel point estimates with sklearn...
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: disabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+Static PHYSIO prior disabled by --no_physio after checkpoint loading.
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Computing image-level metrics and 95CI...
+[Slice-Img]  AUROC=86.97% (95% CI 85.17-88.75%)  AUPR=88.98% (95% CI 87.09-90.51%)  F1=79.93% (95% CI 78.19-82.22%)
+Computing pixel-level Slice-Px(abn) metrics and 95CI...
+Computing exact full-pixel point estimates with sklearn...
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: disabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+Static PHYSIO prior disabled by --no_physio after checkpoint loading.
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Computing image-level metrics and 95CI...
+[Slice-Img]  AUROC=86.97% (95% CI 85.17-88.75%)  AUPR=88.98% (95% CI 87.09-90.51%)  F1=79.93% (95% CI 78.19-82.22%)
+Computing pixel-level Slice-Px(abn) metrics and 95CI...
+Computing exact full-pixel point estimates with sklearn...
+Pixel histogram slice bootstrap: 50/500
+Pixel histogram slice bootstrap: 100/500
+Pixel histogram slice bootstrap: 150/500
+Pixel histogram slice bootstrap: 200/500
+Pixel histogram slice bootstrap: 250/500
+Pixel histogram slice bootstrap: 300/500
+Pixel histogram slice bootstrap: 350/500
+Pixel histogram slice bootstrap: 400/500
+Pixel histogram slice bootstrap: 450/500
+Pixel histogram slice bootstrap: 500/500
+[Slice-Px(abn)]  AUROC=97.47% (95% CI 97.22-97.72%)  AUPR=44.96% (95% CI 42.20-47.65%)
+Computing patient-level metrics and 95CI...
+Saved visualizations to ./ablation_psma_m1_residual_only/PhyTwin_PETCT_PSMA/visualizations
+Saved slice score table to ./ablation_psma_m1_residual_only/PhyTwin_PETCT_PSMA/slice_scores.csv
+[Slice-Img]  AUROC=86.97% (95% CI 85.17-88.75%)  AUPR=88.98% (95% CI 87.09-90.51%)  F1=79.93% (95% CI 78.19-82.22%)
+[Slice-Px(abn)]  AUROC=97.47% (95% CI 97.22-97.72%)  AUPR=44.96% (95% CI 42.20-47.65%)
+[Patient(18/36abn)]  AUROC=92.28% (95% CI 80.98-99.04%)  AUPR=92.87% (95% CI 82.84-98.76%)  F1=87.18% (95% CI 78.05-97.56%)
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: disabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+Static PHYSIO prior disabled by --no_physio after checkpoint loading.
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Computing image-level metrics and 95CI...
+[Slice-Img]  AUROC=86.97% (95% CI 85.17-88.75%)  AUPR=88.98% (95% CI 87.09-90.51%)  F1=79.93% (95% CI 78.19-82.22%)
+Computing pixel-level Slice-Px(abn) metrics and 95CI...
+Computing exact full-pixel point estimates with sklearn...

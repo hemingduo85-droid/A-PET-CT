@@ -1,0 +1,66 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA
+Labels and masks are used only for evaluation and visualization.
+Train Normal Twin | epochs=30 | image_size=256 | base_channels=32 | uncertainty=True | nll_weight=0.05
+Epoch [01/30] loss=0.7769 l1=0.7303 grad=0.1014 nll=0.4253
+  -> Saved best Normal Twin (train loss=0.7769)
+Epoch [02/30] loss=0.1172 l1=0.1553 grad=0.0817 nll=-1.1718
+  -> Saved best Normal Twin (train loss=0.1172)
+Epoch [03/30] loss=0.0914 l1=0.1404 grad=0.0794 nll=-1.3779
+  -> Saved best Normal Twin (train loss=0.0914)
+Epoch [04/30] loss=0.0750 l1=0.1302 grad=0.0786 nll=-1.4974
+  -> Saved best Normal Twin (train loss=0.0750)
+Epoch [05/30] loss=0.0710 l1=0.1271 grad=0.0782 nll=-1.5126
+  -> Saved best Normal Twin (train loss=0.0710)
+Epoch [06/30] loss=0.0543 l1=0.1177 grad=0.0776 nll=-1.6558
+  -> Saved best Normal Twin (train loss=0.0543)
+Epoch [07/30] loss=0.0428 l1=0.1112 grad=0.0770 nll=-1.7525
+  -> Saved best Normal Twin (train loss=0.0428)
+Epoch [08/30] loss=0.0393 l1=0.1087 grad=0.0766 nll=-1.7714
+  -> Saved best Normal Twin (train loss=0.0393)
+Epoch [09/30] loss=0.0277 l1=0.1023 grad=0.0759 nll=-1.8718
+  -> Saved best Normal Twin (train loss=0.0277)
+Epoch [10/30] loss=0.0239 l1=0.0996 grad=0.0754 nll=-1.8896
+  -> Saved best Normal Twin (train loss=0.0239)
+Epoch [11/30] loss=0.0155 l1=0.0954 grad=0.0750 nll=-1.9721
+  -> Saved best Normal Twin (train loss=0.0155)
+Epoch [12/30] loss=0.0134 l1=0.0937 grad=0.0746 nll=-1.9795
+  -> Saved best Normal Twin (train loss=0.0134)
+Epoch [13/30] loss=0.0065 l1=0.0899 grad=0.0740 nll=-2.0373
+  -> Saved best Normal Twin (train loss=0.0065)
+Epoch [14/30] loss=0.0050 l1=0.0887 grad=0.0737 nll=-2.0417
+  -> Saved best Normal Twin (train loss=0.0050)
+Epoch [15/30] loss=0.0045 l1=0.0873 grad=0.0733 nll=-2.0215
+  -> Saved best Normal Twin (train loss=0.0045)
+Epoch [16/30] loss=-0.0022 l1=0.0844 grad=0.0728 nll=-2.0971
+  -> Saved best Normal Twin (train loss=-0.0022)
+Epoch [17/30] loss=-0.0139 l1=0.0798 grad=0.0720 nll=-2.2340
+  -> Saved best Normal Twin (train loss=-0.0139)
+Epoch [18/30] loss=-0.0189 l1=0.0778 grad=0.0717 nll=-2.2926
+  -> Saved best Normal Twin (train loss=-0.0189)
+Epoch [19/30] loss=-0.0124 l1=0.0786 grad=0.0715 nll=-2.1787
+Epoch [20/30] loss=-0.0196 l1=0.0758 grad=0.0711 nll=-2.2652
+  -> Saved best Normal Twin (train loss=-0.0196)
+Epoch [21/30] loss=-0.0240 l1=0.0737 grad=0.0706 nll=-2.3062
+  -> Saved best Normal Twin (train loss=-0.0240)
+Epoch [22/30] loss=-0.0318 l1=0.0714 grad=0.0701 nll=-2.4149
+  -> Saved best Normal Twin (train loss=-0.0318)
+Epoch [23/30] loss=-0.0272 l1=0.0726 grad=0.0700 nll=-2.3479
+Epoch [24/30] loss=-0.0331 l1=0.0697 grad=0.0695 nll=-2.4033
+  -> Saved best Normal Twin (train loss=-0.0331)
+Epoch [25/30] loss=-0.0328 l1=0.0699 grad=0.0693 nll=-2.4017
+Epoch [26/30] loss=-0.0339 l1=0.0687 grad=0.0690 nll=-2.3974
+  -> Saved best Normal Twin (train loss=-0.0339)
+Epoch [27/30] loss=-0.0324 l1=0.0685 grad=0.0688 nll=-2.3618
+Epoch [28/30] loss=-0.0404 l1=0.0663 grad=0.0684 nll=-2.4766
+  -> Saved best Normal Twin (train loss=-0.0404)
+Epoch [29/30] loss=-0.0394 l1=0.0663 grad=0.0683 nll=-2.4549
+Epoch [30/30] loss=-0.0402 l1=0.0654 grad=0.0681 nll=-2.4530
+Built normal models | normal_residuals=1659 | memory_patches=30000 | residual_mean=0.1731 residual_std=0.2480 | memory_mean=7.4339 memory_std=8.7184 | normal_image_mean=3.0061 normal_image_std=1.6895 | normal_lesion_mean=5.1277 normal_lesion_std=3.7015 | pred_mask_thr=1.9764 | physio=enabled
+Saved full PhyTwin checkpoint to ./ckpts/PhyTwin_PETCT/BEST_PHYTWIN.pth
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Saved visualizations to ./saved_results_phytwin_psma_3407/PhyTwin_PETCT/visualizations
+Saved slice score table to ./saved_results_phytwin_psma_3407/PhyTwin_PETCT/slice_scores.csv
+[Slice-Img]  AUROC=87.65%  AP=89.80%  F1=80.12%
+[Slice-Px(abn)]  AUROC=96.78%  AP=40.25%  F1=44.37%
+[Patient(18/36abn)]  AUROC=93.52%  AP=94.50%  F1=86.49%  Sens@90Spec=72.22%  Sens@95Spec=72.22%

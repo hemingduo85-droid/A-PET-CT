@@ -1,0 +1,13 @@
+{
+  "method": "ESC-DRKD",
+  "group": "small",
+  "tracer": "PSMA",
+  "patient": "psma_1ca3af29b7df127d_2020-06-27",
+  "slice": "0009",
+  "score": 0.292447566986084,
+  "score_mode": "max pixel score",
+  "threshold": 0.1992349922657013,
+  "best_f1": 0.3946187889606162,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/ESC_DRKD_successful/checkpoints/PSMA/ct_pet/best_model.pt",
+  "case_dir": "/data/cyf/codes/A-PET-CT/ESC_DRKD_successful/fixed_lesion_case_figures/cases/small/small_PSMA_psma_1ca3af29b7df127d_2020-06-27__0009"
+}

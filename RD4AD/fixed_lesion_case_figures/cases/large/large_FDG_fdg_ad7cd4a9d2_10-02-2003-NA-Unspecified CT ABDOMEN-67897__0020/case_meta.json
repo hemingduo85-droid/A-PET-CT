@@ -1,0 +1,13 @@
+{
+  "method": "RD4AD",
+  "group": "large",
+  "tracer": "FDG",
+  "patient": "fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897",
+  "slice": "0020",
+  "score": 0.29779744148254395,
+  "score_mode": "max pixel score",
+  "threshold": 0.21916238963603973,
+  "best_f1": 0.4369482555939542,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/RD4AD/checkpoints/rd4ad_autopet_fdg_ct_pet_pet.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/RD4AD/fixed_lesion_case_figures/cases/large/large_FDG_fdg_ad7cd4a9d2_10-02-2003-NA-Unspecified CT ABDOMEN-67897__0020"
+}

@@ -1,0 +1,3 @@
+[DeepPSMA] slices=2324 normal=1162 abnormal=1162 score_mode=lesion_z
+[Slice-Img]  AUROC=85.04% (95%CI 83.61-86.42%)  AP=80.22% (95%CI 77.30-82.93%)  F1=81.31% (95%CI 79.79-82.74%)
+[Slice-Px(abn)]  AUROC=98.16% (95%CI 98.04-98.27%)  AUPR=14.88% (95%CI 13.20-16.49%)

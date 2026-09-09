@@ -1,0 +1,113 @@
+开始训练 | modality=petct | epochs=30 | batch_size=8 | image_size=256 | image_agg=top1pct
+训练集样本数: 1659 | 测试集样本数: 1546
+评估协议: Img/Px AUROC+AP 用原始分数; Img-F1 用原始 image score; Px-F1 用测试集全局 min-max; 训练完成后统一测试一次
+Epoch [01/30] loss=18.8394
+Epoch [02/30] loss=18.4946
+Epoch [03/30] loss=18.4143
+Epoch [04/30] loss=18.3752
+Epoch [05/30] loss=18.3544
+Epoch [06/30] loss=18.3335
+Epoch [07/30] loss=18.3301
+Epoch [08/30] loss=18.3067
+Epoch [09/30] loss=18.2969
+Epoch [10/30] loss=18.2893
+Epoch [11/30] loss=18.2824
+Epoch [12/30] loss=18.2782
+Epoch [13/30] loss=18.2730
+Epoch [14/30] loss=18.2694
+Epoch [15/30] loss=18.2652
+Epoch [16/30] loss=18.2626
+Epoch [17/30] loss=18.2595
+Epoch [18/30] loss=18.2561
+Epoch [19/30] loss=18.2534
+Epoch [20/30] loss=18.2516
+Epoch [21/30] loss=18.2500
+Epoch [22/30] loss=18.2490
+Epoch [23/30] loss=18.2477
+Epoch [24/30] loss=18.2459
+Epoch [25/30] loss=18.2439
+Epoch [26/30] loss=18.2427
+Epoch [27/30] loss=18.2400
+Epoch [28/30] loss=18.2394
+Epoch [29/30] loss=18.2382
+Epoch [30/30] loss=18.2412
+训练结束 | 已保存最后一轮权重: EPOCH_030.pth
+
+--- 最后一轮权重最终评估 ---
+[Slice-Img]  AUROC=84.80%  AP=86.15%  F1=78.53%
+[Slice-Px(all)]  AUROC=93.53%  AP=8.03%  F1=16.24%
+[Slice-Px(abn)]  AUROC=91.72%  AP=9.33%  F1=17.52%
+[Patient(18/36abn)]  AUROC=85.49%  AP=89.26%  F1=80.00%  Sens@90Spec=66.67%  Sens@95Spec=55.56%
+热力图已保存到: ./saved_results/petct_psma/PETCT_PSMA_PETCT/heatmaps/EPOCH_030
+权重加载完成: EPOCH_030.pth
+开始评估 | ci_bootstraps=500 | ci_pixel_max_samples=0 | pixel_metric_max_samples=0
+评估 forward 进度: 1/1546
+评估 forward 进度: 100/1546
+评估 forward 进度: 200/1546
+评估 forward 进度: 300/1546
+评估 forward 进度: 400/1546
+评估 forward 进度: 500/1546
+评估 forward 进度: 600/1546
+评估 forward 进度: 700/1546
+评估 forward 进度: 800/1546
+评估 forward 进度: 900/1546
+评估 forward 进度: 1000/1546
+评估 forward 进度: 1100/1546
+评估 forward 进度: 1200/1546
+评估 forward 进度: 1300/1546
+评估 forward 进度: 1400/1546
+评估 forward 进度: 1500/1546
+开始合成 anomaly map
+开始计算 image-level 指标
+[Image-level first pass]
+[Slice-Img]  AUROC=84.80% [82.94-86.65]  AUPR=86.15% [84.00-88.11]  F1=78.53% [76.75-80.55]
+开始计算 pixel-level 指标
+开始计算 patient-level 指标
+开始保存热力图: ./saved_results/petct_psma/PETCT_PSMA_PETCT/heatmaps/EPOCH_030
+[推理模式]
+[Slice-Img]  AUROC=84.80% [82.94-86.65]  AUPR=86.15% [84.00-88.11]  F1=78.53% [76.75-80.55]
+[Slice-Px(abn)] AUROC=91.72% [91.68-91.75]  AUPR=9.33% [8.53-10.13]
+[Patient(18/36abn)]  AUROC=85.49% [72.58-98.41]  AUPR=89.26% [77.24-96.48]  F1=80.00% [69.23-94.12]
+热力图已保存到: ./saved_results/petct_psma/PETCT_PSMA_PETCT/heatmaps/EPOCH_030
+权重加载完成: EPOCH_030.pth
+开始评估 | ci_bootstraps=500 | hist_bins=16384
+评估 forward 进度: 1/1546
+评估 forward 进度: 100/1546
+评估 forward 进度: 200/1546
+评估 forward 进度: 300/1546
+评估 forward 进度: 400/1546
+评估 forward 进度: 500/1546
+评估 forward 进度: 600/1546
+评估 forward 进度: 700/1546
+评估 forward 进度: 800/1546
+评估 forward 进度: 900/1546
+评估 forward 进度: 1000/1546
+评估 forward 进度: 1100/1546
+评估 forward 进度: 1200/1546
+评估 forward 进度: 1300/1546
+评估 forward 进度: 1400/1546
+评估 forward 进度: 1500/1546
+anomaly map 已逐 batch 合成完成
+Eval arrays ready: labels=(1546,), masks=(1546, 256, 256), maps=(1546, 256, 256), bootstrap_iters=500
+Computing image-level metrics and 95CI...
+[Slice-Img]  AUROC=84.80% (95% CI 82.80-86.64%)  AUPR=86.15% (95% CI 84.00-88.11%)  F1=78.53% (95% CI 76.75-80.55%)
+Computing pixel-level Slice-Px(abn) metrics and 95CI...
+Computing exact full-pixel point estimates with sklearn...
+Pixel histogram slice bootstrap: 50/500
+Pixel histogram slice bootstrap: 100/500
+Pixel histogram slice bootstrap: 150/500
+Pixel histogram slice bootstrap: 200/500
+Pixel histogram slice bootstrap: 250/500
+Pixel histogram slice bootstrap: 300/500
+Pixel histogram slice bootstrap: 350/500
+Pixel histogram slice bootstrap: 400/500
+Pixel histogram slice bootstrap: 450/500
+Pixel histogram slice bootstrap: 500/500
+[Slice-Px(abn)]  AUROC=91.72% (95% CI 91.16-92.29%)  AUPR=9.33% (95% CI 8.53-10.16%)
+Computing patient-level metrics and 95CI...
+开始保存热力图: ./saved_results/petct_psma/PETCT_PSMA_PETCT/heatmaps/EPOCH_030
+[推理模式]
+[Slice-Img]  AUROC=84.80% (95% CI 82.80-86.64%)  AUPR=86.15% (95% CI 84.00-88.11%)  F1=78.53% (95% CI 76.75-80.55%)
+[Slice-Px(abn)]  AUROC=91.72% (95% CI 91.16-92.29%)  AUPR=9.33% (95% CI 8.53-10.16%)
+[Patient(18/36abn)]  AUROC=85.49% (95% CI 70.68-96.56%)  AUPR=89.26% (95% CI 77.24-96.48%)  F1=80.00% (95% CI 69.23-94.12%)
+热力图已保存到: ./saved_results/petct_psma/PETCT_PSMA_PETCT/heatmaps/EPOCH_030

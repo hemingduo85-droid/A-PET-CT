@@ -1,0 +1,4 @@
+checkpoint=/data/cyf/codes/A-PET-CT/UniNet-main/ckpts/PETCT_PSMA_PETCT/EPOCH_030.pth
+data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1
+[Slice-Img]  AUROC=30.78% (95% CI 28.71-33.07%)  AUPR=39.60% (95% CI 37.38-42.19%)  F1=66.82% (95% CI 65.08-68.55%)
+[Slice-Px(abn)]  AUROC=72.40% (95% CI 71.26-73.52%)  AUPR=0.62% (95% CI 0.57-0.67%)

@@ -1,0 +1,57 @@
+Device: cuda:1
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50_ganzkoerper/FDG', input_mode='dual_rgbd', mulsen_fusion='mean', num_epochs=30, batch_size=16, num_workers=4, gpu='1', seed=40, save_dir='./saved_results/dual_rgbd_fdg', save_name='dinomaly2_petct_dual_rgbd_ep30_s40', eval_only=False, checkpoint=None, max_ratio=0.01)
+输入模式: dual_rgbd — 6通道 [CT³,PET³] DinomalyRGBD（特征级融合）
+图像尺寸: 256, 裁剪尺寸: 252
+训练样本: 13182, 测试样本: 6876
+Device: cuda:2
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50_ganzkoerper/FDG', input_mode='dual_rgbd', mulsen_fusion='mean', num_epochs=30, batch_size=16, num_workers=4, gpu='2', seed=40, save_dir='./saved_results/dual_rgbd_fdg', save_name='dinomaly2_petct_dual_rgbd_ep30_s40', eval_only=False, checkpoint=None, max_ratio=0.01)
+输入模式: dual_rgbd — 6通道 [CT³,PET³] DinomalyRGBD（特征级融合）
+图像尺寸: 256, 裁剪尺寸: 252
+训练样本: 13182, 测试样本: 6876
+模型类型: DinomalyRGBD
+可训练参数: 60049408
+总迭代数: 24690, 预热: 100
+Device: cuda:3
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50_ganzkoerper/FDG', input_mode='dual_rgbd', mulsen_fusion='mean', num_epochs=30, batch_size=16, num_workers=4, gpu='3', seed=40, save_dir='./saved_results/dual_rgbd_fdg', save_name='dinomaly2_petct_dual_rgbd_ep30_s40', eval_only=False, checkpoint=None, max_ratio=0.01)
+输入模式: dual_rgbd — 6通道 [CT³,PET³] DinomalyRGBD（特征级融合）
+图像尺寸: 256, 裁剪尺寸: 252
+训练样本: 13182, 测试样本: 6876
+模型类型: DinomalyRGBD
+可训练参数: 60049408
+总迭代数: 24690, 预热: 100
+Epoch [1/30], Loss: 0.0907
+Epoch [2/30], Loss: 0.0485
+Epoch [3/30], Loss: 0.0451
+Epoch [4/30], Loss: 0.0436
+Epoch [5/30], Loss: 0.0413
+Epoch [6/30], Loss: 0.0400
+Epoch [7/30], Loss: 0.0391
+Epoch [8/30], Loss: 0.0380
+Epoch [9/30], Loss: 0.0372
+Epoch [10/30], Loss: 0.0367
+Epoch [11/30], Loss: 0.0359
+Epoch [12/30], Loss: 0.0353
+Epoch [13/30], Loss: 0.0347
+Epoch [14/30], Loss: 0.0343
+Epoch [15/30], Loss: 0.0339
+Epoch [16/30], Loss: 0.0336
+Epoch [17/30], Loss: 0.0329
+Epoch [18/30], Loss: 0.0328
+Epoch [19/30], Loss: 0.0323
+Epoch [20/30], Loss: 0.0321
+Epoch [21/30], Loss: 0.0320
+Epoch [22/30], Loss: 0.0314
+Epoch [23/30], Loss: 0.0316
+Epoch [24/30], Loss: 0.0312
+Epoch [25/30], Loss: 0.0309
+Epoch [26/30], Loss: 0.0308
+Epoch [27/30], Loss: 0.0306
+Epoch [28/30], Loss: 0.0308
+Epoch [29/30], Loss: 0.0301
+Epoch [30/30], Loss: 0.0301
+================================================================================
+第 30 轮模型已保存: ./saved_results/dual_rgbd_fdg/dinomaly2_petct_dual_rgbd_ep30_s40/model.pth
+最终测试结果:
+[Slice-Img]  AUROC=82.56%  AP=80.95%  F1=75.96%
+[Slice-Px(abn)]  AUROC=95.95%  AP=22.06%  F1=32.67%
+[Patient(92/184abn)]  AUROC=88.80%  AP=84.07%  F1=84.62%  Sens@90Spec=70.65%  Sens@95Spec=46.74%

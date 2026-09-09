@@ -1,0 +1,20 @@
+{
+  "group": "small",
+  "case_id": "psma_1ca3af29b7df127d_2020-06-27",
+  "slice_id": "0009",
+  "rank_in_size_group": "fixed",
+  "full_raw_lesion_evidence": 39.10750567741944,
+  "full_image_score_z": 10.741950283261192,
+  "without_a_physio_raw_lesion_evidence": 56.18799521220518,
+  "without_a_physio_image_score_z": 16.0434843465298,
+  "pixel_auroc": 0.9992648654694489,
+  "pixel_aupr": 0.8925452311065165,
+  "hotspot_recall": 0.8,
+  "hotspot_precision": 0.8,
+  "pred_dice_reference": 0.37891268533772654,
+  "pred_iou_reference": 0.23373983739837398,
+  "ms_lai_evidence_components": 13,
+  "ms_lai_components_by_quantile": "{\"0.985\": 6, \"0.992\": 5, \"0.997\": 2}",
+  "path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA/test/abnormal/psma_1ca3af29b7df127d_2020-06-27/pet/0009.png",
+  "status": "saved"
+}

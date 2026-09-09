@@ -1,0 +1,13 @@
+{
+  "method": "InvAD",
+  "group": "medium",
+  "tracer": "FDG",
+  "patient": "fdg_2b60c8135a_12-09-2005-NA-PET-CT Ganzkoerper  primaer mit KM-49696",
+  "slice": "0033",
+  "score": 9.625894546508789,
+  "score_mode": "max pixel score",
+  "threshold": 8.765382766723633,
+  "best_f1": 0.1729323106692389,
+  "checkpoint": "/data/cyf/codes/A-PET-CT/InversionAD/results/exp_dit_petct/fdg/dual/model_latest.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/InversionAD/fixed_lesion_case_figures/cases/medium/medium_FDG_fdg_2b60c8135a_12-09-2005-NA-PET-CT Ganzkoerper  primaer mit KM-49696__0033"
+}

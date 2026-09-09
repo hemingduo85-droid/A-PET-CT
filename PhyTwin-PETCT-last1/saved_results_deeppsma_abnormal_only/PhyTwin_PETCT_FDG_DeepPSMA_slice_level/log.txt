@@ -1,0 +1,7 @@
+DeepPSMA slice-level evaluation | data_root=/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1
+Device: cuda
+Loaded slices=2324 normal=1162 abnormal=1162
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_FDG/BEST_PHYTWIN.pth
+Checkpoint lesion_z refinement config differs from current args; DeepPSMA slice-level evaluation cannot recalibrate without train/normal, so it will reuse the checkpoint's available normal calibration statistics.
+[Image-level finished]
+[Slice-Img]  AUROC=85.99% (95%CI 84.54-87.46%)  AP=82.37% (95%CI 79.59-84.84%)  F1=81.09% (95%CI 79.53-82.58%)

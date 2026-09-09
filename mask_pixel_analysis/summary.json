@@ -1,0 +1,301 @@
+{
+  "FDG": {
+    "summary": {
+      "n_masks": 4249,
+      "min": 1,
+      "max": 3661,
+      "mean": 527.8980936690986,
+      "median": 276.0,
+      "std": 640.4138031201178,
+      "quantiles": {
+        "p1": 3.0,
+        "p5": 13.0,
+        "p10": 27.0,
+        "p25": 94.0,
+        "p50": 276.0,
+        "p75": 724.0,
+        "p90": 1400.4000000000005,
+        "p95": 1881.0,
+        "p99": 2957.079999999998
+      },
+      "count_lt_1": 0,
+      "pct_lt_1": 0.0,
+      "count_lt_2": 12,
+      "pct_lt_2": 0.28241939279830547,
+      "count_lt_3": 38,
+      "pct_lt_3": 0.894328077194634,
+      "count_lt_4": 55,
+      "pct_lt_4": 1.2944222169922335,
+      "count_lt_5": 63,
+      "pct_lt_5": 1.4827018121911038,
+      "count_lt_10": 150,
+      "pct_lt_10": 3.5302424099788183,
+      "count_lt_20": 310,
+      "pct_lt_20": 7.295834313956225,
+      "count_lt_50": 684,
+      "pct_lt_50": 16.097905389503413,
+      "count_lt_100": 1104,
+      "pct_lt_100": 25.982584137444103
+    },
+    "smallest_15": [
+      {
+        "patient": "fdg_3fd361ec14_10-24-2004-NA-PET-CT Ganzkoerper  primaer mit KM-79985",
+        "slice": "0009.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_3fd361ec14_10-24-2004-NA-PET-CT Ganzkoerper  primaer mit KM-79985/label/0009.png"
+      },
+      {
+        "patient": "fdg_59e6d1de22_08-06-2005-NA-PET-CT Ganzkoerper  primaer mit KM-59516",
+        "slice": "0023.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_59e6d1de22_08-06-2005-NA-PET-CT Ganzkoerper  primaer mit KM-59516/label/0023.png"
+      },
+      {
+        "patient": "fdg_73597f33fe_02-10-2007-NA-PET-CT Ganzkoerper  primaer mit KM-77540",
+        "slice": "0008.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_73597f33fe_02-10-2007-NA-PET-CT Ganzkoerper  primaer mit KM-77540/label/0008.png"
+      },
+      {
+        "patient": "fdg_770ee48d09_07-15-2005-NA-PET-CT Ganzkoerper  primaer mit KM-58868",
+        "slice": "0048.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_770ee48d09_07-15-2005-NA-PET-CT Ganzkoerper  primaer mit KM-58868/label/0048.png"
+      },
+      {
+        "patient": "fdg_7cfd708a53_06-17-2005-NA-PET-CT Ganzkoerper  primaer mit KM-72140",
+        "slice": "0046.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_7cfd708a53_06-17-2005-NA-PET-CT Ganzkoerper  primaer mit KM-72140/label/0046.png"
+      },
+      {
+        "patient": "fdg_7cfd708a53_06-17-2005-NA-PET-CT Ganzkoerper  primaer mit KM-72140",
+        "slice": "0059.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_7cfd708a53_06-17-2005-NA-PET-CT Ganzkoerper  primaer mit KM-72140/label/0059.png"
+      },
+      {
+        "patient": "fdg_7cfd708a53_06-17-2005-NA-PET-CT Ganzkoerper  primaer mit KM-72140",
+        "slice": "0101.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_7cfd708a53_06-17-2005-NA-PET-CT Ganzkoerper  primaer mit KM-72140/label/0101.png"
+      },
+      {
+        "patient": "fdg_b509ace2a2_05-27-2002-NA-PET-CT Ganzkoerper  primaer mit KM-84477",
+        "slice": "0003.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_b509ace2a2_05-27-2002-NA-PET-CT Ganzkoerper  primaer mit KM-84477/label/0003.png"
+      },
+      {
+        "patient": "fdg_cc5c58c82d_07-26-2001-NA-PET-CT Ganzkoerper  primaer mit KM-77724",
+        "slice": "0040.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_cc5c58c82d_07-26-2001-NA-PET-CT Ganzkoerper  primaer mit KM-77724/label/0040.png"
+      },
+      {
+        "patient": "fdg_d31c9ebd93_07-21-2003-NA-PET-CT Ganzkoerper  primaer mit KM-37139",
+        "slice": "0058.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_d31c9ebd93_07-21-2003-NA-PET-CT Ganzkoerper  primaer mit KM-37139/label/0058.png"
+      },
+      {
+        "patient": "fdg_d3d61785e6_10-19-2001-NA-PET-CT Ganzkoerper  primaer mit KM-35929",
+        "slice": "0036.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_d3d61785e6_10-19-2001-NA-PET-CT Ganzkoerper  primaer mit KM-35929/label/0036.png"
+      },
+      {
+        "patient": "fdg_d40a16781a_09-13-2003-NA-PET-CT Ganzkoerper  primaer mit KM-42002",
+        "slice": "0024.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_d40a16781a_09-13-2003-NA-PET-CT Ganzkoerper  primaer mit KM-42002/label/0024.png"
+      },
+      {
+        "patient": "fdg_37952b7ffb_08-24-2002-NA-PET-CT Ganzkoerper  primaer mit KM-55543",
+        "slice": "0035.png",
+        "pixels": 2,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_37952b7ffb_08-24-2002-NA-PET-CT Ganzkoerper  primaer mit KM-55543/label/0035.png"
+      },
+      {
+        "patient": "fdg_37952b7ffb_08-24-2002-NA-PET-CT Ganzkoerper  primaer mit KM-55543",
+        "slice": "0036.png",
+        "pixels": 2,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_37952b7ffb_08-24-2002-NA-PET-CT Ganzkoerper  primaer mit KM-55543/label/0036.png"
+      },
+      {
+        "patient": "fdg_442a09f90e_03-16-2002-NA-PET-CT Ganzkoerper  primaer mit KM-24290",
+        "slice": "0033.png",
+        "pixels": 2,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/FDG/test/abnormal/fdg_442a09f90e_03-16-2002-NA-PET-CT Ganzkoerper  primaer mit KM-24290/label/0033.png"
+      }
+    ]
+  },
+  "PSMA": {
+    "summary": {
+      "n_masks": 757,
+      "min": 1,
+      "max": 1996,
+      "mean": 309.2523117569353,
+      "median": 164.0,
+      "std": 378.2679619025662,
+      "quantiles": {
+        "p1": 5.0,
+        "p5": 18.0,
+        "p10": 26.0,
+        "p25": 63.0,
+        "p50": 164.0,
+        "p75": 376.0,
+        "p90": 933.9999999999998,
+        "p95": 1167.7999999999997,
+        "p99": 1703.079999999998
+      },
+      "count_lt_1": 0,
+      "pct_lt_1": 0.0,
+      "count_lt_2": 3,
+      "pct_lt_2": 0.3963011889035667,
+      "count_lt_3": 5,
+      "pct_lt_3": 0.6605019815059445,
+      "count_lt_4": 5,
+      "pct_lt_4": 0.6605019815059445,
+      "count_lt_5": 6,
+      "pct_lt_5": 0.7926023778071334,
+      "count_lt_10": 21,
+      "pct_lt_10": 2.774108322324967,
+      "count_lt_20": 49,
+      "pct_lt_20": 6.472919418758257,
+      "count_lt_50": 155,
+      "pct_lt_50": 20.47556142668428,
+      "count_lt_100": 275,
+      "pct_lt_100": 36.32760898282695
+    },
+    "smallest_15": [
+      {
+        "patient": "psma_348a4dbda705c573_2017-09-02",
+        "slice": "0003.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_348a4dbda705c573_2017-09-02/label/0003.png"
+      },
+      {
+        "patient": "psma_698f9e802d84253c_2014-08-03",
+        "slice": "0046.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_698f9e802d84253c_2014-08-03/label/0046.png"
+      },
+      {
+        "patient": "psma_7f274800860fcbfa_2015-06-29",
+        "slice": "0018.png",
+        "pixels": 1,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_7f274800860fcbfa_2015-06-29/label/0018.png"
+      },
+      {
+        "patient": "psma_698f9e802d84253c_2014-08-03",
+        "slice": "0008.png",
+        "pixels": 2,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_698f9e802d84253c_2014-08-03/label/0008.png"
+      },
+      {
+        "patient": "psma_7f274800860fcbfa_2015-06-29",
+        "slice": "0017.png",
+        "pixels": 2,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_7f274800860fcbfa_2015-06-29/label/0017.png"
+      },
+      {
+        "patient": "psma_0bf6ac34fa0c97c0_2019-02-09",
+        "slice": "0041.png",
+        "pixels": 4,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_0bf6ac34fa0c97c0_2019-02-09/label/0041.png"
+      },
+      {
+        "patient": "psma_0bf6ac34fa0c97c0_2016-12-23",
+        "slice": "0038.png",
+        "pixels": 5,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_0bf6ac34fa0c97c0_2016-12-23/label/0038.png"
+      },
+      {
+        "patient": "psma_0bf6ac34fa0c97c0_2019-02-09",
+        "slice": "0045.png",
+        "pixels": 5,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_0bf6ac34fa0c97c0_2019-02-09/label/0045.png"
+      },
+      {
+        "patient": "psma_f46740fcc3f44f10_2020-05-22",
+        "slice": "0036.png",
+        "pixels": 5,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_f46740fcc3f44f10_2020-05-22/label/0036.png"
+      },
+      {
+        "patient": "psma_348a4dbda705c573_2017-09-02",
+        "slice": "0004.png",
+        "pixels": 6,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_348a4dbda705c573_2017-09-02/label/0004.png"
+      },
+      {
+        "patient": "psma_698f9e802d84253c_2014-08-03",
+        "slice": "0045.png",
+        "pixels": 6,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_698f9e802d84253c_2014-08-03/label/0045.png"
+      },
+      {
+        "patient": "psma_698f9e802d84253c_2014-08-03",
+        "slice": "0047.png",
+        "pixels": 6,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_698f9e802d84253c_2014-08-03/label/0047.png"
+      },
+      {
+        "patient": "psma_f46740fcc3f44f10_2020-05-22",
+        "slice": "0044.png",
+        "pixels": 6,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_f46740fcc3f44f10_2020-05-22/label/0044.png"
+      },
+      {
+        "patient": "psma_f46740fcc3f44f10_2020-05-22",
+        "slice": "0047.png",
+        "pixels": 6,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_f46740fcc3f44f10_2020-05-22/label/0047.png"
+      },
+      {
+        "patient": "psma_0bf6ac34fa0c97c0_2019-02-09",
+        "slice": "0044.png",
+        "pixels": 7,
+        "path": "/data/cyf/shared_data/PET-CT/AutoPET/2d_equal/PSMA/test/abnormal/psma_0bf6ac34fa0c97c0_2019-02-09/label/0044.png"
+      }
+    ]
+  },
+  "COMBINED": {
+    "n_masks": 5006,
+    "min": 1,
+    "max": 3661,
+    "mean": 494.83479824210946,
+    "median": 254.0,
+    "std": 613.0937345649471,
+    "quantiles": {
+      "p1": 3.0,
+      "p5": 13.0,
+      "p10": 27.0,
+      "p25": 87.0,
+      "p50": 254.0,
+      "p75": 666.75,
+      "p90": 1319.5,
+      "p95": 1811.75,
+      "p99": 2919.699999999999
+    },
+    "count_lt_1": 0,
+    "pct_lt_1": 0.0,
+    "count_lt_2": 15,
+    "pct_lt_2": 0.29964043148222136,
+    "count_lt_3": 43,
+    "pct_lt_3": 0.8589692369157012,
+    "count_lt_4": 60,
+    "pct_lt_4": 1.1985617259288854,
+    "count_lt_5": 69,
+    "pct_lt_5": 1.3783459848182182,
+    "count_lt_10": 171,
+    "pct_lt_10": 3.4159009188973233,
+    "count_lt_20": 359,
+    "pct_lt_20": 7.171394326807831,
+    "count_lt_50": 839,
+    "pct_lt_50": 16.759888134238913,
+    "count_lt_100": 1379,
+    "pct_lt_100": 27.54694366759888
+  }
+}

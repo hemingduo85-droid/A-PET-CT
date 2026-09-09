@@ -1,0 +1,75 @@
+DeepPSMA abnormal-only evaluation | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/deeppsma
+Device: cuda
+This evaluator does not report AUROC/AP/F1/Sens@Spec because no normal controls are present.
+Loaded abnormal-only slices=2832 patients=93
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+DeepPSMA abnormal-only evaluation | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/deeppsma
+Device: cuda
+This evaluator does not report AUROC/AP/F1/Sens@Spec because no normal controls are present.
+Loaded abnormal-only slices=2832 patients=93
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+DeepPSMA abnormal-only evaluation | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/deeppsma
+Device: cuda
+This evaluator does not report AUROC/AP/F1/Sens@Spec because no normal controls are present.
+Loaded abnormal-only slices=2832 patients=93
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+Checkpoint lesion_z refinement config differs from current args; abnormal-only evaluation cannot recalibrate without train/normal, so it will reuse the checkpoint's available normal calibration statistics.
+
+DeepPSMA abnormal-only evaluation
+Slices=2832  Patients=93  ScoreMode=lesion_z
+
+[Detection recall at fixed score thresholds]
+  score>=0.0: SliceRecall=99.40% (2815/2832)  PatientRecall=100.00% (93/93)
+  score>=1.0: SliceRecall=95.69% (2710/2832)  PatientRecall=98.92% (92/93)
+  score>=2.0: SliceRecall=88.35% (2502/2832)  PatientRecall=98.92% (92/93)
+  score>=3.0: SliceRecall=81.00% (2294/2832)  PatientRecall=97.85% (91/93)
+
+[Pixel localization from predicted masks]
+  Dice=35.79%  IoU=21.80%  PixelRecall=57.01%  PixelPrecision=26.08%
+
+[Lesion-wise detection]
+  LesionRecall=37.98% (13134/34581 lesions, min_overlap=1 px)
+
+[Score distribution]
+  slice_scores: mean=6.1962 median=5.9234 IQR=3.7413-8.3387 min=-0.8336 max=17.0743
+  patient_max_scores: mean=9.7688 median=9.7504 IQR=7.7425-11.8221 min=0.8894 max=17.0743
+  mask_inside_anomaly_mean: mean=9.4147 median=9.0373 IQR=6.8084-11.6765 min=1.6994 max=24.0138
+  mask_outside_anomaly_mean: mean=1.0428 median=1.0536 IQR=0.7522-1.3064 min=0.0676 max=2.7817
+
+[Not reported]
+  AUROC/AP/F1/Sens@90Spec/Sens@95Spec are not valid here because this set has no normal controls.
+
+[What these metrics mean]
+  SliceRecall: among abnormal slices, the fraction whose image score exceeds a fixed threshold.
+  PatientRecall: among abnormal patients, the fraction with at least one detected abnormal slice.
+  Pixel Dice/IoU: spatial overlap between the predicted anomaly mask and the ground-truth lesion mask.
+  PixelRecall: how much of the lesion mask is covered by the prediction; high value means fewer missed lesion pixels.
+  PixelPrecision: how much of the predicted mask falls inside the lesion; high value means less over-segmentation.
+  LesionRecall: fraction of connected lesion regions touched by the predicted mask.
+  Score distribution: whether abnormal slices/patients receive high anomaly scores relative to the model calibration.
+Saved metrics JSON: ./saved_results_deeppsma_abnormal_only/PhyTwin_PETCT_PSMA_DeepPSMA_abnormal_only/deeppsma_abnormal_only_metrics.json
+Saved metrics text: ./saved_results_deeppsma_abnormal_only/PhyTwin_PETCT_PSMA_DeepPSMA_abnormal_only/deeppsma_abnormal_only_metrics.txt
+Saved slice table: ./saved_results_deeppsma_abnormal_only/PhyTwin_PETCT_PSMA_DeepPSMA_abnormal_only/deeppsma_abnormal_only_slice_scores.csv
+DeepPSMA abnormal-only evaluation | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/deeppsma
+Device: cuda
+This evaluator does not report AUROC/AP/F1/Sens@Spec because no normal controls are present.
+Loaded abnormal-only slices=2832 patients=93
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+Checkpoint lesion_z refinement config differs from current args; abnormal-only evaluation cannot recalibrate without train/normal, so it will reuse the checkpoint's available normal calibration statistics.
+
+[DeepPSMA] slices=2832 patients=93 score_mode=lesion_z
+[Detection]
+  score>=0.0: SliceRecall=99.40% (2815/2832)  PatientRecall=100.00% (93/93)
+  score>=1.0: SliceRecall=95.69% (2710/2832)  PatientRecall=98.92% (92/93)
+  score>=2.0: SliceRecall=88.35% (2502/2832)  PatientRecall=98.92% (92/93)
+  score>=3.0: SliceRecall=81.00% (2294/2832)  PatientRecall=97.85% (91/93)
+[Pixel]
+  Dice=35.79%  IoU=21.80%  PixelRecall=57.01%  PixelPrecision=26.08%
+[Lesion]
+  LesionRecall=37.98% (13134/34581 lesions, min_overlap=1 px)
+[Scores]
+  slice_scores: mean=6.1962 median=5.9234 IQR=3.7413-8.3387 min=-0.8336 max=17.0743
+  patient_max_scores: mean=9.7688 median=9.7504 IQR=7.7425-11.8221 min=0.8894 max=17.0743
+  mask_inside_anomaly_mean: mean=9.4147 median=9.0373 IQR=6.8084-11.6765 min=1.6994 max=24.0138
+  mask_outside_anomaly_mean: mean=1.0428 median=1.0536 IQR=0.7522-1.3064 min=0.0676 max=2.7817
+Saved: ./saved_results_deeppsma_abnormal_only/PhyTwin_PETCT_PSMA_DeepPSMA_abnormal_only/deeppsma_abnormal_only_metrics.json | ./saved_results_deeppsma_abnormal_only/PhyTwin_PETCT_PSMA_DeepPSMA_abnormal_only/deeppsma_abnormal_only_metrics.txt | ./saved_results_deeppsma_abnormal_only/PhyTwin_PETCT_PSMA_DeepPSMA_abnormal_only/deeppsma_abnormal_only_slice_scores.csv

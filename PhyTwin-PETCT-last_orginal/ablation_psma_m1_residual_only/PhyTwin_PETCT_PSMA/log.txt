@@ -1,0 +1,27 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: disabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Saved visualizations to ./ablation_psma_m1_residual_only/PhyTwin_PETCT_PSMA/visualizations
+Saved slice score table to ./ablation_psma_m1_residual_only/PhyTwin_PETCT_PSMA/slice_scores.csv
+[Slice-Img]  AUROC=87.73%  AP=90.10%  F1=80.24%
+[Slice-Px(abn)]  AUROC=97.73%  AP=48.68%  F1=51.12%
+[Patient(18/36abn)]  AUROC=95.37%  AP=96.22%  F1=88.89%  Sens@90Spec=83.33%  Sens@95Spec=77.78%
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: disabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+Static PHYSIO prior disabled by --no_physio after checkpoint loading.
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Saved visualizations to ./ablation_psma_m1_residual_only/PhyTwin_PETCT_PSMA/visualizations
+Saved slice score table to ./ablation_psma_m1_residual_only/PhyTwin_PETCT_PSMA/slice_scores.csv
+[Slice-Img]  AUROC=86.97%  AP=88.98%  F1=79.93%
+[Slice-Px(abn)]  AUROC=97.47%  AP=44.96%  F1=48.55%
+[Patient(18/36abn)]  AUROC=92.28%  AP=92.87%  F1=87.18%  Sens@90Spec=66.67%  Sens@95Spec=61.11%

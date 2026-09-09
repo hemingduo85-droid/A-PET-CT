@@ -1,0 +1,17 @@
+{
+  "group": "small",
+  "case_id": "fdg_791ec15924_04-16-2001-NA-PET-CT Ganzkoerper  primaer mit KM-50308",
+  "slice_id": "0052",
+  "rank_in_size_group": "1",
+  "lesion_pixels": "179",
+  "lesion_area_ratio": "0.000992239467849224",
+  "image_score": 30.605983528075335,
+  "pixel_auroc": "0.9929875441451889",
+  "pixel_aupr": "0.06802799445508832",
+  "hotspot_recall": 0.0,
+  "hotspot_precision": 0.0,
+  "pred_dice_reference": 0.13459715639810427,
+  "pred_iou_reference": 0.07215447154471545,
+  "path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG/test/abnormal/fdg_791ec15924_04-16-2001-NA-PET-CT Ganzkoerper  primaer mit KM-50308/pet/0052.png",
+  "status": "saved"
+}

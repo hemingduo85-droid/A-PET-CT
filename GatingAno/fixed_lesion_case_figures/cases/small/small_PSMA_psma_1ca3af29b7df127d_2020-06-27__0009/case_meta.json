@@ -1,0 +1,12 @@
+{
+  "method": "GatingAno",
+  "group": "small",
+  "tracer": "PSMA",
+  "patient": "psma_1ca3af29b7df127d_2020-06-27",
+  "slice": "0009",
+  "score": 0.12680934369564056,
+  "threshold": 0.738858163356781,
+  "best_f1": 0.5657015090500588,
+  "checkpoint": "./checkpoints/PSMA_petct_epoch30.pth",
+  "case_dir": "/data/cyf/codes/A-PET-CT/GatingAno/fixed_lesion_case_figures/cases/small/small_PSMA_psma_1ca3af29b7df127d_2020-06-27__0009"
+}

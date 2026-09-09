@@ -1,0 +1,22 @@
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: enabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+Checkpoint image-level refinement calibration is missing or outdated; recalibrating on train/normal without retraining.
+PhyTwin-PETCT | data_root=/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA
+Experiment: PhyTwin_PETCT_PSMA
+Checkpoint directory: ./ckpts/PhyTwin_PETCT_PSMA
+Labels and masks are used only for evaluation and visualization.
+Adaptive PHYSIO: enabled
+Loading checkpoint from ./ckpts/PhyTwin_PETCT_PSMA/BEST_PHYTWIN.pth
+Checkpoint image-level refinement calibration is missing or outdated; recalibrating on train/normal without retraining.
+Calibrated multi-scale lesion_z | normal_lesion_ms_mean=5.4834 normal_lesion_ms_std=3.9681 | normal_hotspots=disabled
+Dynamic physiological suppression: disabled
+--- Final evaluation ---
+Saved visualizations to ./ablation_psma_m4_nomem_full/PhyTwin_PETCT_PSMA/visualizations
+Saved slice score table to ./ablation_psma_m4_nomem_full/PhyTwin_PETCT_PSMA/slice_scores.csv
+[Slice-Img]  AUROC=90.66%  AP=92.72%  F1=84.89%
+[Slice-Px(abn)]  AUROC=97.76%  AP=46.60%  F1=50.24%
+[Patient(18/36abn)]  AUROC=97.84%  AP=98.05%  F1=92.31%  Sens@90Spec=88.89%  Sens@95Spec=83.33%

@@ -1,0 +1,20 @@
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50_ganzkoerper/FDG', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='petct_fdg_eval', eval_only=True, ckpt_path='./saved_results/pet_fdg/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 6876
+Loading checkpoint from ./saved_results/pet_fdg/epoch_30_model.pth
+--- Final evaluation ---
+[Slice-Img]  AUROC=78.71%  AP=77.29%  F1=73.47%
+[Slice-Px(abn)]  AUROC=95.78%  AP=17.95%  F1=29.13%
+[Patient(92/184abn)]  AUROC=83.01%  AP=79.01%  F1=78.18%  Sens@90Spec=56.52%  Sens@95Spec=31.52%
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50_ganzkoerper/FDG', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='petct_fdg_eval', eval_only=True, ckpt_path='./saved_results/pet_fdg/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 6876
+Loading checkpoint from ./saved_results/pet_fdg/epoch_30_model.pth
+--- Final evaluation ---
+[Slice-Img]  AUROC=78.71%  AP=77.29%  F1=73.47%
+[Slice-Px(abn)]  AUROC=95.78%  AP=17.95%  F1=29.13%
+[Patient(92/184abn)]  AUROC=83.01%  AP=79.01%  F1=78.18%  Sens@90Spec=56.52%  Sens@95Spec=31.52%

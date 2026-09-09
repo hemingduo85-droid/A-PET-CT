@@ -1,0 +1,40 @@
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='petct_psma_eval', eval_only=True, ckpt_path='./saved_results/petct_psma/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 1546
+Loading checkpoint from ./saved_results/petct_psma/epoch_30_model.pth
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='petct_psma_eval', eval_only=True, ckpt_path='./saved_results/pet_psma/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 1546
+Loading checkpoint from ./saved_results/pet_psma/epoch_30_model.pth
+--- Final evaluation ---
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='petct_psma_eval', eval_only=True, ckpt_path='./saved_results/pet_psma/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 1546
+Loading checkpoint from ./saved_results/pet_psma/epoch_30_model.pth
+--- Final evaluation ---
+[Slice-Img]  AUROC=87.09%  AP=88.20%  F1=79.42%
+[Slice-Px(abn)]  AUROC=87.87%  AP=7.66%  F1=15.30%
+[Patient(18/36abn)]  AUROC=80.25%  AP=80.52%  F1=76.92%  Sens@90Spec=27.78%  Sens@95Spec=22.22%
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='petct_psma_eval', eval_only=True, ckpt_path='./saved_results/pet_psma/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 1546
+Loading checkpoint from ./saved_results/pet_psma/epoch_30_model.pth
+--- Final evaluation ---
+Device: cuda:0
+Args: Namespace(data_path='/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='0', seed=42, save_dir='./saved_results', save_name='petct_psma_eval', eval_only=True, ckpt_path='./saved_results/pet_psma/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 1546
+Loading checkpoint from ./saved_results/pet_psma/epoch_30_model.pth
+--- Final evaluation ---
+[Slice-Img]  AUROC=87.09%  AP=88.20%  F1=79.42%
+[Slice-Px(abn)]  AUROC=87.87%  AP=7.66%  F1=15.30%
+[Patient(18/36abn)]  AUROC=80.25%  AP=80.52%  F1=76.92%  Sens@90Spec=27.78%  Sens@95Spec=22.22%

@@ -1,0 +1,13 @@
+[13:49:24] Args: {'dataset': 'psma', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/PET-CT/AutoPET/2d_equal_mask50/PSMA', 'modality': 'petct', 'gpu': 2, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 50, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_psma_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_psma_petct/heatmaps/psma/petct', 'heatmap_limit': 128, 'ci_iters': 500, 'ci_seed': 42, 'ci_pixel_max_samples': 0, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': True, 'test_stage': 'costfilter', 'dataset_tag': 'psma', 'dinomaly_ckpt': './checkpoint_psma_petct/dinomaly_psma_petct.pth', 'costfilter_ckpt': './checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth', 'device': 'cuda:2'}
+[13:49:24] Device: cuda:2
+[13:49:24] ============================================================
+[13:49:24] Test only: costfilter
+[13:49:24] ============================================================
+[13:49:24] Test slices: 0
+[13:52:04] Args: {'dataset': 'psma', 'dataset_name': None, 'data_path': '/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA', 'modality': 'petct', 'gpu': 2, 'batch_size': 8, 'image_size': 256, 'crop_size': 252, 'dinomaly_epochs': 50, 'dinomaly_eval_freq': 5, 'costfilter_epochs': 30, 'cf_lr': 0.0001, 'lamda': 0.5, 'base_channels': 48, 'save_dir': './checkpoint_psma_petct', 'dinomaly_ckpt_path': None, 'costfilter_ckpt_path': None, 'heatmap_dir': './checkpoint_psma_petct/heatmaps/psma/petct', 'heatmap_limit': 128, 'ci_iters': 500, 'ci_seed': 42, 'ci_pixel_max_samples': 0, 'seed': 42, 'skip_phase1': False, 'skip_phase2': False, 'test_only': True, 'test_stage': 'costfilter', 'dataset_tag': 'psma', 'dinomaly_ckpt': './checkpoint_psma_petct/dinomaly_psma_petct.pth', 'costfilter_ckpt': './checkpoint_psma_petct/costfilter_psma_petct_epoch30.pth', 'device': 'cuda:2'}
+[13:52:04] Device: cuda:2
+[13:52:04] ============================================================
+[13:52:04] Test only: costfilter
+[13:52:04] ============================================================
+[13:52:04] Test slices: 1546
+[13:53:53] Dinomaly checkpoint not found: ./checkpoint_psma_petct/dinomaly_psma_petct.pth

@@ -1,0 +1,19 @@
+{
+  "method": "Dinomaly",
+  "dataset": "DeepPSMA",
+  "source_dataset": "FDG",
+  "target_dataset": "DeepPSMA",
+  "original_data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/deeppsma1",
+  "data_path": "/data/cyf/codes/A-PET-CT/Dinomaly/generalization_outputs/FDG_weights/figure_scores/_deeppsma_view",
+  "input_mode": "dual",
+  "checkpoint": "./saved_results/petct_fdg/epoch_30_model.pth",
+  "slice_csv": "generalization_outputs/FDG_weights/figure_scores/slice_scores.csv",
+  "patient_csv": "generalization_outputs/FDG_weights/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "generalization_outputs/FDG_weights/figure_scores/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 146,
+  "n_patients": 144,
+  "n_pixel_slices": 73,
+  "n_abnormal_slices": 73,
+  "n_abnormal_patients": 73
+}

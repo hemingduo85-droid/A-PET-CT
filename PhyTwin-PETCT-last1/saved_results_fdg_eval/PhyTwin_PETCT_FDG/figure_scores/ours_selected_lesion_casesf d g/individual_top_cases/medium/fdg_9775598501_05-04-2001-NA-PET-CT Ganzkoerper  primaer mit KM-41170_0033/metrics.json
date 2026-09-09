@@ -1,0 +1,20 @@
+{
+  "group": "medium",
+  "case_id": "fdg_9775598501_05-04-2001-NA-PET-CT Ganzkoerper  primaer mit KM-41170",
+  "slice_id": "0033",
+  "rank_in_size_group": 5,
+  "original_rank_in_size_group": "645",
+  "sort_by": "pixel_aupr",
+  "sort_value": 0.9854209025354486,
+  "lesion_pixels": "383",
+  "lesion_area_ratio": "0.0033714788732394367",
+  "image_score": 11.245673444772464,
+  "pixel_auroc": "0.9999488037493914",
+  "pixel_aupr": "0.9854209025354486",
+  "hotspot_recall": 0.9311926605504587,
+  "hotspot_precision": 0.9311926605504587,
+  "pred_dice_reference": 0.3642439431913116,
+  "pred_iou_reference": 0.2226762002042901,
+  "path": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG/test/abnormal/fdg_9775598501_05-04-2001-NA-PET-CT Ganzkoerper  primaer mit KM-41170/pet/0033.png",
+  "status": "saved"
+}

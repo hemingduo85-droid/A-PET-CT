@@ -1,0 +1,15 @@
+{
+  "method": "MMRAD",
+  "dataset": "FDG",
+  "modality": "ct_pet",
+  "data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG",
+  "checkpoint": "/data/cyf/codes/A-PET-CT/MMRAD1/checkpoints/FDG/ct_pet/model.pth",
+  "score_rule": "top 1% mean from MMRAD residual map",
+  "slice_csv": "/data/cyf/codes/A-PET-CT/MMRAD1/checkpoints/FDG/ct_pet/figure_scores/slice_scores.csv",
+  "patient_csv": "/data/cyf/codes/A-PET-CT/MMRAD1/checkpoints/FDG/ct_pet/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "/data/cyf/codes/A-PET-CT/MMRAD1/checkpoints/FDG/ct_pet/figure_scores/pixel_slice_metrics.csv",
+  "n_slices": 7647,
+  "n_patients": 202,
+  "n_pixel_slices": 3778,
+  "patient_aggregation": "max slice anomaly_score"
+}

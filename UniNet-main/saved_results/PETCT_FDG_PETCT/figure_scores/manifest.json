@@ -1,0 +1,16 @@
+{
+  "method": "UniNet",
+  "dataset": "FDG",
+  "data_root": "/data/cyf/shared_data/A-PETCT/2d_equal_mask50/FDG",
+  "modality": "petct",
+  "checkpoint": "./ckpts/PETCT_FDG_PETCT/EPOCH_030.pth",
+  "slice_csv": "./saved_results/PETCT_FDG_PETCT/figure_scores/slice_scores.csv",
+  "patient_csv": "./saved_results/PETCT_FDG_PETCT/figure_scores/patient_scores.csv",
+  "pixel_slice_metrics_csv": "./saved_results/PETCT_FDG_PETCT/figure_scores/pixel_slice_metrics.csv",
+  "patient_aggregation": "max slice anomaly_score",
+  "n_slices": 7647,
+  "n_patients": 202,
+  "n_pixel_slices": 3778,
+  "n_abnormal_slices": 3778,
+  "n_abnormal_patients": 101
+}

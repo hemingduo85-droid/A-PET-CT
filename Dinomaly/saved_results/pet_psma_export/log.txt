@@ -1,0 +1,19 @@
+Device: cuda:4
+Args: Namespace(data_path='/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='4', seed=42, save_dir='./saved_results', save_name='pet_psma_export', eval_only=True, ckpt_path='./saved_results/pet_psma/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None, ci_bootstrap=500, ci_seed=42, ci_pixel_max_samples=200000, hist_pixel_points=False, exact_pixel_auroc=None, exact_pixel_aupr=None, cache_path='./saved_results/pet_psma_export/PSMA_petct_eval_cache.npz', export_only=True, progress_interval=20)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 1546
+Device: cuda:4
+Args: Namespace(data_path='/data/cyf/shared_data/A-PETCT/2d_equal_mask50/PSMA', input_mode='dual', num_epochs=30, batch_size=16, num_workers=4, gpu='4', seed=42, save_dir='./saved_results', save_name='pet_psma_export', eval_only=True, ckpt_path='./saved_results/pet_psma/epoch_30_model.pth', max_ratio=0.01, vis_num=0, anomaly_dir=None, ci_bootstrap=500, ci_seed=42, ci_pixel_max_samples=200000, hist_pixel_points=False, exact_pixel_auroc=None, exact_pixel_aupr=None, cache_path='./saved_results/pet_psma_export/PSMA_petct_eval_cache.npz', export_only=True, progress_interval=20)
+Input mode: dual
+Image size: 256, Crop size: 252
+Test samples: 1546
+Loading checkpoint from ./saved_results/pet_psma/epoch_30_model.pth
+--- Export eval cache ---
+Eval/export progress: batch 20/97, samples 320/1546
+Eval/export progress: batch 40/97, samples 640/1546
+Eval/export progress: batch 60/97, samples 960/1546
+Eval/export progress: batch 80/97, samples 1280/1546
+Writing eval cache to ./saved_results/pet_psma_export/PSMA_petct_eval_cache.npz
+Saved eval cache to ./saved_results/pet_psma_export/PSMA_petct_eval_cache.npz
+Export only: skipped metric computation.
